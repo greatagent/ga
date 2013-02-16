@@ -1,5 +1,4 @@
 
-02957bd82721281d02d393af75ae16ea  .\data\wwqgtxx-goagent.pubkey
 036208b4a1ab4a235d75c181e685e5a3  .\.git\info\exclude
 05bb6a949bd2131139d42cac411a022b  .\.git\objects\9d\d01aed3f4cb5c3d1a853dfef283076d09f6752
 05bdcf6b9e206e7dc55fbf9a786fafe5  .\.git\objects\e3\283ecc37837614f0481ebf377cbeb634c5d6de
@@ -9,6 +8,7 @@
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 11781a27d64eb6586fc81c020f52aeb0  .\.git\objects\35\53cd733f743c6bf1b73095b57e4d9b6fb14d42
 15449d98cfa79704332d057b3f91093c  .\.git\hooks\pre-commit.sample
+1564dea8e3a21d2e85110cd572c101f6  .\.git\objects\c9\42763dbec4681ddf0fd6004a88b8a17d9f12b9
 172aa0fb12242c48d0696ffefe1e77f4  .\.git\objects\91\42a5c95692c7639569b87c0f23b9f1d2375d58
 172aa7a33c4b2bbe8c7008f93330534e  .\.git\objects\08\82709e8fb625a4635357b5af1e2da95dbdd57b
 178936f2ea129600fd57d107f4c3d81c  .\.git\objects\30\27a86186a25862e6bfab76179f84ee20e2d953
@@ -31,12 +31,14 @@
 3a937fa73546685885a95e00d9da586f  .\.git\objects\4a\e1ea6df76616325ff75b009e0d052f96887e87
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
+3f19607e31e86a11372a56e450ebd2a2  .\.git\index
 449144d43847d06367b4cdcae9c37fd2  .\.git\objects\f2\807c15c5d0d01965ccf65caf6b2a96cc1fa76e
 478186af8c8295f0a4039a1100b23222  .\.git\objects\5d\8e030786531199955290139344af85ce08a08e
 47b74e04e3316ff28e3532022da481c7  .\wwqgtxx-goagent.bat
 485168b0d701bf8d45849eb0b73c4b46  .\.git\objects\d8\2e54e5ca5f6808186d701aacddeae72194f78a
 49cabaa67dace63dd1f8f0da8fc5dfe2  .\.git\objects\56\b81daa15bd3160ff0abe7340659911081b1cb8
 49e17a46c0abd33213a458ad97625310  .\.git\objects\a4\4048834c41f78c8e514252fdae350d7164370f
+4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 4a7f2be9efe1751bd890d401c8f85397  .\.git\objects\ba\b1548d360af208dcf63c685f47478e58a130b7
 4ab26d6a5dfb806dd5f0066a8b69c46d  .\.git\objects\89\22b752145db6cea9344e8f9873b240ed7a83d8
 4cf2d64e44205fe628ddd534e1151b58  .\.git\HEAD
@@ -74,7 +76,6 @@
 795881afa91ac075b68796fdd9743829  .\.git\objects\b1\827434796342ed7d45770963d457212d0ec071
 7b3358cc10624b3e1fb20d937c055c03  .\.git\objects\dd\b7cc412e0461c4cc17f0da46e9d95e186b301a
 7b973145f7e1b59330ca4dd1f86b3d55  .\utility\certutil.exe
-7d5efa3b668e1aae103b594a61a415a2  .\.git\refs\heads\master
 7dfe15854212a30f346da5255c1d794b  .\.git\hooks\prepare-commit-msg.sample
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 81005745454846bb79cc3c7c0c57658d  .\.git\hooks\pre-rebase.sample
@@ -82,9 +83,8 @@
 836d34af3f901c12c80e593a35a559d6  .\.git\objects\4a\ad92e55de4e93ea36e77ff8662e8646702c6ad
 88849028d7f5873bfa627e4224e870a9  .\.git\config
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
+91492394f63a81e85304626ea3daa3d8  .\.git\objects\c2\6b3113210b92c77ea99d126ded19b44dd7a8f6
 9480d91c81b514ab05cdb9e60a407f7e  .\utility\certenc.dll
-98b12e3fd4a212b023b6e626230255d7  .\.git\logs\HEAD
-98b12e3fd4a212b023b6e626230255d7  .\.git\logs\refs\heads\master
 98d7f8e291edbab8df79e433dc97ecc8  .\.git\hooks\update.sample
 9a039dc8a4a20da96cf1cd8660e316e6  .\.git\objects\b1\a1a822a58e30e5031431fe351248a859b09a79
 9b46c6c35056e76521591c0e5bfd76fd  .\wwqgtxx-goagent-debug.bat
@@ -94,6 +94,7 @@
 9cc72dc973e24f9623bd3fe708f60ef5  .\.git\hooks\applypatch-msg.sample
 9ef504e469b0e06a2c2d7c8df73ae6f5  .\miscellaneous.inc.bat
 a0a7c3fff21f2aea3cfa1d0316dd816c  .\.git\description
+a1c5f6437ef9b5c6627ca063688940b2  .\.git\objects\73\9c0caff9d8b7eee739604a68f247022858ae4f
 a23c0215d9389b73cc0287d261204c04  .\.git\objects\e0\3e8c55fa7848ebf15db4d9dd43db49e198eaba
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
 a4a7e457b55b5ac2877f7973dbba37e9  .\.git\hooks\pre-applypatch.sample
@@ -101,11 +102,14 @@ ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 af9ac7cd86031f5f0edf67886bbf112d  .\.git\objects\03\5ff7ec5e5ed0eadea4258e79b0f12ae143ba31
 b046c1ec4eda7c8e2a85ffdf401b0a75  .\.git\objects\b7\6b703f9aa88a6c72e26334a9d55aec8a7cbdcc
 b630f747f05f35d1a1a9368e909e030f  .\.git\objects\3e\82b1aeace3a21d8b38ff5f6c1c2d8269da4507
+b71d8ccdb64fcdefd673df910c8f1cfc  .\.git\objects\81\a8e52257474a2767b20b56a6fdade95f4d7df7
 b9b86b1b8e759a624dc96e2cd9fed2ee  .\.git\objects\cc\3ac3f585c35497436f895ec9d50fdb7ae83b2f
 ba94a23aea6790e45cbad9858edcf58c  .\.git\objects\c5\250aed57624f70e4aa739d286d3e8ba6918823
 bb3d1e54c1fb0e968bcf607e5fd4eb2d  .\.git\objects\85\0a644f1f73604a0644c68f06e764e8214373f2
 bc93fe41f4f4e77eddeccfcfcab291df  .\.git\objects\95\8b2a69d75112ece0f39ba6de60e71cec7264a9
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
+c0a99290b3baf36f2a015ae19196ca3e  .\.git\logs\HEAD
+c0a99290b3baf36f2a015ae19196ca3e  .\.git\logs\refs\heads\master
 c2e6110982d9f93dce3ff77b04ba5c2f  .\updategc.php
 c331824d0859cd7060be08ca6120565f  .\.git\objects\1b\fd37abf60f4e8ee4f1fdc6342d7743c88ed68d
 c331851a4f23617856f183f2e74d6d2b  .\.git\objects\23\a53fbfbf86a10f03c7e63aac1caf2c1796e846
@@ -123,11 +127,11 @@ db8013b9bbccc1d6d9f17acc5f40d665  .\startfirefox.inc.bat
 ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 df8f130f74d26a15b413412b6113b3ae  .\.git\objects\06\40979649fb915f988ffc44f4ee3f5cced2caff
-e1a636d1ae33a81b09a6b62d5ef61cbf  .\.git\index
 e2c1a183aeec1360d7320e96300f260e  .\genhash.inc.bat
 e67656637a7adddee91a5a7b9fae60ee  .\goagent-local\ip.txt
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
 f1ffd57364f0957b4a7fcab3b64d6ebe  .\.git\objects\db\afc9ffc571fba5175d0f5abec1e65b95dd9fc1
+f78304b5a507c66c1f81dbc8896bbfd4  .\.git\refs\heads\master
 f86bf0d3fa5e6dd5240ba742e6706d45  .\makegservers.inc.php
 fdbbb207d6dfab9abab59e558ee6567a  .\.git\objects\00\bd33a6aa7e62d54b045f7c23a5a72a78ae5126
 fef4d060cc3c42349e184d3f60a96a8a  .\goagent-local\goagent.exe
