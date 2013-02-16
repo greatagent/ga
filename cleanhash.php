@@ -12,7 +12,7 @@ function cleanup($line) {
   if(base64_encode($line)=="ZTc4NDhiZTgzNzBmNTg3Y2E1NTJkOGE0ZjIxNmI4NDIgIC5c5LiA6ZSu57+75aKZLmJhdA=="){
     return false;
   }
-  if (preg_match('/  \.\\\\.svn\\\/',$line)) {
+  if (preg_match('/  \.\\\\.git\\\/',$line)) {
     return false;
   }
   if (preg_match('/  \.\\\firefox\\\/',$line)) {
