@@ -9,6 +9,7 @@
 @unlink("miscellaneous.inc.bat");
 @unlink("genhash.inc.bat");
 @unlink(".gitattributes");
+@unlink("wwqgtxx-goagent-standalone.bat");
 
 /* 20121207 Remove incorrect Pinyin Filename */
 @unlink("wwqgtxx-goagent-debug.bat");
