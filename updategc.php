@@ -71,7 +71,7 @@ function request($query,$host){
 function update($filename,$hash){
 	global $gservers,$host;
 	$request="GET /git/{$filename} HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n";
-	
+	$request=str_replace('./','',$request);
 	$success=false;
 	foreach($gservers as $gkey=>$gserver){ 
 		if(! $success){
