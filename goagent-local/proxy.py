@@ -32,7 +32,7 @@ try:
     import gevent.timeout
     gevent.monkey.patch_all(dns=gevent.version_info[0]>=1)
 except ImportError:
-    sys.stderr.write('WARNING: python-gevent not installed. `https://github.com/SiteSupport/gevent/downloads`\n')
+    sys.stderr.write(' WARNING : python-gevent not installed. `https://github.com/SiteSupport/gevent/downloads`\n')
     import Queue
     import thread
     import threading
