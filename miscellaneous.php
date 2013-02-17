@@ -9,8 +9,9 @@
 @unlink("miscellaneous.inc.bat");
 @unlink("genhash.inc.bat");
 @unlink(".gitattributes");
-if(file_exists('firefox/firefoxprotable')){
-	@unlink('wwqgtxx-goagent.bat');
+if(file_exists("firefox/firefoxprotable")){
+	@unlink("wwqgtxx-goagent.bat");
+	rename("wwqgtxx-goagent-standalone.bat","wwqgtxx-goagent.bat")
 }
 else{
 @unlink("wwqgtxx-goagent-standalone.bat");

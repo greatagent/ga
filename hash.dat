@@ -29,10 +29,10 @@
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
 a87ff38438a8d2ad0b075b38c9dd8507  .\updategc.php
 ac97c7a9d40b93cafe997fc8ddf7bb8c  .\wwqgtxx-goagent-standalone.bat
-acf59e1e38aa12aae6294aa5d0fa9fe6  .\miscellaneous.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 bd637dc30bdc3c64e42855f74a667478  .\cleanhash.php
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
+c28fd48e8cc9d90ee846f0f23ae76888  .\miscellaneous.php
 c90396d49df9a4e1158dc53769507fdc  .\goagent-local\goagent-gtk.py
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
