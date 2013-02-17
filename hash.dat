@@ -32,8 +32,8 @@
 891e85bd555dd37e6b2a10981b87bf98  .\wwqgtxx-goagent.bat
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
 9480d91c81b514ab05cdb9e60a407f7e  .\utility\certenc.dll
+986c5a675fea7d7f4aba316041778a8d  .\miscellaneous.inc.bat
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
-9ef504e469b0e06a2c2d7c8df73ae6f5  .\miscellaneous.inc.bat
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
 a9ce7967a4324eeca8cdfd791da475e7  .\updategc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
@@ -45,7 +45,6 @@ d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 db8013b9bbccc1d6d9f17acc5f40d665  .\startfirefox.inc.bat
 ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
-e67656637a7adddee91a5a7b9fae60ee  .\goagent-local\ip.txt
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
 efb7165c6b304643d824c00f9ff851cc  .\genhash.inc.bat
 f86bf0d3fa5e6dd5240ba742e6706d45  .\makegservers.inc.php
