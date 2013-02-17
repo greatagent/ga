@@ -11,10 +11,8 @@
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
-3d0468924677b2e9be71b4b8a1d5d082  .\miscellaneous.php
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
-4d7bd1dd4a7fd0fdeb349a49a6407ee0  .\.gitattributes
 502e7c3111f585cc577ab592dde710c3  .\goagent-local\proxy.py
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
@@ -45,6 +43,7 @@ d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 db8013b9bbccc1d6d9f17acc5f40d665  .\startfirefox.inc.bat
 ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
+df08c7019f9829d6d19dc830f8490f00  .\miscellaneous.php
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
 efb7165c6b304643d824c00f9ff851cc  .\genhash.inc.bat
 f86bf0d3fa5e6dd5240ba742e6706d45  .\makegservers.inc.php
