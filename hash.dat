@@ -19,6 +19,7 @@
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
 62e5466246bd44cc073d2a62038b77aa  .\goagent-local\cacerts.txt
+64d92cc2a50046dbb998180ea74d3d02  .\updategc.php
 665ccc57a84c5639c4e5151686cc0432  .\utility\md5deep64.exe
 68b37130e1493fcddfc68f2f0292e4d2  .\miscellaneous.php
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
@@ -38,7 +39,6 @@ ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 b2f5ff47436671b6e533d8dc3614845d  .\wwqgtxx.php
 b5f34d68b0b3644a37fe063b40a255dd  .\cleanhash.php
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
-c2e6110982d9f93dce3ff77b04ba5c2f  .\updategc.php
 c90396d49df9a4e1158dc53769507fdc  .\goagent-local\goagent-gtk.py
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 db8013b9bbccc1d6d9f17acc5f40d665  .\startfirefox.inc.bat

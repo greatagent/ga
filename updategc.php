@@ -163,7 +163,7 @@ if(!file_exists("data/wwqgtxx-goagent.pubkey")){
 	}
 }
 
-$response=explode("\r\n",$response);
+$response=explode("\n",$response);
 foreach($response as $value){
 	unset($remotefilename,$remotefilehash);
 	$value=explode("  ",$value);
