@@ -62,9 +62,5 @@ start goagent-local\goagent.exe
 :: startfirefox.inc.bat
 :: Step5 - Start Firefox
 echo Starting FirefoxPortable...
-start FirefoxPortable\FirefoxPortable.exe "https://wwqgtxx-goagent.googlecode.com/git-history/web/ifanqiang.htm"
+utility\php\php.exe firefox.inc.php
 utility\sleep.exe -m 1000
-else
-(
-pause
-)

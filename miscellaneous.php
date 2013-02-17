@@ -9,13 +9,8 @@
 @unlink("miscellaneous.inc.bat");
 @unlink("genhash.inc.bat");
 @unlink(".gitattributes");
-if(file_exists("firefox/firefoxprotable")){
-	@unlink("wwqgtxx-goagent.bat");
-	rename("wwqgtxx-goagent-standalone.bat","wwqgtxx-goagent.bat")
-}
-else{
 @unlink("wwqgtxx-goagent-standalone.bat");
-}
+
 
 /* 20121207 Remove incorrect Pinyin Filename */
 @unlink("wwqgtxx-goagent-debug.bat");
