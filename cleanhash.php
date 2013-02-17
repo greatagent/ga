@@ -57,7 +57,7 @@ function cleanup($line) {
   if (preg_match('/  \.\\\data\\\host$/',$line)) {
     return false;
   }
-  if (preg_match('/\\\proxy\.ini$/',$line)) {
+  if (preg_match('/\\\update.inc\.bat$/',$line)) {
     return false;
   }
   if (preg_match('/  \.\\\custom\.ini$/',$line)) {
