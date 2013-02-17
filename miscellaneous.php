@@ -3,8 +3,12 @@
 #  
 #  miscellaneous.php - Last cleanup
 
-@unlink("wwqgtxx-goagent-chrome.bat");
+@unlink("startfirefox.inc.bat");
+@unlink("startgoagent.inc.bat");
 @unlink("update.inc.bat");
+@unlink("miscellaneous.inc.bat");
+@unlink("genhash.inc.bat");
+@unlink(".gitattributes");
 
 /* 20121207 Remove incorrect Pinyin Filename */
 @unlink("wwqgtxx-goagent-debug.bat");

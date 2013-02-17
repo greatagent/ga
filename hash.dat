@@ -5,11 +5,11 @@
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
 2e4f4d7b9893e682c520665ce5c489af  .\string.inc.php
-304cce67f3ca6c6c681a19ba85b57c99  .\update.inc.bat
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
+44cd577ba0b100691f2d97a87dfd8af5  .\update.inc.bat
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 502e7c3111f585cc577ab592dde710c3  .\goagent-local\proxy.py
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
@@ -24,7 +24,6 @@
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
 76ba0f6121ea0128f6fd5b968ff86fa4  .\goagent-local\python27.zip
 7b973145f7e1b59330ca4dd1f86b3d55  .\utility\certutil.exe
-803700f78dff2aca29a0276ee935baac  .\miscellaneous.php
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
 9480d91c81b514ab05cdb9e60a407f7e  .\utility\certenc.dll
@@ -40,5 +39,6 @@ d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
+f481a72bb7cdc3d32497fd690917cc3e  .\miscellaneous.php
 f86bf0d3fa5e6dd5240ba742e6706d45  .\makegservers.inc.php
 fef4d060cc3c42349e184d3f60a96a8a  .\goagent-local\goagent.exe
