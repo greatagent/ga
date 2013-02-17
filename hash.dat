@@ -5,7 +5,6 @@
 2303ea535203c79305490d6c20be8454  .\utility\md5deep.exe
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
-2e4f4d7b9893e682c520665ce5c489af  .\string.inc.php
 318213b941b6f3e7025853873a524c03  .\goagent-local\proxy.ini
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
@@ -22,6 +21,7 @@
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
 76ba0f6121ea0128f6fd5b968ff86fa4  .\goagent-local\python27.zip
+77be84563e51713d09f5062b239e4bdd  .\string.inc.php
 7b973145f7e1b59330ca4dd1f86b3d55  .\utility\certutil.exe
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
