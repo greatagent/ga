@@ -14,7 +14,6 @@
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 47b74e04e3316ff28e3532022da481c7  .\wwqgtxx-goagent.bat
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
-4d7bd1dd4a7fd0fdeb349a49a6407ee0  .\.gitattributes
 502e7c3111f585cc577ab592dde710c3  .\goagent-local\proxy.py
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
