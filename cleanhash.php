@@ -36,21 +36,6 @@ function cleanup($line) {
   if (preg_match('/  \.\\\sign\.dat$/',$line)) {
     return false;
   }
-  if (preg_match('/  \.\\\commit\.bat$/',$line)) {
-    return false;
-  }
-  if (preg_match('/  \.\\\\.project$/',$line)) {
-    return false;
-  }
-  if (preg_match('/  \.\\\wwqgtxx-goagent\.nsi$/',$line)) {
-    return false;
-  }
-  if (preg_match('/  \.\\\goagent-local\\\proxy\.pac$/',$line)) {
-    return false;
-  }
-  if (preg_match('/  \.\\\data\\\proxy\.custom$/',$line)) {
-    return false;
-  }
   if (preg_match('/  \.\\\data\\\last-known-good$/',$line)) {
     return false;
   }
