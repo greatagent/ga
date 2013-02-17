@@ -4,6 +4,7 @@
 #  miscellaneous.php - Last cleanup
 
 @unlink("wwqgtxx-goagent-chrome.bat");
+@unlink("update.inc.bat");
 
 /* 20121207 Remove incorrect Pinyin Filename */
 @unlink("wwqgtxx-goagent-debug.bat");
