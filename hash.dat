@@ -5,7 +5,6 @@
 2303ea535203c79305490d6c20be8454  .\utility\md5deep.exe
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
-2cf52b2460ebcf4c46034f311901633a  .\wwqgtxx-goagent-standalone.bat
 2e4f4d7b9893e682c520665ce5c489af  .\string.inc.php
 304cce67f3ca6c6c681a19ba85b57c99  .\update.inc.bat
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
@@ -15,6 +14,7 @@
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 502e7c3111f585cc577ab592dde710c3  .\goagent-local\proxy.py
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
+5ba83f8b24f069c9f047ead5e7330524  .\wwqgtxx-goagent-standalone.bat
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
 61b6414e8af75e5c5b62a36b5cebfe6d  .\cleanhash.php

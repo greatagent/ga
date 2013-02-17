@@ -1,4 +1,4 @@
-:: gfangqiang-standalone.bat
+:: wwqgtxx-goagent-standalone.bat
 :: Main Batch File - GoAgent Only, Use your own browser
 
 @echo off
