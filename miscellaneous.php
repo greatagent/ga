@@ -10,8 +10,6 @@
 @unlink("wwqgtxx-goagent-donotupdate.bat");
 @unlink("wwqgtxx-goagent-donotupdate-debug.bat");
 
-/* 20121207 Remove incorrect Pinyin Filename */
-@unlink("wwqgtxx-goagent-standalone.bat");
 
 /* 20121218 Remove proxy.custom */
 /* You may edit the FindProxyForURL() section in /goagent-local/proxy.pac to create custom rules */

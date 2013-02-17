@@ -11,6 +11,7 @@
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
+3d0468924677b2e9be71b4b8a1d5d082  .\miscellaneous.php
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 4d7bd1dd4a7fd0fdeb349a49a6407ee0  .\.gitattributes
@@ -21,7 +22,6 @@
 61b6414e8af75e5c5b62a36b5cebfe6d  .\cleanhash.php
 62e5466246bd44cc073d2a62038b77aa  .\goagent-local\cacerts.txt
 665ccc57a84c5639c4e5151686cc0432  .\utility\md5deep64.exe
-68b37130e1493fcddfc68f2f0292e4d2  .\miscellaneous.php
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
 6c03747d42333dfc1f7ac85cc528f902  .\goagent-local\logo.png
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
