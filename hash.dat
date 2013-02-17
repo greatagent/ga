@@ -1,5 +1,4 @@
 
-00a09b7c18fcdcb5129d5a28823d073e  .\firefox.inc.php
 0edd83dfc97566b43abd21d2753043dc  .\miscellaneous.php
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
@@ -11,6 +10,7 @@
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
+3e451f0e8b8bc770412ccdc4632f3b3b  .\firefox.inc.php
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
