@@ -13,6 +13,7 @@
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
 3c0e601a8036f921a9f270cfc25daf5d  .\goagent-local\proxy.ini
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
+45a78365147ce8576a3c76c00034dc55  .\updategc.php
 46c853cce07e3947ea09a88892f90e7a  .\startfirefox.inc.php
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 4c8cb3b80dacbaf7ff73b71e25de11e0  .\get-last-kown-good.inc.php
@@ -21,7 +22,6 @@
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
 62e5466246bd44cc073d2a62038b77aa  .\goagent-local\cacerts.txt
-65e3489c7cc875f09c35ea2a1beccd94  .\updategc.php
 665ccc57a84c5639c4e5151686cc0432  .\utility\md5deep64.exe
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
 6bf687453245cf0661629685501d0349  .\goagent-local\goagent-gtk.py
