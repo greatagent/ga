@@ -4,7 +4,7 @@
 #  makegserver.inc.php - Reslove Google Server IP
 echo "\r\n";
 echo "Grabbing last-known-good file from smarthosts:\r\n";
-@unlink("data/last-known-good");
+
 /* FUNCTION */
 require_once("makegservers.inc.php");
 function request($query,$host){
@@ -56,6 +56,7 @@ foreach($host as $hostkey=>$hoststring){
 
 if(count($googleip)){
 	$googleip=array_unique($googleip);
+	@unlink("data/last-known-good");
 	file_put_contents("data/last-known-good",implode("\r\n",$googleip));
 	echo " last-known-good=".implode(",",$googleip)."\r\n";
 }else{

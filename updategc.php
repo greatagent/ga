@@ -18,23 +18,6 @@ if(file_exists("data/usegc2")){
 file_exists("string.inc.php") && require_once("string.inc.php");
 require_once("makegservers.inc.php");
 
-/* */
-echo " Last known good...";
-if($lkg=@file_get_contents("data/last-known-good")){
-	echo "Exists!\r\n";
-	$lkg=explode("\n",str_replace("\r\n","\n",$lkg));
-	echo " LAST-KNOWN-GOOD=".implode(",",$lkg)."\r\n";
-	foreach($lkg as $value){
-		if(($key = array_search($value, $gservers)) !== false) {
-			unset($gservers[$key]);
-		}
-		array_unshift($gservers,$value);
-	}
-	array_unique($gservers);
-}else{
-	echo "Not exists!\r\n";
-}
-
 /* FUNCTION */
 function request($query,$host){
 	global $gservers;
