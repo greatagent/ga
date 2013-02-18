@@ -3,7 +3,6 @@
 #  
 #  miscellaneous.php - Last cleanup
 
-@unlink("utility/vcredist_x86_sc.exe");
 @unlink("utility/certenc.dll");
 @unlink("utility/certutil.exe");
 
