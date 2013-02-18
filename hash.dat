@@ -15,7 +15,6 @@
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 4c8cb3b80dacbaf7ff73b71e25de11e0  .\get-last-kown-good.inc.php
 4d4790f3d57e2bbb22ee3855d89374f0  .\cleanhash.php
-5882de20c723d991262cfb1696372817  .\wwqgtxx-goagent.bat
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
@@ -45,4 +44,5 @@ ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
+e9c866835869d8261769001b736d04dc  .\wwqgtxx-goagent.bat
 f86bf0d3fa5e6dd5240ba742e6706d45  .\makegservers.inc.php
