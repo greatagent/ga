@@ -10,6 +10,9 @@ chdir($currentdir[1]);
 
 /* Define update server*/
 $host = "goagent.wwqgtxx-goagent.googlecode.com";
+if(file_exists("data/usegc2")){
+	$host = "goagent.wwqgtxx-wallproxy.googlecode.com";
+}
 
 /* */
 file_exists("string.inc.php") && require_once("string.inc.php");
@@ -126,6 +129,10 @@ if(file_exists("data/updateignore")){
 if(! file_exists("hash.dat")){
 	die("Fatal Error: hash.dat not exists!");
 }
+
+echo "Update Server:";
+echo $host;
+echo "\r\n";
 
 /* Remote Hash Table */
 $query="GET /git/sign.dat HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n";

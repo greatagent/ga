@@ -32,8 +32,8 @@
 8489cdb6cd5e68e6fff7ad20134f0989  .\goagent-local\proxy.py
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
+9edee1492c9cc098128e6c381932e460  .\updategc.php
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
-a87ff38438a8d2ad0b075b38c9dd8507  .\updategc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 bdbd495ca375c6a7daf763e53558888a  .\makegservers.inc.php
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
