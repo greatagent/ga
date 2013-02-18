@@ -27,9 +27,5 @@ if(file_exists("./FirefoxPortable/FirefoxPortable.exe")){
 }
 else{
 echo "Don't Have FirefoxPortable.";
-@unlink("FirefoxPortable\Data\profile\cert8.db");
-deldir("FirefoxPortable\Data\profile");
-deldir("FirefoxPortable\Data");
-deldir("FirefoxPortable");
 }
 ?>
