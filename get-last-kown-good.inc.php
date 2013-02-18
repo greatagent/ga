@@ -41,6 +41,7 @@ function request($query,$host){
 	
 	return $response;
 } 
+echo "Grabbing smarthosts hosts:\r\n";
 $googleip=array();
 $host=request("GET /svn/trunk/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","smarthosts.googlecode.com");
 $host=explode("\r\n",$host);
@@ -53,7 +54,8 @@ foreach($host as $hostkey=>$hoststring){
 		}
 	}
 }
-$host=request("GET /git/downloads/raw/ipv4_mobile_utf8/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com");
+echo "Grabbing huhamhire-hosts hosts:\r\n";
+$host=request("GET /git/downloads/raw/ipv4_mobile_ansi/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com");
 $host=explode("\r\n",$host);
 foreach($host as $hostkey=>$hoststring){
 	//talk.google.com is special case. We cannot use it as G-Server
