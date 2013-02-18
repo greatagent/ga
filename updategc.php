@@ -203,11 +203,6 @@ foreach($remotefile as $remotekey=>$remotevalue){
 				continue; //Protect public key
 			}
 		}
-		if(preg_match('/\.\/FirefoxPortable\/Data\/profile\/cert8\.db/',$remotekey)){
-			if(!file_exists('FirefoxPortable/FirefoxPortable.exe')){
-				continue; //no need to update cert8.db
-			}
-		}
 		
 		if(! preg_match('/\.\/\.svn\//',$remotekey)){
 			if(! in_array($remotekey,$ignore)){
