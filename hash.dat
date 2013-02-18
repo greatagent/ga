@@ -7,6 +7,7 @@
 244225b9436c74c3a3b70388c5244d4a  .\goagent-local\SwitchyOptions.bak
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
+316c98e692cb1ea456583fa1f46132e6  .\get-last-kown-good.inc.php
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
@@ -43,4 +44,3 @@ de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
 f174de1cc0f6f161592a45017733a85f  .\miscellaneous.php
-fcaf31eec2c794e2669f86292707e218  .\get-last-kown-good.inc.php

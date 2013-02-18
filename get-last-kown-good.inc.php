@@ -55,7 +55,7 @@ foreach($host as $hostkey=>$hoststring){
 	}
 }
 echo "Grabbing huhamhire-hosts hosts:\r\n";
-$host=request("GET /git/downloads/raw/ipv4_mobile_ansi/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com");
+$host=request("GET /git/downloads/raw/ipv4_mobile_utf8/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com");
 $host=explode("\r\n",$host);
 foreach($host as $hostkey=>$hoststring){
 	//talk.google.com is special case. We cannot use it as G-Server
