@@ -4,6 +4,42 @@
 #  makegserver.inc.php - Reslove Google Server IP
 echo "Grabbing last-known-good file from smarthosts:\r\n";
 @unlink("data/last-known-good");
+/* FUNCTION */
+require_once("makegservers.inc.php");
+function request($query,$host){
+	global $gservers;
+	$success=false;
+	foreach($gservers as $gkey=>$gserver){ 
+		if(! $success){
+			echo " Trying\t".$gserver."...";
+			$fp = fsockopen('ssl://'.$gserver, 443,$errno,$errstr,3);
+			if($fp){
+				if ( fwrite($fp, str_replace('{host}',$host,$query)) ) {
+					$response=NULL;
+					while ( !feof($fp) ) {
+						$response .= fgets($fp, 1024);
+					}	
+					if(preg_match('/HTTP\/1.1 200 OK/',$response)){
+						$response=explode("\r\n\r\n",$response);
+						unset($response[0]); $response=implode("\r\n\r\n",$response);
+						$success=true;
+						echo "OK!\r\n";
+					}else{
+						echo "Walled!\r\n";
+						unset($gservers[$gkey]);
+					}
+				}
+				fclose($fp);
+			}else{
+				echo "Walled!\r\n";
+				unset($gservers[$gkey]);
+				@fclose($fp);
+			}
+		} 
+	}
+	
+	return $response;
+} 
 $googleip=array();
 $host=request("GET /svn/trunk/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","smarthosts.googlecode.com");
 $host=explode("\r\n",$host);
