@@ -61,10 +61,9 @@ start goagent-local\goagent.exe
 :: get-last-kown-good.inc.bat
 :: Step7 - Start Firefox
 utility\php\php.exe get-last-kown-good.inc.php
-utility\sleep.exe -m 1000
 
 :: startfirefox.inc.bat
 :: Step6 - Start Firefox
 echo Starting FirefoxPortable...
-start utility\php\php.exe firefox.inc.php
+utility\php\php.exe firefox.inc.php
 
