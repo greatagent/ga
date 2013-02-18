@@ -7,4 +7,5 @@ $str["cert_corrupted"]=" [!]wwqgtxx-goagent公钥已损毁! 请到官网(https://code.goo
 $str["sign_incorrect"]=" [!]HASH签名校验错误，与谷歌服务器之间可能存在中间人攻击，请留意网络环境是否安全\r\n也有可能这只不过是Google全球服务器之间的延迟所造成\r\n";
 $str["hash_sign_incorrect"]=" [!]更新过程中发现签名校验错误，与谷歌服务器之间可能存在中间人攻击，请留意网络环境是否安全\r\n";
 $str["retryin3seconds"]="3秒后重试\r\n";
+$str["dont_allow_two_bat"]="不支持将wwqgtxx-goagent和wwqgtxx-wallproxy放在同一目录下，程序自动退出\r\n";
 ?>

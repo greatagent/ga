@@ -9,51 +9,29 @@ preg_match('/(.*?)\\\updategc\.php$/',__FILE__,$currentdir);
 chdir($currentdir[1]);
 
 /* Define update server*/
-$host = "goagent.wwqgtxx-goagent.googlecode.com";
-if(file_exists("data/usegc2")){
-	$host = "goagent.wwqgtxx-wallproxy.googlecode.com";
+if(file_exists("wwqgtxx-goagent.bat")){
+	if(file_exists("wwqgtxx-wallproxy.bat"){
+		exit($str["dont_allow_two_bat"]);
+	}
+	if(file_exists("data/usegc2")){
+		$host = "goagent.wwqgtxx-wallproxy.googlecode.com";
+	}else{
+		$host = "goagent.wwqgtxx-goagent.googlecode.com";
+	}
+}else if(file_exists("wwqgtxx-wallproxy.bat"){
+	if(file_exists("data/usegc2")){
+		$host = "wallproxy.wwqgtxx-wallproxy.googlecode.com";
+	}else{
+		$host = "wallproxy.wwqgtxx-goagent.googlecode.com";
+	}
 }
+
 
 /* */
 file_exists("string.inc.php") && require_once("string.inc.php");
 require_once("makegservers.inc.php");
 
 /* FUNCTION */
-function request($query,$host){
-	global $gservers;
-	$success=false;
-	foreach($gservers as $gkey=>$gserver){ 
-		if(! $success){
-			echo " Trying\t".$gserver."...";
-			$fp = fsockopen('ssl://'.$gserver, 443,$errno,$errstr,3);
-			if($fp){
-				if ( fwrite($fp, str_replace('{host}',$host,$query)) ) {
-					$response=NULL;
-					while ( !feof($fp) ) {
-						$response .= fgets($fp, 1024);
-					}	
-					if(preg_match('/HTTP\/1.1 200 OK/',$response)){
-						$response=explode("\r\n\r\n",$response);
-						unset($response[0]); $response=implode("\r\n\r\n",$response);
-						$success=true;
-						echo "OK!\r\n";
-					}else{
-						echo "Walled!\r\n";
-						unset($gservers[$gkey]);
-					}
-				}
-				fclose($fp);
-			}else{
-				echo "Walled!\r\n";
-				unset($gservers[$gkey]);
-				@fclose($fp);
-			}
-		} 
-	}
-	
-	return $response;
-} 
-
 function update($filename,$hash){
 	global $gservers,$host;
 	$request="GET /git/{$filename} HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n";
