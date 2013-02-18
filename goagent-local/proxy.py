@@ -1790,6 +1790,7 @@ def main():
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     import check_google_ip
     check_google_ip.main()
+    common = Common()
     logging.basicConfig(level=logging.DEBUG if common.LISTEN_DEBUGINFO else logging.INFO, format='%(levelname)s - %(asctime)s %(message)s', datefmt='[%b %d %H:%M:%S]')
     CertUtil.check_ca()
     pre_start()

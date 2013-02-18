@@ -26,6 +26,7 @@
 77be84563e51713d09f5062b239e4bdd  .\string.inc.php
 7b973145f7e1b59330ca4dd1f86b3d55  .\utility\certutil.exe
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
+8489cdb6cd5e68e6fff7ad20134f0989  .\goagent-local\proxy.py
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
 9480d91c81b514ab05cdb9e60a407f7e  .\utility\certenc.dll
 9baddf917e092a3916761022151ec7ce  .\wwqgtxx-goagent.bat
@@ -41,6 +42,5 @@ ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
-f07f4a7b7de16d1ffd08ab9078f1097e  .\goagent-local\proxy.py
 f1c5f808a6e997959a704e2db1b7c4d0  .\firefox.inc.php
 f86bf0d3fa5e6dd5240ba742e6706d45  .\makegservers.inc.php
