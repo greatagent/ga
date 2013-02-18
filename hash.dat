@@ -15,6 +15,7 @@
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 4c8cb3b80dacbaf7ff73b71e25de11e0  .\get-last-kown-good.inc.php
 4d4790f3d57e2bbb22ee3855d89374f0  .\cleanhash.php
+5882de20c723d991262cfb1696372817  .\wwqgtxx-goagent.bat
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
@@ -26,7 +27,6 @@
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
 76ba0f6121ea0128f6fd5b968ff86fa4  .\goagent-local\python27.zip
-77487907ff65ceff9dca1fe8ece0f93c  .\wwqgtxx-goagent.bat
 77be84563e51713d09f5062b239e4bdd  .\string.inc.php
 7b973145f7e1b59330ca4dd1f86b3d55  .\utility\certutil.exe
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
