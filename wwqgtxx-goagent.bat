@@ -58,14 +58,13 @@ echo Starting GoAgent...
 start goagent-local\goagent.exe
 ::Start proxy.exe if connot load proxy.bat
 
-
-:: startfirefox.inc.bat
-:: Step6 - Start Firefox
-echo Starting FirefoxPortable...
-utility\sleep.exe -m 5000
-utility\php\php.exe firefox.inc.php
-
 :: get-last-kown-good.inc.bat
 :: Step7 - Start Firefox
 utility\php\php.exe get-last-kown-good.inc.php
 utility\sleep.exe -m 1000
+
+:: startfirefox.inc.bat
+:: Step6 - Start Firefox
+echo Starting FirefoxPortable...
+start utility\php\php.exe firefox.inc.php
+
