@@ -4,7 +4,7 @@
 #  makegserver.inc.php - Reslove Google Server IP
 
 $gservers=array();
-$gdomains=array("www.google.com","mail.google.com","www.l.google.com","mail.l.google.com");
+$gdomains=array("www.google.com","mail.google.com","www.l.google.com","mail.l.google.com","www.google.cn","www.g.cn");
 
 /* Grab GServer using DNS */
 foreach($gdomains as $gdomain){
