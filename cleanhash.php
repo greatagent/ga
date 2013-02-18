@@ -15,6 +15,9 @@ function cleanup($line) {
   if (preg_match('/  \.\\\\.git\\\/',$line)) {
     return false;
   }
+  if (preg_match('/  \.\\\cert8\.db$/',$line)) {
+    return false;
+  }
   if (preg_match('/  \.\\\firefox\\\/',$line)) {
     return false;
   }
