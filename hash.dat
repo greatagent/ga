@@ -13,8 +13,8 @@
 3c0e601a8036f921a9f270cfc25daf5d  .\goagent-local\proxy.ini
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
+4c8cb3b80dacbaf7ff73b71e25de11e0  .\get-last-kown-good.inc.php
 4d4790f3d57e2bbb22ee3855d89374f0  .\cleanhash.php
-554908fbcfb5b03206bacd40ef4f2041  .\get-last-kown-good.inc.php
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key

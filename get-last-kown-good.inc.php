@@ -2,6 +2,7 @@
 #  wwqgtxx-goagent - Software suite for breakthrough GFW
 #  
 #  makegserver.inc.php - Reslove Google Server IP
+echo "\r\n";
 echo "Grabbing last-known-good file from smarthosts:\r\n";
 @unlink("data/last-known-good");
 /* FUNCTION */
