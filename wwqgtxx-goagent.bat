@@ -50,7 +50,7 @@ utility\php\php.exe miscellaneous.php
 utility\sleep.exe -m 1000
 
 :: startgoagent.inc.bat
-:: Step6 - Start GoAgent
+:: Step5 - Start GoAgent
 
 echo Starting GoAgent...
 ::goagent-local\proxy.bat
@@ -60,7 +60,12 @@ start goagent-local\goagent.exe
 
 
 :: startfirefox.inc.bat
-:: Step5 - Start Firefox
+:: Step6 - Start Firefox
 echo Starting FirefoxPortable...
 utility\php\php.exe firefox.inc.php
+utility\sleep.exe -m 1000
+
+:: get-last-kown-good.inc.bat
+:: Step7 - Start Firefox
+utility\php\php.exe get-last-kown-good.inc.php
 utility\sleep.exe -m 1000
