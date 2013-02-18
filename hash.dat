@@ -37,11 +37,11 @@ a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
 a87ff38438a8d2ad0b075b38c9dd8507  .\updategc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
+c2fac054b40739b347aff82351aa9359  .\firefox.inc.php
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d749ad4000c7747091f136d46cebfc9e  .\goagent-local\goagent.exe
 ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
-ebaf661172ab083d0f3d4194a75cfac2  .\firefox.inc.php
 f86bf0d3fa5e6dd5240ba742e6706d45  .\makegservers.inc.php
