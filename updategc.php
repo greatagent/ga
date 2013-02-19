@@ -156,7 +156,7 @@ foreach($remotefile as $remotekey=>$remotevalue){
 			}
 		}
 		
-		if(! preg_match('/\.\/\.svn\//',$remotekey)){
+		if(! preg_match('/\.\/\.git\//',$remotekey)){
 			if(! in_array($remotekey,$ignore)){
 				update($remotekey,$remotevalue);
 			}
