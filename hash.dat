@@ -15,6 +15,7 @@
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
 3c0e601a8036f921a9f270cfc25daf5d  .\goagent-local\proxy.ini
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
+461697b3a0cf95f1fd10edfe67a20725  .\goagent-local\goagent-gtk.py
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 4d4790f3d57e2bbb22ee3855d89374f0  .\cleanhash.php
 5ab543da4d1314f1ca28f974dfb0076f  .\makegservers.inc.php
@@ -24,7 +25,6 @@
 62e5466246bd44cc073d2a62038b77aa  .\goagent-local\cacerts.txt
 665ccc57a84c5639c4e5151686cc0432  .\utility\md5deep64.exe
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
-6bf687453245cf0661629685501d0349  .\goagent-local\goagent-gtk.py
 6c03747d42333dfc1f7ac85cc528f902  .\goagent-local\logo.png
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
