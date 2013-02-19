@@ -16,7 +16,7 @@ function cleanup($line) {
     return false;
   }
   if (preg_match('/  \.\\\cert8\.db$/',$line)) {
-    return false;
+    return true;
   }
   if (preg_match('/  \.\\\firefox\\\/',$line)) {
     return false;
