@@ -8,23 +8,14 @@
 preg_match('/(.*?)\\\updategc\.php$/',__FILE__,$currentdir); 
 chdir($currentdir[1]);
 
-/* Define update server*/
-if(file_exists("wwqgtxx-goagent.bat")){
-	if(file_exists("wwqgtxx-wallproxy.bat"){
-		exit($str["dont_allow_two_bat"]);
-	}
-	if(file_exists("data/usegc2")){
-		$host = "goagent.wwqgtxx-wallproxy.googlecode.com";
-	}else{
-		$host = "goagent.wwqgtxx-goagent.googlecode.com";
-	}
-}else if(file_exists("wwqgtxx-wallproxy.bat"){
-	if(file_exists("data/usegc2")){
-		$host = "wallproxy.wwqgtxx-wallproxy.googlecode.com";
-	}else{
-		$host = "wallproxy.wwqgtxx-goagent.googlecode.com";
-	}
+
+
+if(file_exists("data/usegc2")){
+	$host = "goagent.wwqgtxx-wallproxy.googlecode.com";
+}else{
+	$host = "goagent.wwqgtxx-goagent.googlecode.com";
 }
+
 
 
 /* */

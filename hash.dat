@@ -1,4 +1,5 @@
 
+0a6cd528a8580b9622d1284cf3a61aae  .\updategc.php
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 13103857637a5fb25e92537be3946828  .\runner.bat
 16363e78f05a17e6d250be8a31578ad1  .\FirefoxPortable\Data\profile\cert8.db
@@ -30,7 +31,6 @@
 76ba0f6121ea0128f6fd5b968ff86fa4  .\goagent-local\python27.zip
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8489cdb6cd5e68e6fff7ad20134f0989  .\goagent-local\proxy.py
-8bbc5716f0843c7a5d3f88b65ee59ab7  .\updategc.php
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
