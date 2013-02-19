@@ -2,6 +2,7 @@
 0a6cd528a8580b9622d1284cf3a61aae  .\updategc.php
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 13103857637a5fb25e92537be3946828  .\runner.bat
+15fcdd0287b6d53ec34295c529a0ecfc  .\get-last-kown-good.inc.php
 16363e78f05a17e6d250be8a31578ad1  .\FirefoxPortable\Data\profile\cert8.db
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
 2303ea535203c79305490d6c20be8454  .\utility\md5deep.exe
@@ -20,7 +21,6 @@
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
-60a2592f3acb73b86c7ad391f0812f3c  .\get-last-kown-good.inc.php
 62e5466246bd44cc073d2a62038b77aa  .\goagent-local\cacerts.txt
 665ccc57a84c5639c4e5151686cc0432  .\utility\md5deep64.exe
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat

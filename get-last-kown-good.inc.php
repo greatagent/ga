@@ -1,14 +1,14 @@
 <?php
 #  wwqgtxx-goagent - Software suite for breakthrough GFW
 #  
-#  makegserver.inc.php - Reslove Google Server IP
+#  get-last-kown-good.inc.php - Grabbing last-known-good file from SmartHosts and Huhamhire-Hosts
 echo "\r\n";
-echo "Grabbing last-known-good file from smarthosts and huhamhire-hosts:\r\n";
+echo "Grabbing last-known-good file from SmartHosts and Huhamhire-Hosts:\r\n";
 
 /* FUNCTION */
 require_once("makegservers.inc.php");
 
-echo "Grabbing smarthosts hosts:\r\n";
+echo "Grabbing SmartHosts hosts:\r\n";
 $googleip=array();
 $host=request("GET /svn/trunk/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","smarthosts.googlecode.com");
 $host=explode("\r\n",$host);
@@ -21,7 +21,7 @@ foreach($host as $hostkey=>$hoststring){
 		}
 	}
 }
-echo "Grabbing huhamhire-hosts hosts:\r\n";
+echo "Grabbing Huhamhire-Hosts hosts:\r\n";
 $host=request("GET /git/downloads/raw/ipv4_mobile_utf8/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com");
 $host=explode("\r\n",$host);
 foreach($host as $hostkey=>$hoststring){
