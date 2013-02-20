@@ -20,3 +20,5 @@ utility\php\php.exe get-last-kown-good.inc.php
 :: Step7 - Start Firefox
 echo Starting FirefoxPortable...
 utility\php\php.exe startfirefox.inc.php
+
+pause
