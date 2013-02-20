@@ -7,13 +7,11 @@
 244225b9436c74c3a3b70388c5244d4a  .\goagent-local\SwitchyOptions.bak
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
-38c79da8b7896f4286b34d53ea86cfc3  .\miscellaneous.php
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 461697b3a0cf95f1fd10edfe67a20725  .\goagent-local\goagent-gtk.py
-496dba88e0528c75b7debe5db64d357d  .\git.txt
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 5ab543da4d1314f1ca28f974dfb0076f  .\makegservers.inc.php
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
@@ -22,14 +20,17 @@
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
 62e5466246bd44cc073d2a62038b77aa  .\goagent-local\cacerts.txt
 665ccc57a84c5639c4e5151686cc0432  .\utility\md5deep64.exe
+69872c1dc9ece44129db3bfda810d197  .\git.txt
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
 6c03747d42333dfc1f7ac85cc528f902  .\goagent-local\logo.png
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
+75eb668a5eba0a08106ed268bbeebfff  .\miscellaneous.php
 76ba0f6121ea0128f6fd5b968ff86fa4  .\goagent-local\python27.zip
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8489cdb6cd5e68e6fff7ad20134f0989  .\goagent-local\proxy.py
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
+92d129ac56138a24a99058b1e8fb212e  .\data\version
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
 a10f896fc4158c4d8fd3f91b98319c50  .\get-last-kown-good.inc.php
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
@@ -47,4 +48,3 @@ ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
-f453fe59737d8388da52e0376e35dadd  .\data\version
