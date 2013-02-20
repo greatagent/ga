@@ -1,4 +1,5 @@
 
+0afe56855446f70b2400da4eaeac0c00  .\data\version
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 13103857637a5fb25e92537be3946828  .\runner.bat
 16363e78f05a17e6d250be8a31578ad1  .\FirefoxPortable\Data\profile\cert8.db
@@ -6,7 +7,6 @@
 2303ea535203c79305490d6c20be8454  .\utility\md5deep.exe
 244225b9436c74c3a3b70388c5244d4a  .\goagent-local\SwitchyOptions.bak
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
-2ee4a11a04a08e718877dc3d4f21eb78  .\data\version
 38c79da8b7896f4286b34d53ea86cfc3  .\miscellaneous.php
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
@@ -15,10 +15,10 @@
 3fe60450805be0a6e6b2a200eacfdcbe  .\utility\php\php.ini
 461697b3a0cf95f1fd10edfe67a20725  .\goagent-local\goagent-gtk.py
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
+54f752ffdd33e7894c8a5cd1f3fa80c8  .\git.txt
 5ab543da4d1314f1ca28f974dfb0076f  .\makegservers.inc.php
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
-5e269bb287c671c45336e0804e246034  .\git.txt
 600b8334e4df7682fcd3f692f1b0f51c  .\cleanhash.php
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
 62e5466246bd44cc073d2a62038b77aa  .\goagent-local\cacerts.txt
