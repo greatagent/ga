@@ -1,21 +1,20 @@
 
-0afe56855446f70b2400da4eaeac0c00  .\data\version
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 13103857637a5fb25e92537be3946828  .\runner.bat
 16363e78f05a17e6d250be8a31578ad1  .\FirefoxPortable\Data\profile\cert8.db
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
 2303ea535203c79305490d6c20be8454  .\utility\md5deep.exe
 244225b9436c74c3a3b70388c5244d4a  .\goagent-local\SwitchyOptions.bak
+2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
 38c79da8b7896f4286b34d53ea86cfc3  .\miscellaneous.php
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
-3fe60450805be0a6e6b2a200eacfdcbe  .\utility\php\php.ini
 461697b3a0cf95f1fd10edfe67a20725  .\goagent-local\goagent-gtk.py
+496dba88e0528c75b7debe5db64d357d  .\git.txt
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
-54f752ffdd33e7894c8a5cd1f3fa80c8  .\git.txt
 5ab543da4d1314f1ca28f974dfb0076f  .\makegservers.inc.php
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
@@ -48,3 +47,4 @@ ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
+f453fe59737d8388da52e0376e35dadd  .\data\version
