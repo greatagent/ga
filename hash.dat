@@ -2,6 +2,7 @@
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 13103857637a5fb25e92537be3946828  .\runner.bat
 16363e78f05a17e6d250be8a31578ad1  .\FirefoxPortable\Data\profile\cert8.db
+168dfe7b6b7b81162bfbfebebd8566dd  .\cleanhash.php
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
 2303ea535203c79305490d6c20be8454  .\utility\md5deep.exe
 244225b9436c74c3a3b70388c5244d4a  .\goagent-local\SwitchyOptions.bak
@@ -16,11 +17,9 @@
 5ab543da4d1314f1ca28f974dfb0076f  .\makegservers.inc.php
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
-600b8334e4df7682fcd3f692f1b0f51c  .\cleanhash.php
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
 62e5466246bd44cc073d2a62038b77aa  .\goagent-local\cacerts.txt
 665ccc57a84c5639c4e5151686cc0432  .\utility\md5deep64.exe
-69872c1dc9ece44129db3bfda810d197  .\git.txt
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
 6c03747d42333dfc1f7ac85cc528f902  .\goagent-local\logo.png
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
@@ -30,12 +29,12 @@
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8489cdb6cd5e68e6fff7ad20134f0989  .\goagent-local\proxy.py
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
-92d129ac56138a24a99058b1e8fb212e  .\data\version
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
 a10f896fc4158c4d8fd3f91b98319c50  .\get-last-kown-good.inc.php
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
 a3de093304f7209b5f95530781a75731  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
+b292ba18e7d57b6ff2f1e12b554f0604  .\data\version
 b29c55163d23aacbd2a24e90ae18f2d3  .\goagent-local\proxy.ini
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
 c14a33e8eee1fd0e24592e51fd8c3c01  .\wwqgtxx-goagent.bat

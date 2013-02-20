@@ -16,7 +16,7 @@ function cleanup($line) {
     return false;
   }
    if (preg_match('/  \.\\\git\.txt$/',$line)) {
-    return true;
+    return false;
   }
   if (preg_match('/  \.\\\cert8\.db$/',$line)) {
     return true;
