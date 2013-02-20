@@ -11,7 +11,6 @@ $googleip=array();
 
 /* FUNCTION */
 function update($host){
-	$host=request($host);
 	$host=explode("\r\n",$host);
 	foreach($host as $hostkey=>$hoststring){
 		//talk.google.com is special case. We cannot use it as G-Server
@@ -91,16 +90,16 @@ function update($host){
 
 
 echo "Grabbing SmartHosts hosts:\r\n";
-update("GET /svn/trunk/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","smarthosts.googlecode.com");
+update(request("GET /svn/trunk/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","smarthosts.googlecode.com"));
 
 echo "Grabbing SmartHosts mobile hosts:\r\n";
-update("GET /svn/trunk/mobile_devices/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","smarthosts.googlecode.com");
+update(request("GET /svn/trunk/mobile_devices/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","smarthosts.googlecode.com"));
 
 echo "Grabbing SmartLadder hosts:\r\n";
-update("GET /svn/trunk/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","smartladder.googlecode.com");
+update(request("GET /svn/trunk/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","smartladder.googlecode.com"));
 
 echo "Grabbing Huhamhire-Hosts hosts:\r\n";
-update("GET /git/downloads/raw/ipv4_mobile_utf8/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com");
+update(request("GET /git/downloads/raw/ipv4_mobile_utf8/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com"));
 
 if(count($googleip)){
 	$googleip=array_unique($googleip);
