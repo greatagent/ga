@@ -41,8 +41,8 @@ d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
 d60725689326e73aa630cd2b991f9f21  .\string.inc.php
 d749ad4000c7747091f136d46cebfc9e  .\goagent-local\goagent.exe
+dbc87dcca9a853e97cb16e5930fa64ea  .\updategc.php
 ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
-ff4914b1f74aabb8672faf94a1bc9ce9  .\updategc.php
