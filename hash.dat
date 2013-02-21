@@ -1,5 +1,6 @@
 
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
+14bad2e25a6427ba09abf0c4e82ef1a6  .\data\version
 16363e78f05a17e6d250be8a31578ad1  .\FirefoxPortable\Data\profile\cert8.db
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
 22e96746125986b85455a62614fee245  .\makegservers.inc.php
@@ -37,7 +38,6 @@ b29c55163d23aacbd2a24e90ae18f2d3  .\goagent-local\proxy.ini
 bb61f04a05c5c264832b21ed1beffc03  .\get-last-kown-good.inc.php
 bde0984f77af9c671e3f2453e44e9cd2  .\data\host
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
-c8fc331581e0f21a68e82a8b98873e67  .\data\version
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d40b365c27b4768764bc9d5877d0adf2  .\miscellaneous.php
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
