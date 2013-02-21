@@ -4,7 +4,6 @@
 168dfe7b6b7b81162bfbfebebd8566dd  .\cleanhash.php
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
 2303ea535203c79305490d6c20be8454  .\utility\md5deep.exe
-241f695802fa55f19012c53e3ce802ed  .\data\version
 244225b9436c74c3a3b70388c5244d4a  .\goagent-local\SwitchyOptions.bak
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
@@ -14,6 +13,7 @@
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 461697b3a0cf95f1fd10edfe67a20725  .\goagent-local\goagent-gtk.py
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
+4ea5dc7654dac31d8f4b74a6d95bf4a2  .\updategc.php
 5ab543da4d1314f1ca28f974dfb0076f  .\makegservers.inc.php
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
@@ -33,7 +33,6 @@
 a10f896fc4158c4d8fd3f91b98319c50  .\get-last-kown-good.inc.php
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
 a3de093304f7209b5f95530781a75731  .\startfirefox.inc.php
-ab6758366578bd08c0d15ff443601168  .\updategc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 b29c55163d23aacbd2a24e90ae18f2d3  .\goagent-local\proxy.ini
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
@@ -46,4 +45,5 @@ ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 de61d8a034891853a82080d478a7d082  .\runner.bat
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
+e3f0f65fc29f0d92026d5e99dedc9646  .\data\version
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll

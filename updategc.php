@@ -10,7 +10,9 @@ chdir($currentdir[1]);
 
 
 
-if(file_exists("data/usegc2")){
+if(file_exists("data/usegctest")){
+	$host = "goagenttest.wwqgtxx-wallproxy.googlecode.com";
+}else if(file_exists("data/usegc2")){
 	$host = "goagent.wwqgtxx-wallproxy.googlecode.com";
 }else{
 	$host = "goagent.wwqgtxx-goagent.googlecode.com";
