@@ -1,4 +1,8 @@
 <?php
+#  wwqgtxx-goagent   - Software suite for breakthrough GFW
+#  wwqgtxx-wallproxy - Software suite for breakthrough GFW
+#  
+#  startfirefox.inc.php - Start Firefox
 function deldir($dir) { 
 	//先删除目录下的文件： 
 	$dh=opendir($dir); 
@@ -26,7 +30,7 @@ if(file_exists("./FirefoxPortable/FirefoxPortable.exe")){
 	exec('start ./FirefoxPortable/FirefoxPortable.exe "https://wwqgtxx-goagent.googlecode.com/git-history/web/ifanqiang.htm"');
 }
 else{
-	echo "Don't Have FirefoxPortable.";
+	echo "Don't Have FirefoxPortable.\r\n";
 	if(file_exists("./FirefoxPortable/Data/profile/cert8.db")){
 		@unlink("FirefoxPortable\Data\profile\cert8.db");
 		deldir("FirefoxPortable\Data\profile");

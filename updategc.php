@@ -1,8 +1,9 @@
 <?php
-#  wwqgtxx-goagent - Software suite for breakthrough GFW
+#  wwqgtxx-goagent   - Software suite for breakthrough GFW
+#  wwqgtxx-wallproxy - Software suite for breakthrough GFW
 #  
-#  updategc.php - Bootstrap Phase 1
-#  "gc" is stand for googleCode. In the old version, we use GAE for update, not GoogleCode.
+#  updategc.php - Updata Our Files From GoogleCode
+#  "gc" is stand for googleCode.
 
 /* Set Current Directory */
 preg_match('/(.*?)\\\updategc\.php$/',__FILE__,$currentdir); 

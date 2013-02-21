@@ -1,5 +1,6 @@
 <?php
-#  wwqgtxx-goagent - Software suite for breakthrough GFW
+#  wwqgtxx-goagent   - Software suite for breakthrough GFW
+#  wwqgtxx-wallproxy - Software suite for breakthrough GFW
 #  
 #  makegserver.inc.php - Reslove Google Server IP
 
