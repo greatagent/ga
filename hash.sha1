@@ -11,6 +11,7 @@
 28a1f9394cc379309d04064f3e28a4f5af05bfd6  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 3a450d7c21b4cc96581d4f0389e4fed7ee0a9e57  .\runner.bat
+4505067ee651cb2c3a2750eec6564769377f32f9  .\data\version
 4a1e7593c376b8e0d1b4d1ed9e88473e6a55f9b2  .\utility\php\pharcommand.phar
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
@@ -23,7 +24,6 @@
 783d5881c79763f4f07cd5c1744d9a9777928bce  .\cleanhash.php
 78d00c903f15e2b98cab23e626f38fd04be93498  .\string.inc.php
 7c8ea8ff0d060a4ae0c3191f93147c03329f0913  .\makegservers.inc.php
-7f4e76205142861aa41c322b4f62e3a49f840396  .\data\version
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
 8d157fcd656912e86d237c38f9f6bee4e0277710  .\miscellaneous.php
