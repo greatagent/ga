@@ -1,9 +1,10 @@
 
 00e71a9b1fe7f4fb7aa097a69ed243f317c2feae  .\utility\php\gmodule-2.dll
+03a40c1e269ddb7945bbf2804ecd7dd67552435d  .\get-last-kown-good.inc.php
 06327ccf551d4726b81a70ba4dd1216795ac8cde  .\goagent-local\logo.png
+08a6cd086c6607bd257d4b4e30342083075face9  .\data\version
 0b51fb415ec89848f339f8989d323bea722bfd70  .\goagent-local\msvcr100.dll
 0ce24adfb47cdab7ed360b57bdba9e5e16e9f1a2  .\goagent-local\SwitchyOptions.bak
-0d95764a4ed67d6f013d34d1a8b77d6edc30a499  .\get-last-kown-good.inc.php
 113e2ccf6322b9bfd83bf6bbf00a4aeaec1e525a  .\goagent-local\proxy.py
 11544d89a4583e2625e580510fde2999a0609fec  .\goagent-local\CA.key
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
@@ -13,7 +14,6 @@
 29acceb00958d41734b5d5aef5510b9c471cf95d  .\data\host
 3a450d7c21b4cc96581d4f0389e4fed7ee0a9e57  .\runner.bat
 433fb96df32ef0b670d52b74673e628fc4e1cce5  .\goagent-local\proxy.pac
-494a2e0b4a6f0461b2e07f29f180c4745b364fbb  .\data\version
 4a1e7593c376b8e0d1b4d1ed9e88473e6a55f9b2  .\utility\php\pharcommand.phar
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
