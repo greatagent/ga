@@ -27,6 +27,7 @@
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
 8d157fcd656912e86d237c38f9f6bee4e0277710  .\miscellaneous.php
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
+95d005005aebf895e1e3ee647f443729659822d9  .\get-last-kown-good.inc.php
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 9e3d84241053d0ff82d83104fe9f73b9f02a3b3e  .\goagent-local\python27.dll
 a817155206c141aec8587b795935e74a061f93cc  .\goagent-local\goagent-gtk.py
@@ -35,11 +36,10 @@ b241f1d75a1117969833c853623aabc6267177fc  .\goagent-local\python27.zip
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\goagent-local\Microsoft.VC90.CRT.manifest
 b43a51387a3788dae34568269bc5d852de7142da  .\utility\vcredist_x86_sc.exe
 bd225f53ecb970d87841e3ee5fda9cbd69cf264f  .\goagent-local\cacerts.txt
-bd44e6d4b987563d06675e13dcdfd0dfe21fe4bb  .\data\version
+bd9f09fde15cba172bb1b3b00a2de63fe17e00d0  .\data\version
 c6f7a1b457d042976e6900483172501c53db725e  .\utility\php\php.exe
 da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
 dca124f213fd3749beb90398cd75a5b9e2a183b5  .\wwqgtxx-goagent.bat
-dece7dc8e61994e5fef82011068727c2c2827f19  .\get-last-kown-good.inc.php
 e0ebf70d184c3db4efaed3e38a2403211db5259e  .\goagent-local\CA.crt
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\md5deep64.exe
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
