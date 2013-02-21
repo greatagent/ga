@@ -3,6 +3,7 @@
 06327ccf551d4726b81a70ba4dd1216795ac8cde  .\goagent-local\logo.png
 0b51fb415ec89848f339f8989d323bea722bfd70  .\goagent-local\msvcr100.dll
 0ce24adfb47cdab7ed360b57bdba9e5e16e9f1a2  .\goagent-local\SwitchyOptions.bak
+0e0ee6d10ef4fe94e2002ea59b6ef61978058438  .\data\version
 113e2ccf6322b9bfd83bf6bbf00a4aeaec1e525a  .\goagent-local\proxy.py
 11544d89a4583e2625e580510fde2999a0609fec  .\goagent-local\CA.key
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
@@ -28,7 +29,6 @@
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 9e3d84241053d0ff82d83104fe9f73b9f02a3b3e  .\goagent-local\python27.dll
-a553f9b73084fe3e7cacb506f20bf57601f56fae  .\data\version
 a817155206c141aec8587b795935e74a061f93cc  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\wwqgtxx-goagent.pubkey
 aaab50ef410b7e52fa05300438c6ba18b6a59209  .\updategc.php
