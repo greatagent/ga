@@ -3,6 +3,8 @@
 #  
 #  miscellaneous.php - Last cleanup
 
+@unlink("hash.dat");
+@unlink("sign.dat");
 @unlink("git.txt");
 @unlink("utility/certenc.dll");
 @unlink("utility/certutil.exe");

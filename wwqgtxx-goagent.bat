@@ -10,21 +10,21 @@ title wwqgtxx-goagent
 echo Generating hash table...
 
 :try
-del hash.dat
+del hash.sha1
 if %PROCESSOR_ARCHITECTURE%==x86 (
-	utility\md5deep.exe -rl . > hash.dat
+	utility\sha1deep.exe -rl . > hash.sha1
 ) else (
-	utility\md5deep64.exe -rl . > hash.dat
+	utility\sha1deep64.exe -rl . > hash.sha1
 )
 
-if not exist hash.dat (
+if not exist hash.sha1 (
 	echo "FAIL TO GENERATE HASH FILE! RETRY..."
 	sleep 1 
 	goto try
 )
 
 
-for %%a in (hash.dat) do (
+for %%a in (hash.sha1) do (
 	set length=%%~za
 )
 

@@ -36,6 +36,12 @@ function cleanup($line) {
   if (preg_match('/  \.\\\chrome\\\/',$line)) {
     return false;
   }
+  if (preg_match('/  \.\\\hash\.sha1$/',$line)) {
+    return false;
+  }
+  if (preg_match('/  \.\\\sign\.sha1$/',$line)) {
+    return false;
+  }
   if (preg_match('/  \.\\\hash\.dat$/',$line)) {
     return false;
   }
@@ -72,16 +78,29 @@ function cleanup($line) {
 
 
 /* Check local hash.dat exists or not*/
-if(! file_exists("hash.dat")){
-	die("Fatal Error: hash.dat not exists!");
+if(file_exists("hash.dat")){
+	$hashtable=file_get_contents("hash.dat");
+	$hashtable=explode("\r\n",$hashtable);
+	$hashtable=array_filter($hashtable,"cleanup");
+	sort($hashtable);
+	$hashtable=implode("\r\n",$hashtable);
+
+	/* Output hash.dat */
+	if(! file_put_contents("hash.dat",$hashtable)){ echo "ERROR to wrtie hash.dat!"; }
 }
 
-$hashtable=file_get_contents("hash.dat");
+
+/* Check local hash.dat exists or not*/
+if(! file_exists("hash.sha1")){
+	die("Fatal Error: hash.sha1 not exists!");
+}
+
+$hashtable=file_get_contents("hash.sha1");
 $hashtable=explode("\r\n",$hashtable);
 $hashtable=array_filter($hashtable,"cleanup");
 sort($hashtable);
 $hashtable=implode("\r\n",$hashtable);
 
-/* Output hash.dat */
-if(! file_put_contents("hash.dat",$hashtable)){ echo "ERROR to wrtie hash.dat!"; }
+/* Output hash.sha1 */
+if(! file_put_contents("hash.sha1",$hashtable)){ echo "ERROR to wrtie hash.sha1!"; }
 ?>
