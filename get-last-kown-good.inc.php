@@ -22,6 +22,7 @@ foreach($host as $hostkey=>$hoststring){
 		}
 	}
 }
+$googleip1=array_unique($googleip1);
 echo "SmartHosts=".implode(",",$googleip1)."\r\n";
 echo "Grabbing Huhamhire-Hosts hosts:\r\n";
 $googleip2=array();
@@ -36,6 +37,7 @@ foreach($host as $hostkey=>$hoststring){
 		}
 	}
 }
+$googleip2=array_unique($googleip2);
 echo "Huhamhire-Hosts=".implode(",",$googleip2)."\r\n";
 
 $googleip = $googleip1 +$googleip2;
