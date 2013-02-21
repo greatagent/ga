@@ -6,6 +6,7 @@
 244225b9436c74c3a3b70388c5244d4a  .\goagent-local\SwitchyOptions.bak
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
+29dc65a2fe0ba209402bfec667012c94  .\data\version
 2a0234e7d6f39d2fc2738b156482639d  .\wwqgtxx-goagent.bat
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
@@ -19,12 +20,10 @@
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
 62e5466246bd44cc073d2a62038b77aa  .\goagent-local\cacerts.txt
 665ccc57a84c5639c4e5151686cc0432  .\utility\sha1deep64.exe
-69f865d0dfcd50746ff79c93610e1606  .\data\version
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
 6c03747d42333dfc1f7ac85cc528f902  .\goagent-local\logo.png
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
-762b463a776bd2a709c1ee01a62269ba  .\get-last-kown-good.inc.php
 76ba0f6121ea0128f6fd5b968ff86fa4  .\goagent-local\python27.zip
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8489cdb6cd5e68e6fff7ad20134f0989  .\goagent-local\proxy.py
@@ -48,4 +47,5 @@ de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 de61d8a034891853a82080d478a7d082  .\runner.bat
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
+ed00ac21129a1ec920929f3f16297ccb  .\get-last-kown-good.inc.php
 eefdd638c94ca5cade99d343def4b1ed  .\updategc.php

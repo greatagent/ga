@@ -25,7 +25,6 @@
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
-9a5d1928dfb4dc447195fe5110780543b6af3e49  .\get-last-kown-good.inc.php
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 9e3d84241053d0ff82d83104fe9f73b9f02a3b3e  .\goagent-local\python27.dll
 a817155206c141aec8587b795935e74a061f93cc  .\goagent-local\goagent-gtk.py
@@ -37,7 +36,8 @@ b43a51387a3788dae34568269bc5d852de7142da  .\utility\vcredist_x86_sc.exe
 bd225f53ecb970d87841e3ee5fda9cbd69cf264f  .\goagent-local\cacerts.txt
 c219c5d497e9f9cc0afadff29783d5cd7227a91d  .\miscellaneous.php
 c6f7a1b457d042976e6900483172501c53db725e  .\utility\php\php.exe
-d6d01dc07e837364166637e786e69318fe3639a4  .\data\version
+cf1199aca4989edafca1af7977986696b27404dc  .\data\version
+d38d9a3eb003dcd149f702bd6bca20892a111bf3  .\get-last-kown-good.inc.php
 da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
 dca124f213fd3749beb90398cd75a5b9e2a183b5  .\wwqgtxx-goagent.bat
 e0ebf70d184c3db4efaed3e38a2403211db5259e  .\goagent-local\CA.crt
