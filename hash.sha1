@@ -11,6 +11,7 @@
 28a1f9394cc379309d04064f3e28a4f5af05bfd6  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 3a450d7c21b4cc96581d4f0389e4fed7ee0a9e57  .\runner.bat
+40558207a8521dda86a5f9314e0d0d4606d77b14  .\data\version
 4a1e7593c376b8e0d1b4d1ed9e88473e6a55f9b2  .\utility\php\pharcommand.phar
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
@@ -20,7 +21,6 @@
 6a72583c5b42636f0f8a8e2586fb3d1dd0fe4aad  .\goagent-local\proxy.bat
 6ca1cedc91693d63ab551768b9cec36646644895  .\goagent-local\certmgr.exe
 723682d6a052f2e234ff06e717311a153bef0e0d  .\updategc.php
-783d5881c79763f4f07cd5c1744d9a9777928bce  .\cleanhash.php
 78d00c903f15e2b98cab23e626f38fd04be93498  .\string.inc.php
 7c8ea8ff0d060a4ae0c3191f93147c03329f0913  .\makegservers.inc.php
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
@@ -36,16 +36,14 @@ b241f1d75a1117969833c853623aabc6267177fc  .\goagent-local\python27.zip
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\goagent-local\Microsoft.VC90.CRT.manifest
 b43a51387a3788dae34568269bc5d852de7142da  .\utility\vcredist_x86_sc.exe
 bd225f53ecb970d87841e3ee5fda9cbd69cf264f  .\goagent-local\cacerts.txt
-bd9f09fde15cba172bb1b3b00a2de63fe17e00d0  .\data\version
+c0c16f6a21a469e7f8a527568c6a0b1369a1967e  .\cleanhash.php
 c6f7a1b457d042976e6900483172501c53db725e  .\utility\php\php.exe
 da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
 dca124f213fd3749beb90398cd75a5b9e2a183b5  .\wwqgtxx-goagent.bat
 e0ebf70d184c3db4efaed3e38a2403211db5259e  .\goagent-local\CA.crt
-e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\md5deep64.exe
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 e6c074c41d826f29559663b35dc4b48976c939ab  .\goagent-local\proxy.ini
 e88af65fbe3403ca1c3d842341488590fa8fa070  .\goagent-local\goagent.exe
-ed95b93cb6152b337c42947437ae64d524931218  .\utility\md5deep.exe
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
 fd338bc63616951af232da3e76a7195c2658795f  .\goagent-local\addto-startup.py

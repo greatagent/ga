@@ -36,6 +36,12 @@ function cleanup($line) {
   if (preg_match('/  \.\\\chrome\\\/',$line)) {
     return false;
   }
+  if (preg_match('/  \.\\\utility\\\md5deep\.exe$/',$line)) {
+    return false;
+  }
+  if (preg_match('/  \.\\\utility\\\md5deep64\.exe$/',$line)) {
+    return false;
+  }
   if (preg_match('/  \.\\\hash\.sha1$/',$line)) {
     return false;
   }
