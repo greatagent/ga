@@ -1,14 +1,13 @@
 
 00e71a9b1fe7f4fb7aa097a69ed243f317c2feae  .\utility\php\gmodule-2.dll
-03a40c1e269ddb7945bbf2804ecd7dd67552435d  .\get-last-kown-good.inc.php
 06327ccf551d4726b81a70ba4dd1216795ac8cde  .\goagent-local\logo.png
-08a6cd086c6607bd257d4b4e30342083075face9  .\data\version
 0b51fb415ec89848f339f8989d323bea722bfd70  .\goagent-local\msvcr100.dll
 0ce24adfb47cdab7ed360b57bdba9e5e16e9f1a2  .\goagent-local\SwitchyOptions.bak
 113e2ccf6322b9bfd83bf6bbf00a4aeaec1e525a  .\goagent-local\proxy.py
 11544d89a4583e2625e580510fde2999a0609fec  .\goagent-local\CA.key
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 16635cf9dd8d1d8ecd6f3a9438715efd9e14b1be  .\goagent-local\addto-startup.vbs
+203d71547eebbb6445e564fa675622d9c9602754  .\data\version
 28a1f9394cc379309d04064f3e28a4f5af05bfd6  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29acceb00958d41734b5d5aef5510b9c471cf95d  .\data\host
@@ -46,6 +45,7 @@ e43cd8ab4b4b5ba08e13df2aed14ce927abc7bdd  .\cleanhash.php
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 e6c074c41d826f29559663b35dc4b48976c939ab  .\goagent-local\proxy.ini
 e88af65fbe3403ca1c3d842341488590fa8fa070  .\goagent-local\goagent.exe
+eae1fdb643e043d827f54289df18e4d78319d2ad  .\get-last-kown-good.inc.php
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
 fd338bc63616951af232da3e76a7195c2658795f  .\goagent-local\addto-startup.py
