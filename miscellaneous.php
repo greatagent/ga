@@ -5,6 +5,8 @@
 
 @unlink("hash.dat");
 @unlink("sign.dat");
+@unlink("utility/md5deep.exe");
+@unlink("utility/md5deep64.exe");
 @unlink("git.txt");
 @unlink("utility/certenc.dll");
 @unlink("utility/certutil.exe");
