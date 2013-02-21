@@ -32,7 +32,6 @@
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
 9278be31bd16897885fd8c8def318f7f  .\miscellaneous.php
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
-9d7a1e996635c40d1eb8ed3d4189dfd9  .\data\version
 a10f896fc4158c4d8fd3f91b98319c50  .\get-last-kown-good.inc.php
 a1a0e4b8df2eb5c035d07c2aab8e604a  .\updategc.php
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
@@ -49,3 +48,4 @@ de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 de61d8a034891853a82080d478a7d082  .\runner.bat
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
+e8d813fd8e175022dc231d5fa2e9e2d7  .\data\version

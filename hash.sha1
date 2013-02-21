@@ -7,11 +7,11 @@
 0d9d5260cf4e2a9d708f6622c1cdac432f9f6064  .\startfirefox.inc.php
 113e2ccf6322b9bfd83bf6bbf00a4aeaec1e525a  .\goagent-local\proxy.py
 11544d89a4583e2625e580510fde2999a0609fec  .\goagent-local\CA.key
+122f5b215018d8ac0cd7022672c5c7615cd18b00  .\data\version
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 16635cf9dd8d1d8ecd6f3a9438715efd9e14b1be  .\goagent-local\addto-startup.vbs
 28a1f9394cc379309d04064f3e28a4f5af05bfd6  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
-3427f479a37b112dc7dbbde1d2970f8e1fe28ffd  .\data\version
 3a450d7c21b4cc96581d4f0389e4fed7ee0a9e57  .\runner.bat
 4a1e7593c376b8e0d1b4d1ed9e88473e6a55f9b2  .\utility\php\pharcommand.phar
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
