@@ -22,6 +22,7 @@ foreach($host as $hostkey=>$hoststring){
 		}
 	}
 }
+echo "SmartHosts=".implode(",",$googleip1)."\r\n";
 echo "Grabbing Huhamhire-Hosts hosts:\r\n";
 $googleip2=array();
 $host=request("GET /git/downloads/raw/ipv4_mobile_utf8/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com");
@@ -35,6 +36,7 @@ foreach($host as $hostkey=>$hoststring){
 		}
 	}
 }
+echo "Huhamhire-Hosts=".implode(",",$googleip2)."\r\n";
 
 $googleip = $googleip1 +$googleip2;
 
