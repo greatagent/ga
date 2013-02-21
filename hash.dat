@@ -19,11 +19,12 @@
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
 62e5466246bd44cc073d2a62038b77aa  .\goagent-local\cacerts.txt
 665ccc57a84c5639c4e5151686cc0432  .\utility\sha1deep64.exe
+69f865d0dfcd50746ff79c93610e1606  .\data\version
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
 6c03747d42333dfc1f7ac85cc528f902  .\goagent-local\logo.png
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
-7343c6ec81ba98a465f36f7d4febcca4  .\data\version
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
+762b463a776bd2a709c1ee01a62269ba  .\get-last-kown-good.inc.php
 76ba0f6121ea0128f6fd5b968ff86fa4  .\goagent-local\python27.zip
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8489cdb6cd5e68e6fff7ad20134f0989  .\goagent-local\proxy.py
@@ -40,7 +41,6 @@ bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d40b365c27b4768764bc9d5877d0adf2  .\miscellaneous.php
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
-d45a2880385e187d5a9d6c811846678c  .\get-last-kown-good.inc.php
 d60725689326e73aa630cd2b991f9f21  .\string.inc.php
 d749ad4000c7747091f136d46cebfc9e  .\goagent-local\goagent.exe
 ddf130f30f4beb519cfecde666e3843b  .\utility\php\gmodule-2.dll
