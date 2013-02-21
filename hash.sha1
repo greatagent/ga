@@ -5,7 +5,6 @@
 0ce24adfb47cdab7ed360b57bdba9e5e16e9f1a2  .\goagent-local\SwitchyOptions.bak
 113e2ccf6322b9bfd83bf6bbf00a4aeaec1e525a  .\goagent-local\proxy.py
 11544d89a4583e2625e580510fde2999a0609fec  .\goagent-local\CA.key
-14125e6c7df421efd3eb9cce8ea17bee06b867d8  .\data\version
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 16635cf9dd8d1d8ecd6f3a9438715efd9e14b1be  .\goagent-local\addto-startup.vbs
 28a1f9394cc379309d04064f3e28a4f5af05bfd6  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
@@ -14,6 +13,7 @@
 3a450d7c21b4cc96581d4f0389e4fed7ee0a9e57  .\runner.bat
 433fb96df32ef0b670d52b74673e628fc4e1cce5  .\goagent-local\proxy.pac
 4a1e7593c376b8e0d1b4d1ed9e88473e6a55f9b2  .\utility\php\pharcommand.phar
+50a499b33e2f5ec3285423c1d4ebde0fdb68e8e5  .\data\version
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
 587cc61dbae6ad52f35aae9adbef4505dd534108  .\FirefoxPortable\Data\profile\cert8.db
@@ -45,7 +45,7 @@ e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 e6c074c41d826f29559663b35dc4b48976c939ab  .\goagent-local\proxy.ini
 e88af65fbe3403ca1c3d842341488590fa8fa070  .\goagent-local\goagent.exe
 eae1fdb643e043d827f54289df18e4d78319d2ad  .\get-last-kown-good.inc.php
+ec41a298bb999bc77a27d62465566b0349b53bd6  .\makegservers.inc.php
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
-fc1fc0a3b9b531030e53bb42d08415c246679e89  .\makegservers.inc.php
 fd338bc63616951af232da3e76a7195c2658795f  .\goagent-local\addto-startup.py

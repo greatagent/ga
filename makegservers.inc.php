@@ -20,8 +20,12 @@ function request($query,$host){
 					while ( !feof($fp) ) {
 						$response .= fgets($fp, 1024);
 					}	
-					echo $response;
 					if(preg_match('/HTTP\/1.1 200 OK/',$response)){
+						$response=explode("\r\n\r\n",$response);
+						unset($response[0]); $response=implode("\r\n\r\n",$response);
+						$success=true;
+						echo "OK!\r\n";
+					}elseif(preg_match('/HTTP\/1.0 200 OK/',$response)){
 						$response=explode("\r\n\r\n",$response);
 						unset($response[0]); $response=implode("\r\n\r\n",$response);
 						$success=true;

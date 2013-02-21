@@ -14,6 +14,7 @@
 461697b3a0cf95f1fd10edfe67a20725  .\goagent-local\goagent-gtk.py
 49731f272f7c5227f60660fff6d7c2d1  .\cleanhash.php
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
+5439397a12bc59dec6a66cbcd1216839  .\data\version
 5b41fdb12d7943f5a930a928143a3d4b  .\utility\php\pharcommand.phar
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 607c3bb7068c305f07b7498652bf5e7f  .\goagent-local\CA.key
@@ -22,7 +23,6 @@
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
 6c03747d42333dfc1f7ac85cc528f902  .\goagent-local\logo.png
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
-73034c76db98e005049abea0d927f15b  .\data\version
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
 76ba0f6121ea0128f6fd5b968ff86fa4  .\goagent-local\python27.zip
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
@@ -30,12 +30,12 @@
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
 9d8cf1c5dc159bcbbed0017470cc1665  .\goagent-local\proxy.pac
-9f874cc837b48e18572e1ab2fd7bf688  .\makegservers.inc.php
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 b29c55163d23aacbd2a24e90ae18f2d3  .\goagent-local\proxy.ini
 b637c947a3995140ca18cada35c4d402  .\get-last-kown-good.inc.php
+b64ff9575a3202c1c3e18727a17306dd  .\makegservers.inc.php
 bde0984f77af9c671e3f2453e44e9cd2  .\data\host
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
