@@ -3,18 +3,27 @@
 # Contributor:
 #      Phus Lu        <phus.lu@gmail.com>
 
-__version__ = '1.3'
+__version__ = '1.4'
 
 import sys
 import os
 import re
 import time
+import thread
 import platform
 
-import pygtk
-pygtk.require('2.0')
-import gtk
-
+try:
+    import pygtk
+    pygtk.require('2.0')
+    import gtk
+    gtk.gdk.threads_init()
+except Exception:
+    sys.exit(os.system(u'gdialog --title "GoAgent GTK" --msgbox "\u8bf7\u5b89\u88c5 python-gtk2" 15 60'.encode(sys.getfilesystemencoding() or sys.getdefaultencoding(), 'replace')))
+try:
+    import pynotify
+    pynotify.init('GoAgent Notify')
+except ImportError:
+    pynotify = None
 try:
     import appindicator
 except ImportError:
@@ -24,19 +33,28 @@ try:
 except ImportError:
     sys.exit(gtk.MessageDialog (None, gtk.DIALOG_MODAL, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, u'\u8bf7\u5b89\u88c5 python-vte').run())
 
+def spawn_later(seconds, target, *args, **kwargs):
+    def wrap(*args, **kwargs):
+        import time
+        time.sleep(seconds)
+        return target(*args, **kwargs)
+    return thread.start_new_thread(wrap, args, kwargs)
+
 def drop_desktop():
     filename = os.path.abspath(__file__)
     dirname = os.path.dirname(filename)
     DESKTOP_FILE = '''\
 #!/usr/bin/env xdg-open
 [Desktop Entry]
+Type=Application
 Name=GoAgent GTK
-Comment=GoAgent GTK Shell
-Categories=GTK;Utility;
+Comment=GoAgent GTK Launcher
+Categories=Network;Proxy;
 Exec=/usr/bin/env python "%s"
 Icon=%s/logo.png
 Terminal=false
-Type=Application''' % (filename, dirname)
+StartupNotify=true
+''' % (filename, dirname)
     for dirname in map(os.path.expanduser, ['~/Desktop', u'~/桌面']):
         if os.path.isdir(dirname):
             filename = os.path.join(dirname, 'goagent-gtk.desktop')
@@ -57,6 +75,8 @@ def should_visible():
 class GoAgentAppIndicator:
 
     command = ['python', 'proxy.py']
+    message = u'GoAgent已经启动，单击托盘图标可以最小化'
+    fail_message = u'GoAgent启动失败，请查看控制台窗口的错误信息。'
 
     def __init__(self, window, terminal):
         self.window = window
@@ -69,6 +89,8 @@ class GoAgentAppIndicator:
             self.window.connect('delete-event', lambda w,e: gtk.main_quit())
         else:
             self.childexited = None
+
+        spawn_later(0.5, self.show_startup_notify)
 
         if should_visible():
             self.window.show_all()
@@ -104,13 +126,38 @@ class GoAgentAppIndicator:
 
         self.ind.set_menu(self.menu)
 
+    def show_notify(self, message=None, timeout=None):
+        if pynotify and message:
+            notification = pynotify.Notification('GoAgent Notify', message)
+            notification.set_hint('x', 200)
+            notification.set_hint('y', 400)
+            if timeout:
+                notification.set_timeout(timeout)
+            notification.show()
+
+    def show_startup_notify(self):
+        if self.check_child_exists():
+            self.show_notify(self.message, timeout=3)
+
+    def check_child_exists(self):
+        if self.childpid <= 0:
+            return False
+        cmd = 'ps -p %s' % self.childpid
+        lines = os.popen(cmd).read().strip().splitlines()
+        if len(lines) < 2:
+            return False
+        return True
+
     def on_child_exited(self, term):
         if self.terminal.get_child_exit_status() == 0:
             gtk.main_quit()
+        else:
+            self.show_notify(self.fail_message)
 
     def on_show(self, widget, data=None):
         self.window.show_all()
         self.window.present()
+        self.terminal.feed('\r')
 
     def on_hide(self, widget, data=None):
         self.window.hide_all()

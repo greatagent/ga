@@ -3,8 +3,6 @@
 06327ccf551d4726b81a70ba4dd1216795ac8cde  .\goagent-local\logo.png
 0b51fb415ec89848f339f8989d323bea722bfd70  .\goagent-local\msvcr100.dll
 0ce24adfb47cdab7ed360b57bdba9e5e16e9f1a2  .\goagent-local\SwitchyOptions.bak
-0e0ee6d10ef4fe94e2002ea59b6ef61978058438  .\data\version
-113e2ccf6322b9bfd83bf6bbf00a4aeaec1e525a  .\goagent-local\proxy.py
 11544d89a4583e2625e580510fde2999a0609fec  .\goagent-local\CA.key
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 16635cf9dd8d1d8ecd6f3a9438715efd9e14b1be  .\goagent-local\addto-startup.vbs
@@ -12,12 +10,15 @@
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29acceb00958d41734b5d5aef5510b9c471cf95d  .\data\host
 3a450d7c21b4cc96581d4f0389e4fed7ee0a9e57  .\runner.bat
+3a84bf5c52732598529d63c2856467d14ca36d55  .\goagent-local\goagent-gtk.py
+3c696c9f7fdf221d8310294f038af070a59fd107  .\goagent-local\proxy.py
 433fb96df32ef0b670d52b74673e628fc4e1cce5  .\goagent-local\proxy.pac
 482029cb5642995ab06837aa00175c78ef65c8fb  .\get-last-kown-good.inc.php
 4a1e7593c376b8e0d1b4d1ed9e88473e6a55f9b2  .\utility\php\pharcommand.phar
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
 587cc61dbae6ad52f35aae9adbef4505dd534108  .\FirefoxPortable\Data\profile\cert8.db
+5e83ef31ce0bdf4500c31c508e1ffa859f9fa1f0  .\data\version
 62e95ed22ba86ee833f8445404e4f91124d063af  .\goagent-local\python27.exe
 673a814442244efcca3ecf8652f71c86f240afb3  .\utility\php\ext\php_sockets.dll
 6a72583c5b42636f0f8a8e2586fb3d1dd0fe4aad  .\goagent-local\proxy.bat
@@ -29,7 +30,6 @@
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 9e3d84241053d0ff82d83104fe9f73b9f02a3b3e  .\goagent-local\python27.dll
-a817155206c141aec8587b795935e74a061f93cc  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\wwqgtxx-goagent.pubkey
 aaab50ef410b7e52fa05300438c6ba18b6a59209  .\updategc.php
 b241f1d75a1117969833c853623aabc6267177fc  .\goagent-local\python27.zip
