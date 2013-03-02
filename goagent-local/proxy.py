@@ -21,6 +21,8 @@ import os
 import glob
 
 sys.path += glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'python*.zip'))
+sys.path += os.path.join(os.path.dirname(os.path.abspath('getmyconfig.py')))
+sys.path += os.path.split(os.path.realpath(__file__))[0]
 any(sys.path.append(x) for x in glob.glob('*.egg') if x not in sys.path)
 
 try:

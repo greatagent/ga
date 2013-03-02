@@ -1,7 +1,8 @@
 
 04687dec01535b1cc4cc1ea3b36ef09c  .\get-last-kown-good.inc.php
-08e4a7d5e92ebace110051377752c3fb  .\data\version
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
+119f333e62a327fbcb801b8e0a11a6c3  .\data\version
+199abcd8549be5bd5172db93dc71ecdd  .\goagent-local\getmyconfig.py
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
 244225b9436c74c3a3b70388c5244d4a  .\goagent-local\SwitchyOptions.bak
@@ -13,6 +14,7 @@
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 3f2fb2b19998e24820c750bc2fa77748  .\FirefoxPortable\Data\profile\cert8.db
+47732adee782b0fe51d1bbeda1f11bdd  .\goagent-local\proxy.ini
 49731f272f7c5227f60660fff6d7c2d1  .\cleanhash.php
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 5c682058ebc02157feff8211bfb8ee9a  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
@@ -23,7 +25,7 @@
 6c03747d42333dfc1f7ac85cc528f902  .\goagent-local\logo.png
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
-76ba0f6121ea0128f6fd5b968ff86fa4  .\goagent-local\python27.zip
+7e9237e474498e863aaa5c3c71b3768b  .\goagent-local\proxy.py
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8c92ebe6a45171e7523bae13e91bfd25  .\goagent-local\addto-startup.py
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
@@ -32,11 +34,10 @@
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
-b29c55163d23aacbd2a24e90ae18f2d3  .\goagent-local\proxy.ini
 b64ff9575a3202c1c3e18727a17306dd  .\makegservers.inc.php
-b884740030f00472623354193780bb2b  .\goagent-local\proxy.py
 bde0984f77af9c671e3f2453e44e9cd2  .\data\host
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
+c227abb9dddcca566faada2af3addad6  .\goagent-local\python27.zip
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d40b365c27b4768764bc9d5877d0adf2  .\miscellaneous.php
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
@@ -45,5 +46,6 @@ d749ad4000c7747091f136d46cebfc9e  .\goagent-local\goagent.exe
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 de61d8a034891853a82080d478a7d082  .\runner.bat
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
+e46c69626e8bdfe6cf250795b57165be  .\goagent-local\myproxy.ini.sample
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
 eefdd638c94ca5cade99d343def4b1ed  .\updategc.php
