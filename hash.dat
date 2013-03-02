@@ -1,9 +1,9 @@
 
 04687dec01535b1cc4cc1ea3b36ef09c  .\get-last-kown-good.inc.php
+08e4a7d5e92ebace110051377752c3fb  .\data\version
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
-23b7900edf0301136ac03d7ea8124070  .\goagent-local\proxy.py
 244225b9436c74c3a3b70388c5244d4a  .\goagent-local\SwitchyOptions.bak
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
@@ -34,9 +34,9 @@ ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 b29c55163d23aacbd2a24e90ae18f2d3  .\goagent-local\proxy.ini
 b64ff9575a3202c1c3e18727a17306dd  .\makegservers.inc.php
+b884740030f00472623354193780bb2b  .\goagent-local\proxy.py
 bde0984f77af9c671e3f2453e44e9cd2  .\data\host
 bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
-c2df3f2af47249c271aad34dc95838a1  .\data\version
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d40b365c27b4768764bc9d5877d0adf2  .\miscellaneous.php
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1

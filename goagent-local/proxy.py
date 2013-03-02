@@ -12,6 +12,7 @@
 #      Ming Bai       <mbbill@gmail.com>
 #      Bin Yu         <yubinlove1991@gmail.com>
 #      Zhang Youfu    <zhangyoufu@gmail.com>
+#      Harmony Meow   <harmony.meow@gmail.com>
 
 __version__ = '2.1.12'
 
@@ -20,9 +21,11 @@ import os
 import glob
 
 sys.path += glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'python*.zip'))
+any(sys.path.append(x) for x in glob.glob('*.egg') if x not in sys.path)
 
 try:
     import gevent
+    import gevent.core
     import gevent.queue
     import gevent.monkey
     import gevent.coros
@@ -32,7 +35,11 @@ try:
     import gevent.timeout
     gevent.monkey.patch_all(dns=gevent.version_info[0]>=1)
 except ImportError:
-    sys.stderr.write(' WARNING : python-gevent not installed. `https://github.com/SiteSupport/gevent/downloads`\n')
+    sys.stderr.write('WARNING: python-gevent not installed. \n')
+    if sys.platform.startswith('linux'):
+        sys.stderr.write('wget --no-check-certificate --header="Host: goagent.googlecode.com" https://www.google.cn/files/gevent-1.0dev-linux.egg\n')
+    else:
+        sys.stderr.write('sudo easy_install gevent')
     import Queue
     import thread
     import threading
@@ -115,6 +122,7 @@ import heapq
 import re
 import traceback
 import random
+import shutil
 import base64
 import hashlib
 import fnmatch
@@ -123,7 +131,6 @@ import socket
 import ssl
 import select
 import httplib
-import urllib2
 import urlparse
 import ConfigParser
 try:
@@ -216,7 +223,7 @@ class CertUtil(object):
         subj.localityName = 'Cernet'
         subj.organizationName = 'GoAgent'
         subj.organizationalUnitName = 'GoAgent Root'
-        subj.commonName = 'GoAgent'
+        subj.commonName = 'GoAgent CA'
         ca.gmtime_adj_notBefore(0)
         ca.gmtime_adj_notAfter(24 * 60 * 60 * 3652)
         ca.set_issuer(ca.get_subject())
@@ -326,8 +333,6 @@ class CertUtil(object):
         cmd = ''
         if sys.platform.startswith('win'):
             cmd = 'cd /d "%s" && .\certmgr.exe -add %s -c -s -r localMachine Root >NUL' % (dirname, basename)
-        elif sys.platform == 'cygwin':
-            cmd = 'cmd /c "pushd %s && certmgr.exe -add %s -c -s -r localMachine Root"' % (dirname, basename)
         elif sys.platform == 'darwin':
             cmd = 'security find-certificate -a -c "%s" | grep "%s" >/dev/null || security add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" "%s"' % (commonname, commonname, certfile)
         elif sys.platform.startswith('linux'):
@@ -344,21 +349,48 @@ class CertUtil(object):
     def check_ca():
         #Check CA exists
         capath = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'CA.crt')
+        certdir = os.path.join(os.path.dirname(__file__), 'certs')
         if not os.path.exists(capath):
             if not OpenSSL:
                 logging.critical('CA.key is not exist and OpenSSL is disabled, ABORT!')
                 sys.exit(-1)
             if os.name == 'nt':
                 os.system('certmgr.exe -del -n "GoAgent CA" -c -s -r localMachine Root')
-            [os.remove(os.path.join('certs', x)) for x in os.listdir('certs')]
+            if os.path.exists(certdir):
+                if os.path.isdir(certdir):
+                    shutil.rmtree(certdir)
+                else:
+                    os.remove(certdir)
+                os.mkdir(certdir)
             CertUtil.dump_ca('CA.key', 'CA.crt')
         #Check CA imported
         if CertUtil.import_ca(capath) != 0:
             logging.warning('GoAgent install certificate failed, Please run proxy.py by administrator/root/sudo')
         #Check Certs Dir
-        certdir = os.path.join(os.path.dirname(__file__), 'certs')
         if not os.path.exists(certdir):
             os.makedirs(certdir)
+
+class ProxyUtil(object):
+    """ProxyUtil module, based on urllib2"""
+
+    urllib2 = __import__('urllib.request', fromlist=['']) if sys.version[0] == '3' else __import__('urllib2')
+
+    @staticmethod
+    def parse_proxy(proxy):
+        urllib2 = ProxyUtil.urllib2
+        return urllib2._parse_proxy(proxy)
+
+    @staticmethod
+    def get_system_proxy():
+        urllib2 = ProxyUtil.urllib2
+        system_proxy = None
+        try:
+            proxies = (x for x in urllib2.build_opener().handlers if isinstance(x, urllib2.ProxyHandler)).next().proxies
+            system_proxy = proxies.get('https') or proxies.get('http') or None
+        except StopIteration:
+            pass
+        finally:
+            return system_proxy
 
 class HTTP(object):
     """HTTP Request Class"""
@@ -476,7 +508,6 @@ class HTTP(object):
             for i in xrange(count):
                 queue.get()
         result = None
-
         addresses = [(x, port) for x in self.dns_resolve(host)]
         if port == 443:
             get_connection_time = lambda addr:self.ssl_connection_time.get(addr) or self.tcp_connection_time.get(addr)
@@ -521,7 +552,6 @@ class HTTP(object):
                 start_time = time.time()
                 # TCP connect
                 ssl_sock.connect(address)
-
                 connected_time = time.time()
                 # SSL handshake
                 ssl_sock.do_handshake()
@@ -548,16 +578,13 @@ class HTTP(object):
                 # close ssl socket
                 if ssl_sock:
                     ssl_sock.close()
-
                 # close tcp socket
                 if sock:
                     sock.close()
-
         def _close_ssl_connection(count, queue):
             for i in xrange(count):
                 queue.get()
         result = None
-
         addresses = [(x, port) for x in self.dns_resolve(host)]
         get_connection_time = self.ssl_connection_time.get
         for i in xrange(self.max_retry):
@@ -579,7 +606,7 @@ class HTTP(object):
     def create_connection_withproxy(self, (host, port), timeout=None, source_address=None, proxy=None):
         assert isinstance(proxy, (str, unicode))
         logging.debug('create_connection_withproxy connect (%r, %r)', host, port)
-        scheme, username, password, address = urllib2._parse_proxy(proxy or self.proxy)
+        scheme, username, password, address = ProxyUtil.parse_proxy(proxy or self.proxy)
         try:
             try:
                 self.dns_resolve(host)
@@ -673,7 +700,7 @@ class HTTP(object):
         request_data += '%s %s %s\r\n' % (method, path, protocol_version)
         request_data += ''.join('%s: %s\r\n' % (k, v) for k, v in headers.iteritems() if k not in skip_headers)
         if self.proxy:
-            _, username, password, _ = urllib2._parse_proxy(self.proxy)
+            _, username, password, _ = ProxyUtil.parse_proxy(self.proxy)
             if username and password:
                 request_data += 'Proxy-Authorization: Basic %s\r\n' % base64.b64encode('%s:%s' % (username, password))
         request_data += '\r\n'
@@ -803,19 +830,15 @@ class Common(object):
         self.PROXY_PASSWROD       = self.CONFIG.get('proxy', 'password')
 
         if not self.PROXY_ENABLE and self.PROXY_AUTODETECT:
-            try:
-                proxies = (x for x in urllib2.build_opener().handlers if isinstance(x, urllib2.ProxyHandler)).next().proxies
-                proxy = proxies.get('https') or proxies.get('http') or ''
-                if self.LISTEN_IP not in proxy:
-                    scheme, username, password, address = urllib2._parse_proxy(proxy)
-                    proxyhost, _, proxyport = address.rpartition(':')
-                    self.PROXY_ENABLE   = 1
-                    self.PROXY_USERNAME = username
-                    self.PROXY_PASSWROD = password
-                    self.PROXY_HOST     = proxyhost
-                    self.PROXY_PORT     = int(proxyport)
-            except StopIteration:
-                pass
+            system_proxy = ProxyUtil.get_system_proxy()
+            if system_proxy and self.LISTEN_IP not in system_proxy:
+                scheme, username, password, address = ProxyUtil.parse_proxy(system_proxy)
+                proxyhost, _, proxyport = address.rpartition(':')
+                self.PROXY_ENABLE   = 1
+                self.PROXY_USERNAME = username
+                self.PROXY_PASSWROD = password
+                self.PROXY_HOST     = proxyhost
+                self.PROXY_PORT     = int(proxyport)
         if self.PROXY_ENABLE:
             self.GOOGLE_MODE = 'https'
             self.proxy = 'https://%s:%s@%s:%d' % (self.PROXY_USERNAME or '' , self.PROXY_PASSWROD or '', self.PROXY_HOST, self.PROXY_PORT)
@@ -1001,6 +1024,7 @@ class RangeFetch(object):
         queues = [gevent.queue.Queue() for _ in range(end+1, length, self.maxsize)]
         if queues:
             gevent.spawn_later(0.1, self._poolfetch, min(len(queues), self.threads), queues, end, length, self.maxsize)
+
         try:
             left = end-start+1
             while 1:
@@ -1038,43 +1062,76 @@ class RangeFetch(object):
             headers = self.headers.copy()
             headers['Range'] = 'bytes=%d-%d' % (start, end)
             headers['Connection'] = 'close'
+            tqueue = gevent.queue.Queue()
+
+            data_error = False
             for i in xrange(self.retry):
                 fetchserver = random.choice(self.fetchservers)
                 response = self.urlfetch(self.method, self.url, headers, self.payload, fetchserver, password=self.password)
-                if response.app_status != 200:
-                    logging.warning('Range Fetch %r %s return %s', self.url, headers['Range'], response.app_status)
-                    time.sleep(5)
-                    continue
-                if 200 <= response.status < 300:
-                    break
-                elif 300 <= response.status < 400:
-                    self.url = response.getheader('Location')
-                    logging.info('Range Fetch Redirect(%r)', self.url)
-                    response.close()
-                    continue
+                if data_error:
+                    # logging.info('Retry #%i of %d-%d', i, start, end)
+                    tqueue.queue.clear()
+                    data_error = False
+
+                if response:
+                    if response.app_status != 200:
+                        logging.warning('Range Fetch %s return %s', headers['Range'], response.app_status)
+                        logging.warning("Retry %i of %i", i, self.retry)
+                        time.sleep(5)
+                        continue
+                    if 200 <= response.status < 300:
+                        content_range = response.getheader('Content-Range')
+                        if not content_range:
+                            logging.error('Range Fetch "%s %s" failed: response headers=%s', self.method, self.url, response.msg)
+                            logging.error("Retry %i of %i", i, self.retry)
+                            response.close()
+                            continue
+                            #return
+
+                        content_length = int(response.getheader('Content-Length', 0))
+                        logging.debug('>>>>>>>>>>>>>>> [thread %s] %s %s', id(gevent.getcurrent()), content_length, content_range)
+
+                        left = content_length
+
+                        while 1:
+                            try:
+                                data = response.read(min(self.bufsize, left))
+                            except Exception as e:
+                                # logging.warning("Response%s%s/%s(%s - %s): %s", type(e), response.status, response.reason, start, end, e)
+                                # logging.warning("Retry %i of %i", i, self.retry)
+                                response.close()
+                                data_error = True
+                                break
+                            if not data:
+                                response.close()
+                                tqueue.put(StopIteration)
+                                break
+                            else:
+                                tqueue.put(data)
+                                left -= len(data)
+
+                        if data_error:
+                            logging.error("SSL Error. Retry range fetch %i of %i", i, self.retry)
+                            continue
+                        else:
+                            while not tqueue.empty():
+                                queue.put(tqueue.get())
+                            break
+                    elif 300 <= response.status < 400:
+                        self.url = response.getheader('Location')
+                        # Logging.info('Range Fetch Redirect(%r)', self.url)
+                        response.close()
+                        continue
+                    else:
+                        logging.error('Range Fetch %r return %s', self.url, response.status)
+                        response.close()
+                        time.sleep(5)
+                        continue
                 else:
-                    logging.error('Range Fetch %r return %s', self.url, response.status)
-                    response.close()
+                    logging.error('Range Fetch is None, retry %i of %i', i, self.retry)
                     time.sleep(5)
                     continue
 
-            content_range = response.getheader('Content-Range')
-            if not content_range:
-                logging.error('Range Fetch "%s %s" failed: response headers=%s', self.method, self.url, response.msg)
-                return
-            content_length = int(response.getheader('Content-Length',0))
-            logging.info('>>>>>>>>>>>>>>> [thread %s] %s %s', id(gevent.getcurrent()), content_length, content_range)
-
-            left = content_length
-            while 1:
-                data = response.read(min(self.bufsize, left))
-                if not data:
-                    response.close()
-                    queue.put(StopIteration)
-                    break
-                else:
-                    queue.put(data)
-                    left -= len(data)
         except Exception as e:
             logging.exception('_fetch error:%s', e)
             raise
@@ -1301,7 +1358,7 @@ class GAEProxyHandler(object):
                     self.sock.sendall('HTTP/1.1 301\r\nLocation: %s\r\n\r\n' % urls[0])
                     return
             elif self.path.startswith(common.GOOGLE_FORCEHTTPS):
-                self.sock.sendall('HTTP/1.1 301\r\nLocation: %s\r\n\r\n' % self.path.replace('http://', 'https://'))
+                self.sock.sendall('HTTP/1.1 301\r\nLocation: %s\r\n\r\n' % self.path.replace('http://', 'https://', 1))
                 return
             else:
                 if host not in http.dns:
@@ -1718,6 +1775,10 @@ class Autoproxy2Pac(object):
         self.default = default
         self.encoding = encoding
     def _fetch_rulelist(self):
+        try:
+            import urllib2
+        except ImportError:
+            import urllib.request as urllib2
         proxies = {'http':self.proxy,'https':self.proxy}
         opener = urllib2.build_opener(urllib2.ProxyHandler(proxies))
         response = opener.open(self.url)
@@ -1929,6 +1990,9 @@ def pre_start():
     if common.GAE_APPIDS[0] == 'goagent' and not common.CRLF_ENABLE:
         logging.critical('please edit %s to add your appid to [gae] !', common.CONFIG_FILENAME)
         sys.exit(-1)
+    if common.PAAS_ENABLE:
+        if common.PAAS_FETCHSERVER.startswith('http://') and not common.PAAS_PASSWORD:
+            logging.warning('Dont forget set your PAAS fetchserver password or use https')
 
 def main():
     global __file__
