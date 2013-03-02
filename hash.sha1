@@ -4,6 +4,7 @@
 0ce24adfb47cdab7ed360b57bdba9e5e16e9f1a2  .\goagent-local\SwitchyOptions.bak
 11544d89a4583e2625e580510fde2999a0609fec  .\goagent-local\CA.key
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
+157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 16635cf9dd8d1d8ecd6f3a9438715efd9e14b1be  .\goagent-local\addto-startup.vbs
 28a1f9394cc379309d04064f3e28a4f5af05bfd6  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
@@ -15,7 +16,6 @@
 482029cb5642995ab06837aa00175c78ef65c8fb  .\get-last-kown-good.inc.php
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
-587cc61dbae6ad52f35aae9adbef4505dd534108  .\FirefoxPortable\Data\profile\cert8.db
 62e95ed22ba86ee833f8445404e4f91124d063af  .\goagent-local\python27.exe
 673a814442244efcca3ecf8652f71c86f240afb3  .\utility\php\ext\php_sockets.dll
 6a72583c5b42636f0f8a8e2586fb3d1dd0fe4aad  .\goagent-local\proxy.bat
@@ -24,6 +24,7 @@
 7e93e69e4214721164548a5587cf91823bc2dce1  .\startfirefox.inc.php
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
+8ed8532d5b2d1b70c9de697af8049c1980218109  .\data\version
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 9e3d84241053d0ff82d83104fe9f73b9f02a3b3e  .\goagent-local\python27.dll
@@ -35,7 +36,6 @@ b43a51387a3788dae34568269bc5d852de7142da  .\utility\vcredist_x86_sc.exe
 bd225f53ecb970d87841e3ee5fda9cbd69cf264f  .\goagent-local\cacerts.txt
 c219c5d497e9f9cc0afadff29783d5cd7227a91d  .\miscellaneous.php
 c6f7a1b457d042976e6900483172501c53db725e  .\utility\php\php.exe
-cc4ab2f02cb47dd142ee1aedebb649fede2f2160  .\data\version
 da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
 dca124f213fd3749beb90398cd75a5b9e2a183b5  .\wwqgtxx-goagent.bat
 e0ebf70d184c3db4efaed3e38a2403211db5259e  .\goagent-local\CA.crt
