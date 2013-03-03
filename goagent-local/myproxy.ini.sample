@@ -11,3 +11,8 @@ host = 10.64.1.60
 port = 8080
 username = 
 password = 
+
+[gae]
+appid = yourappid1|yourappid2|yourappid3
+password = yourpassword
+path = /2
