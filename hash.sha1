@@ -4,6 +4,7 @@
 0ce24adfb47cdab7ed360b57bdba9e5e16e9f1a2  .\goagent-local\SwitchyOptions.bak
 11544d89a4583e2625e580510fde2999a0609fec  .\goagent-local\CA.key
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
+153c1ab41d43508b8e77dcc60f53fbe4eab933bd  .\data\version
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 16635cf9dd8d1d8ecd6f3a9438715efd9e14b1be  .\goagent-local\addto-startup.vbs
 28a1f9394cc379309d04064f3e28a4f5af05bfd6  .\goagent-local\SwitchySharp-0.9-beta-r48.crx
@@ -13,7 +14,6 @@
 3a84bf5c52732598529d63c2856467d14ca36d55  .\goagent-local\goagent-gtk.py
 3e74eafda93b31bdf73b724e64253d1c6b4b5917  .\goagent-local\python27.zip
 433fb96df32ef0b670d52b74673e628fc4e1cce5  .\goagent-local\proxy.pac
-44a4efc12215de194c632fea80a7fbac7cae3595  .\data\version
 482029cb5642995ab06837aa00175c78ef65c8fb  .\get-last-kown-good.inc.php
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem

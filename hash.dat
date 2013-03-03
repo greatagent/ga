@@ -1,7 +1,6 @@
 
 04687dec01535b1cc4cc1ea3b36ef09c  .\get-last-kown-good.inc.php
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
-119f333e62a327fbcb801b8e0a11a6c3  .\data\version
 199abcd8549be5bd5172db93dc71ecdd  .\goagent-local\getmyconfig.py
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
@@ -32,6 +31,7 @@
 9cd8a4844879289c69405a2b5eda5e4b  .\goagent-local\goagent-gtk.py
 9d8cf1c5dc159bcbbed0017470cc1665  .\goagent-local\proxy.pac
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
+a4196c4f0739b4986becc05a77d409f8  .\data\version
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 b64ff9575a3202c1c3e18727a17306dd  .\makegservers.inc.php
