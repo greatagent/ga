@@ -27,7 +27,6 @@
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 9e3d84241053d0ff82d83104fe9f73b9f02a3b3e  .\goagent-local\python27.dll
-a8e43bf4223ea69bfba6fffc9ef3a7ea26572b47  .\goagent-local\getmyconfig.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\wwqgtxx-goagent.pubkey
 aaab50ef410b7e52fa05300438c6ba18b6a59209  .\updategc.php
 ab79ac4ea0641d961e4292a4f5ebd8c2aa489917  .\goagent-local\proxy.py
@@ -42,10 +41,10 @@ dca124f213fd3749beb90398cd75a5b9e2a183b5  .\wwqgtxx-goagent.bat
 e0ebf70d184c3db4efaed3e38a2403211db5259e  .\goagent-local\CA.crt
 e43cd8ab4b4b5ba08e13df2aed14ce927abc7bdd  .\cleanhash.php
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
+e5b29f285c0b5698cf2f0d68c244f854ed7c3314  .\data\version
 e60d291f8064100fdb00bbed176e563de4243ab4  .\goagent-local\proxy.ini
 e88af65fbe3403ca1c3d842341488590fa8fa070  .\goagent-local\goagent.exe
 ec41a298bb999bc77a27d62465566b0349b53bd6  .\makegservers.inc.php
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
 fd338bc63616951af232da3e76a7195c2658795f  .\goagent-local\addto-startup.py
-fe8c13ae522f15ccb6b802948ccf18b7c945c72c  .\data\version

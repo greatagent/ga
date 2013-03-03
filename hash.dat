@@ -1,9 +1,7 @@
 
 04687dec01535b1cc4cc1ea3b36ef09c  .\get-last-kown-good.inc.php
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
-199abcd8549be5bd5172db93dc71ecdd  .\goagent-local\getmyconfig.py
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
-22fd060d187c06e2acc157850e0d23ca  .\data\version
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
 244225b9436c74c3a3b70388c5244d4a  .\goagent-local\SwitchyOptions.bak
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
@@ -41,6 +39,7 @@ c227abb9dddcca566faada2af3addad6  .\goagent-local\python27.zip
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d40b365c27b4768764bc9d5877d0adf2  .\miscellaneous.php
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
+d425eb43d8d1390fcd3931ed08e9500f  .\data\version
 d60725689326e73aa630cd2b991f9f21  .\string.inc.php
 d749ad4000c7747091f136d46cebfc9e  .\goagent-local\goagent.exe
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
