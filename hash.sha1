@@ -16,7 +16,6 @@
 482029cb5642995ab06837aa00175c78ef65c8fb  .\get-last-kown-good.inc.php
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
-5f6709af523cc83b68709796d69e5f0a27c93cf7  .\data\version
 62e95ed22ba86ee833f8445404e4f91124d063af  .\goagent-local\python27.exe
 673a814442244efcca3ecf8652f71c86f240afb3  .\utility\php\ext\php_sockets.dll
 6a72583c5b42636f0f8a8e2586fb3d1dd0fe4aad  .\goagent-local\proxy.bat
@@ -24,7 +23,6 @@
 78d00c903f15e2b98cab23e626f38fd04be93498  .\string.inc.php
 7e93e69e4214721164548a5587cf91823bc2dce1  .\startfirefox.inc.php
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
-8a6d67fe4923113e8c80746c06c72ce93f779aad  .\goagent-local\myproxy.ini.sample
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
@@ -34,6 +32,7 @@ aaab50ef410b7e52fa05300438c6ba18b6a59209  .\updategc.php
 ab79ac4ea0641d961e4292a4f5ebd8c2aa489917  .\goagent-local\proxy.py
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\goagent-local\Microsoft.VC90.CRT.manifest
 b43a51387a3788dae34568269bc5d852de7142da  .\utility\vcredist_x86_sc.exe
+bc399042f0ca2c248947ce9e43c5ffdda44ef62c  .\goagent-local\myproxy.ini.sample
 c219c5d497e9f9cc0afadff29783d5cd7227a91d  .\miscellaneous.php
 c6f7a1b457d042976e6900483172501c53db725e  .\utility\php\php.exe
 da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
@@ -44,6 +43,7 @@ e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 e88af65fbe3403ca1c3d842341488590fa8fa070  .\goagent-local\goagent.exe
 ec41a298bb999bc77a27d62465566b0349b53bd6  .\makegservers.inc.php
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
+f8254d733f633128a9f7ce01cfba6585de814993  .\data\version
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
 fa9d1bdb0be8fe5eece952dd8b369146962fc75c  .\goagent-local\proxy.ini
 fd338bc63616951af232da3e76a7195c2658795f  .\goagent-local\addto-startup.py

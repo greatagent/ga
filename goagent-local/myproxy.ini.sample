@@ -4,13 +4,6 @@ port = 8087
 visible = 1
 debuginfo = 0
 
-[proxy]
-enable = 0
-autodetect = 0
-host = 10.64.1.60
-port = 8080
-username = 
-password = 
 
 [gae]
 appid = yourappid1|yourappid2|yourappid3
@@ -23,3 +16,11 @@ ip = 127.0.0.1
 port = 8086
 file = proxy.pac
 gfwlist = http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt
+
+[proxy]
+enable = 0
+autodetect = 0
+host = 10.64.1.60
+port = 8080
+username = 
+password = 
