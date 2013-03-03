@@ -16,3 +16,10 @@ password =
 appid = yourappid1|yourappid2|yourappid3
 password = yourpassword
 path = /2
+
+[pac]
+enable = 1
+ip = 127.0.0.1
+port = 8086
+file = proxy.pac
+gfwlist = http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt
