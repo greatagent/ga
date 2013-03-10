@@ -6,6 +6,7 @@ debuginfo = 0
 
 
 [gae]
+enable = 1
 appid = yourappid1|yourappid2|yourappid3
 password = yourpassword
 path = /2
@@ -24,3 +25,10 @@ host = 10.64.1.60
 port = 8080
 username = 
 password = 
+
+[dns]
+enable = 0
+listen = 127.0.0.1:53
+remote = 8.8.8.8
+cachesize = 5000
+timeout = 2

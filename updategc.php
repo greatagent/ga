@@ -69,7 +69,7 @@ function update($filename,$hash){
 	}else{
 		echo $str["hash_sign_incorrect"];
 		echo $str["anykeytocontinue"];
-		fgets(STDIN);
+		echo ">"; fgets(STDIN);
 	}
 
 }
@@ -102,7 +102,7 @@ $response=request($query,$host);
 if(!file_exists("data/wwqgtxx-goagent.pubkey")){
 	echo $str["cert_notexists"];
 	echo $str["anykeytocontinue"];
-	fgets(STDIN);
+	echo ">"; fgets(STDIN);
 }else{
 
 	if($pubkey=openssl_get_publickey(file_get_contents("data/wwqgtxx-goagent.pubkey"))){
@@ -121,7 +121,7 @@ if(!file_exists("data/wwqgtxx-goagent.pubkey")){
 	}else{
 		echo $str["cert_corrupted"];
 		echo $str["anykeytocontinue"];
-		fgets(STDIN);
+		echo ">"; fgets(STDIN);
 	}
 }
 
