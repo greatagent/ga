@@ -5,8 +5,8 @@
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 16635cf9dd8d1d8ecd6f3a9438715efd9e14b1be  .\goagent-local\addto-startup.vbs
+1677ade8c034c2dda8f93304755ac9cfc64b11b1  .\data\version
 1738050616169d5b17b5adac3ff0370b8c642734  .\goagent-local\msvcr100.dll
-1c4a4fb4a27ce0f3e3a52e3966d5780eff744836  .\data\version
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29acceb00958d41734b5d5aef5510b9c471cf95d  .\data\host
 3a450d7c21b4cc96581d4f0389e4fed7ee0a9e57  .\runner.bat
@@ -41,9 +41,9 @@ da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
 dca124f213fd3749beb90398cd75a5b9e2a183b5  .\wwqgtxx-goagent.bat
 e0ebf70d184c3db4efaed3e38a2403211db5259e  .\goagent-local\CA.crt
 e43cd8ab4b4b5ba08e13df2aed14ce927abc7bdd  .\cleanhash.php
+e46914c79ec2fdb5bb49529b604fb64e4a1ee142  .\goagent-local\check_google_ip.py
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 e88af65fbe3403ca1c3d842341488590fa8fa070  .\goagent-local\goagent.exe
-ebaf0bfe20b645eaf9bbf599e67b56a162a52044  .\goagent-local\check_google_ip.py
 ec41a298bb999bc77a27d62465566b0349b53bd6  .\makegservers.inc.php
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll

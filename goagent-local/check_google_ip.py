@@ -188,7 +188,7 @@ def main():
 		common.writeconfig('proxy','port',myconfig.getconfig('proxy','port'))
 		common.writeconfig('proxy','username',myconfig.getconfig('proxy','username'))
 		common.writeconfig('proxy','password',myconfig.getconfig('proxy','password'))
-		if myconfig.getconfig('gae','appid') == '1':
+		if myconfig.getconfig('gae','enable') == '1':
 			common.writeconfig('gae','appid',myconfig.getconfig('gae','appid'))
 			common.writeconfig('gae','password',myconfig.getconfig('gae','password'))
 			common.writeconfig('gae','path',myconfig.getconfig('gae','path'))

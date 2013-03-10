@@ -1,10 +1,9 @@
 
 009f493270ccb2519456b71703a98b7d  .\goagent-local\SwitchySharp_1_9_52.crx
 04687dec01535b1cc4cc1ea3b36ef09c  .\get-last-kown-good.inc.php
+09e685cdb6a5d4f884d3e5f5201aa0cd  .\data\version
 0c7d9e7eaaa7846789fa69202d634c56  .\goagent-local\proxy.py
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
-11a91285b4200acfcd4f0c4d9e6115e5  .\data\version
-12a33715d2d583e2065d79c8427a1eae  .\goagent-local\check_google_ip.py
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
@@ -48,3 +47,4 @@ de61d8a034891853a82080d478a7d082  .\runner.bat
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e61410e6a334b5affbb13b9e0206cb1a  .\goagent-local\SwitchyOptions.bak
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
+fe2d4d5d3d2dd26e9c0082aa8efc3f97  .\goagent-local\check_google_ip.py
