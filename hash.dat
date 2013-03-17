@@ -6,11 +6,9 @@
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
-296633498e16824c293e8ce98ea2e636  .\goagent-local\check_google_ip.py
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
 2a0234e7d6f39d2fc2738b156482639d  .\wwqgtxx-goagent.bat
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
-399364a34f8a3b6e424d685986c8bd3b  .\data\version
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3b21e55ec89a3da73479c1f16a5896a4  .\goagent-local\CA.crt
 3ba8917d543552535fd5399cb46a09c2  .\goagent-local\goagent.exe
@@ -31,6 +29,8 @@
 957e4e2dcc678e8464aa4b9a54eed0da  .\updategc.php
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
 9cd8a4844879289c69405a2b5eda5e4b  .\goagent-local\goagent-gtk.py
+a0220ac88bbd95a0862002a2365b6275  .\goagent-local\check_google_ip.py
+a2e3ed18c0c8687223a087b72b093b9b  .\data\version
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
 a3bf1df79089f2f7d436cb93cf908a09  .\goagent-local\python27.zip
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
