@@ -6,12 +6,12 @@
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 16635cf9dd8d1d8ecd6f3a9438715efd9e14b1be  .\goagent-local\addto-startup.vbs
 1738050616169d5b17b5adac3ff0370b8c642734  .\goagent-local\msvcr100.dll
-26de080a32d15de63486dd673ee7a31fbea6fe14  .\data\version
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29acceb00958d41734b5d5aef5510b9c471cf95d  .\data\host
 3a450d7c21b4cc96581d4f0389e4fed7ee0a9e57  .\runner.bat
 3a84bf5c52732598529d63c2856467d14ca36d55  .\goagent-local\goagent-gtk.py
 41e67195f7258c73ed248acb193598b267ef87f1  .\goagent-local\SwitchySharp_1_9_52.crx
+453ed6cfb0d9b004d80fa3ff956d4a236b3840c5  .\data\version
 482029cb5642995ab06837aa00175c78ef65c8fb  .\get-last-kown-good.inc.php
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem

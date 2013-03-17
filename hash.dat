@@ -1,6 +1,7 @@
 
 009f493270ccb2519456b71703a98b7d  .\goagent-local\SwitchySharp_1_9_52.crx
 04687dec01535b1cc4cc1ea3b36ef09c  .\get-last-kown-good.inc.php
+0bfcecbbcbf1301c2bd393c381b42826  .\data\version
 0d69a75c2659b74f4e92ef8e1e4983d0  .\goagent-local\proxy.py
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 229ee3f6a87b33f0c6e589c0ea3cc085  .\goagent-local\certmgr.exe
@@ -30,7 +31,6 @@
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
 9cd8a4844879289c69405a2b5eda5e4b  .\goagent-local\goagent-gtk.py
 a0220ac88bbd95a0862002a2365b6275  .\goagent-local\check_google_ip.py
-a2e3ed18c0c8687223a087b72b093b9b  .\data\version
 a3a3f3869d437c94feaa8d46f5100299  .\goagent-local\python27.exe
 a3bf1df79089f2f7d436cb93cf908a09  .\goagent-local\python27.zip
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
