@@ -1390,7 +1390,7 @@ class GAEProxyHandler(object):
                         need_switch = True
                         break
                 average_timing = 1000 * connect_timing / len(sample_hosts)
-                if average_timing > 128:
+                #if average_timing > 128:
                     # avg connect time large than 128 ms, need switch
                     #need_switch = True
                 logging.info('speedtest google_cn iplist average_timing=%0.2f ms, need_switch=%r', average_timing, need_switch)

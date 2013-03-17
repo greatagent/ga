@@ -136,19 +136,21 @@ myconfig = MyConfigFile()
 class Check_ip(object):
 	ips = []
 	def check_ip(self,ip):
-		try:
-			with gevent.timeout.Timeout(5):
-				sock = socket.create_connection((ip, 443))
-				ssl_sock = ssl.wrap_socket(sock)
-				peer_cert = ssl_sock.getpeercert(True)
-				if '.google.com' in peer_cert:
-					print ip
-					self.ips.append(ip)
-					#print self.ips
-		except gevent.timeout.Timeout as e:
-			pass
-		except Exception as e:
-			pass
+		for i in xrange(3): 
+			try:
+				with gevent.timeout.Timeout(5):
+					sock = socket.create_connection((ip, 443))
+					ssl_sock = ssl.wrap_socket(sock)
+					peer_cert = ssl_sock.getpeercert(True)
+					if '.google.com' in peer_cert:
+						print ip
+						self.ips.append(ip)
+						return
+						#print self.ips
+			except gevent.timeout.Timeout as e:
+				pass
+			except Exception as e:
+				pass
 	def run(self,filename,ip_head,ip_start,ip_end):
 		for a in xrange(ip_start,(ip_end+1)):
 			global ips
