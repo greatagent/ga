@@ -42,9 +42,9 @@ d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d40b365c27b4768764bc9d5877d0adf2  .\miscellaneous.php
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
 d60725689326e73aa630cd2b991f9f21  .\string.inc.php
+d81639adb36093b3c6cd0a3a37671675  .\data\version
 de1ced46b581298894e56d0804ea8484  .\goagent-local\addto-startup.vbs
 de61d8a034891853a82080d478a7d082  .\runner.bat
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e61410e6a334b5affbb13b9e0206cb1a  .\goagent-local\SwitchyOptions.bak
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
-f9fbc6e89abc27b792be0d516de3ab54  .\data\version
