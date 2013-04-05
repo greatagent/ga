@@ -15,10 +15,10 @@
 49731f272f7c5227f60660fff6d7c2d1  .\cleanhash.php
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 515cd561b02cece6a349d2b271b6f2d7  .\goagent-local\goagent.exe
+5a12bfa12e7f6dae541127a17d988d50  .\data\version
 665ccc57a84c5639c4e5151686cc0432  .\utility\sha1deep64.exe
 68d158a17fd2f091bfa356fd79f854fb  .\goagent-local\proxy.py
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
-6ad3e130a17c36fc416a01135572b3c6  .\data\version
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
 7422cd4ae340e3c8544184bc6ccbdfa3  .\goagent-local\goagent-gtk.py
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
