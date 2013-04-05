@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding:utf-8
-# Based on GAppProxy 2.0.0 by Du XiaoGang <dugang@188.com>
+# Based on GAppProxy 2.0.0 by Du XiaoGang <dugang.2008@gmail.com>
 # Based on WallProxy 0.4.0 by Hust Moon <www.ehust@gmail.com>
 # Contributor:
 #      Phus Lu        <phus.lu@gmail.com>
@@ -15,7 +15,7 @@
 #      Harmony Meow   <harmony.meow@gmail.com>
 #      logostream     <logostream@gmail.com>
 
-__version__ = '2.1.14'
+__version__ = '2.1.15'
 
 import sys
 import os
@@ -123,7 +123,6 @@ except ImportError:
 import errno
 import time
 import struct
-import binascii
 import zlib
 import re
 import traceback
@@ -269,19 +268,18 @@ class CertUtil(object):
         return key, ca
 
     @staticmethod
-    def dump_ca(keyfile='CA.key', certfile='CA.crt'):
+    def dump_ca(keyfile='CA.crt'):
         key, ca = CertUtil.create_ca()
         with open(keyfile, 'wb') as fp:
-            fp.write(OpenSSL.crypto.dump_privatekey(OpenSSL.crypto.FILETYPE_PEM, key))
-        with open(certfile, 'wb') as fp:
             fp.write(OpenSSL.crypto.dump_certificate(OpenSSL.crypto.FILETYPE_PEM, ca))
+            fp.write(OpenSSL.crypto.dump_privatekey(OpenSSL.crypto.FILETYPE_PEM, key))
 
     @staticmethod
-    def _get_cert(commonname, certdir='certs', ca_keyfile='CA.key', ca_certfile='CA.crt', sans=[]):
-        with open(ca_keyfile, 'rb') as fp:
-            key = OpenSSL.crypto.load_privatekey(OpenSSL.crypto.FILETYPE_PEM, fp.read())
-        with open(ca_certfile, 'rb') as fp:
-            ca = OpenSSL.crypto.load_certificate(OpenSSL.crypto.FILETYPE_PEM, fp.read())
+    def _get_cert(commonname, certdir='certs', keyfile='CA.crt', sans=[]):
+        with open(keyfile, 'rb') as fp:
+            content = fp.read()
+            key = OpenSSL.crypto.load_privatekey(OpenSSL.crypto.FILETYPE_PEM, content)
+            ca = OpenSSL.crypto.load_certificate(OpenSSL.crypto.FILETYPE_PEM, content)
 
         pkey = OpenSSL.crypto.PKey()
         pkey.generate_key(OpenSSL.crypto.TYPE_RSA, 2048)
@@ -322,30 +320,26 @@ class CertUtil(object):
         cert.add_extensions([OpenSSL.crypto.X509Extension(b'subjectAltName', True, ', '.join('DNS: %s' % x for x in sans))])
         cert.sign(key, 'sha1')
 
-        keyfile = os.path.join(certdir, commonname + '.key')
-        with open(keyfile, 'wb') as fp:
-            fp.write(OpenSSL.crypto.dump_privatekey(OpenSSL.crypto.FILETYPE_PEM, pkey))
         certfile = os.path.join(certdir, commonname + '.crt')
         with open(certfile, 'wb') as fp:
             fp.write(OpenSSL.crypto.dump_certificate(OpenSSL.crypto.FILETYPE_PEM, cert))
-
-        return keyfile, certfile
+            fp.write(OpenSSL.crypto.dump_privatekey(OpenSSL.crypto.FILETYPE_PEM, pkey))
+        return certfile
 
     @staticmethod
-    def get_cert(commonname, certdir='certs', ca_keyfile='CA.key', ca_certfile='CA.crt', sans=[]):
-        if len(commonname) >= 32 and commonname.count('.') >= 2:
-            commonname = re.sub(r'^[^\.]+', '', commonname)
-        keyfile = os.path.join(certdir, commonname + '.key')
+    def get_cert(commonname, certdir='certs', keyfile='CA.crt', sans=[]):
+        if commonname.count('.') >= 2 and len(commonname.split('.')[-2]) > 4:
+            commonname = '.'+commonname.partition('.')[-1]
         certfile = os.path.join(certdir, commonname + '.crt')
         if os.path.exists(certfile):
-            return keyfile, certfile
+            return certfile
         elif OpenSSL is None:
-            return ca_keyfile, ca_certfile
+            return keyfile
         else:
             with CertUtil.ca_lock:
                 if os.path.exists(certfile):
-                    return keyfile, certfile
-                return CertUtil._get_cert(commonname, certdir, ca_keyfile, ca_certfile, sans)
+                    return certfile
+                return CertUtil._get_cert(commonname, certdir, keyfile, sans)
 
     @staticmethod
     def import_ca(certfile):
@@ -359,17 +353,20 @@ class CertUtil(object):
             except Exception as e:
                 logging.error('load_certificate(certfile=%r) failed:%s', certfile, e)
         if sys.platform.startswith('win'):
-            # return os.system('cd /d "%s" && .\certmgr.exe -add %s -c -s -r localMachine Root >NUL' % (dirname, basename))
             with open(certfile, 'rb') as fp:
                 certdata = fp.read()
                 if certdata.startswith('-----'):
-                    certdata = base64.b64decode(''.join(certdata.strip().splitlines()[1:-1]))
+                    begin = '-----BEGIN CERTIFICATE-----'
+                    end = '-----END CERTIFICATE-----'
+                    certdata = base64.b64decode(''.join(certdata[certdata.find(begin)+len(begin):certdata.find(end)].strip().splitlines()))
                 crypt32_handle = ctypes.windll.kernel32.LoadLibraryW(u'crypt32.dll')
-                libcrypt32 = ctypes.WinDLL(None, handle=crypt32_handle)
-                handle = libcrypt32.CertOpenStore(10, 0, 0, 0x4000 | 0x20000, u'ROOT')
-                ret = libcrypt32.CertAddEncodedCertificateToStore(handle, 0x1, certdata, len(certdata), 4, None)
-                libcrypt32.CertCloseStore(handle, 0)
-                del libcrypt32
+                crypt32 = ctypes.WinDLL(None, handle=crypt32_handle)
+                store_handle = crypt32.CertOpenStore(10, 0, 0, 0x4000 | 0x20000, u'ROOT')
+                if not store_handle:
+                    return -1
+                ret = crypt32.CertAddEncodedCertificateToStore(store_handle, 0x1, certdata, len(certdata), 4, None)
+                crypt32.CertCloseStore(store_handle, 0)
+                del crypt32
                 ctypes.windll.kernel32.FreeLibrary(crypt32_handle)
                 return 0 if ret else -1
         elif sys.platform == 'darwin':
@@ -382,6 +379,10 @@ class CertUtil(object):
                 new_certfile = "/usr/local/share/ca-certificates/%s.crt" % commonname
                 if not os.path.exists(pemfile):
                     return os.system('cp "%s" "%s" && update-ca-certificates' % (certfile, new_certfile))
+            elif any(os.path.isfile('%s/certutil' % x) for x in os.environ['PATH'].split(os.pathsep)):
+                return os.system('certutil -L -d sql:$HOME/.pki/nssdb | grep "%s" || certutil -d sql:$HOME/.pki/nssdb -A -t "C,," -n "%s" -i "%s"' % (commonname, commonname, certfile))
+            else:
+                logging.warning('please install *libnss3-tools* package to import GoAgent root ca')
         return 0
 
     @staticmethod
@@ -393,15 +394,13 @@ class CertUtil(object):
             if not OpenSSL:
                 logging.critical('CA.key is not exist and OpenSSL is disabled, ABORT!')
                 sys.exit(-1)
-            if os.name == 'nt':
-                os.system('certmgr.exe -del -n "%s CA" -c -s -r localMachine Root' % CertUtil.ca_vendor)
             if os.path.exists(certdir):
                 if os.path.isdir(certdir):
-                    any(os.remove(x) for x in (glob.glob(certdir+'/*.crt')+glob.glob(certdir+'/*.key')))
+                    any(os.remove(x) for x in glob.glob(certdir+'/*.crt'))
                 else:
                     os.remove(certdir)
-                os.mkdir(certdir)
-            CertUtil.dump_ca('CA.key', 'CA.crt')
+                    os.mkdir(certdir)
+            CertUtil.dump_ca('CA.crt')
         #Check CA imported
         if CertUtil.import_ca(capath) != 0:
             logging.warning('install root certificate failed, Please run as administrator/root/sudo')
@@ -544,7 +543,7 @@ class HTTP(object):
             else:
                 iplist = DNSUtil.remote_resolve(dnsserver, host, timeout=2)
             if ipv4_only:
-                iplist = [ip for ip in iplist if re.match(r'\d+.\d+.\d+.\d+', ip)]
+                iplist = [ip for ip in iplist if re.match(r'\d+\.\d+\.\d+\.\d+', ip)]
             self.dns[host] = iplist = list(set(iplist))
         return iplist
 
@@ -613,7 +612,7 @@ class HTTP(object):
         for i in xrange(self.max_retry):
             window = min((self.max_window+1)//2 + i, len(addresses))
             addresses.sort(key=get_connection_time)
-            addrs = addresses[:window] + random.sample(addresses[window:], window)
+            addrs = addresses[:window] + random.sample(addresses, window)
             queue = gevent.queue.Queue()
             for addr in addrs:
                 gevent.spawn(_create_connection, addr, timeout, queue)
@@ -690,7 +689,7 @@ class HTTP(object):
         for i in xrange(self.max_retry):
             window = min((self.max_window+1)//2 + i, len(addresses))
             addresses.sort(key=self.ssl_connection_time.get)
-            addrs = addresses[:window] + random.sample(addresses[window:], window)
+            addrs = addresses[:window] + random.sample(addresses, window)
             queue = gevent.queue.Queue()
             for addr in addrs:
                 gevent.spawn(_create_ssl_connection, addr, timeout, queue)
@@ -774,6 +773,29 @@ class HTTP(object):
             if remote:
                 remote.close()
 
+    def green_forward_socket(self, local, remote, timeout=60, tick=2, bufsize=8192, maxping=None, maxpong=None, pongcallback=None, bitmask=None):
+        def io_copy(dest, source):
+            try:
+                dest.settimeout(timeout)
+                source.settimeout(timeout)
+                while 1:
+                    data = source.recv(bufsize)
+                    if not data:
+                        break
+                    if bitmask:
+                        data = ''.join(chr(ord(x) ^ bitmask) for x in data)
+                    dest.sendall(data)
+            except socket.error as e:
+                if e[0] not in ('timed out', 10053, 10054, errno.EBADF, errno.EPIPE, 10057, 10060):
+                    raise
+            finally:
+                if local:
+                    local.close()
+                if remote:
+                    remote.close()
+        gevent.spawn(io_copy, remote.dup(), local.dup())
+        io_copy(local, remote)
+
     def parse_request(self, rfile, bufsize=1048576):
         line = rfile.readline(bufsize)
         if not line:
@@ -844,7 +866,8 @@ class HTTP(object):
 
     def request(self, method, url, payload=None, headers={}, fullurl=False, bufsize=1048576, crlf=None, return_sock=None):
         scheme, netloc, path, params, query, fragment = urlparse.urlparse(url)
-        if not re.search(r':\d+$', netloc):
+        if netloc.rfind(':') <= netloc.rfind(']'):
+            # no port number
             host = netloc
             port = 443 if scheme == 'https' else 80
         else:
@@ -1013,6 +1036,7 @@ class Common(object):
         info = ''
         info += '------------------------------------------------------\n'
         info += 'GoAgent Version    : %s (python/%s gevent/%s pyopenssl/%s)\n' % (__version__, sys.version[:5], gevent.__version__, getattr(OpenSSL, '__version__', 'Disabled'))
+        info += 'Uvent Version      : %s (pyuv/%s libuv/%s)\n' % (__import__('uvent').__version__, __import__('pyuv').__version__, __import__('pyuv').LIBUV_VERSION) if all(x in sys.modules for x in ('pyuv', 'uvent')) else ''
         info += 'Listen Address     : %s:%d\n' % (self.LISTEN_IP, self.LISTEN_PORT)
         info += 'Local Proxy        : %s:%s\n' % (self.PROXY_HOST, self.PROXY_PORT) if self.PROXY_ENABLE else ''
         info += 'Debug INFO         : %s\n' % self.LISTEN_DEBUGINFO if self.LISTEN_DEBUGINFO else ''
@@ -1182,6 +1206,8 @@ class RangeFetch(object):
                         response = self.urlfetch(self.method, self.url, headers, self.payload, fetchserver, password=self.password)
                 except gevent.queue.Empty:
                     continue
+                except socket.error:
+                    logging.warning("Response SSLError in __fetchlet")
                 if not response:
                     logging.warning('RangeFetch %s return %r', headers['Range'], response)
                     range_queue.put((start, end, None))
@@ -1239,6 +1265,7 @@ class GAEProxyHandler(object):
     firstrun = None
     firstrun_lock = gevent.coros.Semaphore()
     urlfetch = staticmethod(gae_urlfetch)
+    normcookie = __import__('functools').partial(re.compile(', ([^ =]+(?:=|$))').sub, '\\r\\nSet-Cookie: \\1')
 
     def __init__(self, sock, address):
         self.sock = sock
@@ -1438,7 +1465,7 @@ class GAEProxyHandler(object):
                 return
             if response.status in (400, 405):
                 common.GAE_CRLF = 0
-            logging.info('%s:%s "%s %s HTTP/1.1" %s %s', self.remote_addr, self.remote_port, self.method, self.path, response.status, response.msg.get('Content-Length', '-'))
+            logging.info('%s:%s "FWD %s %s HTTP/1.1" %s %s', self.remote_addr, self.remote_port, self.method, self.path, response.status, response.msg.get('Content-Length', '-'))
             wfile = self.sock.makefile('wb', 0)
             wfile.write('HTTP/1.1 %s\r\n%s\r\n' % (response.status, ''.join('%s: %s\r\n' % (k.title(), v) for k, v in response.getheaders() if k != 'transfer-encoding')))
             wfile.write(response.read())
@@ -1543,13 +1570,13 @@ class GAEProxyHandler(object):
             wfile = self.sock.makefile('wb', 0)
 
             if response.app_status != 200:
-                logging.info('%s:%s "%s %s HTTP/1.1" %s -', self.remote_addr, self.remote_port, self.method, self.path, response.status)
+                logging.info('%s:%s "GAE %s %s HTTP/1.1" %s -', self.remote_addr, self.remote_port, self.method, self.path, response.status)
                 wfile.write('HTTP/1.1 %s\r\n%s\r\n' % (response.status, ''.join('%s: %s\r\n' % (k.title(), v) for k, v in response.getheaders() if k != 'transfer-encoding')))
                 wfile.write(response.read())
                 response.close()
                 return
 
-            logging.info('%s:%s "%s %s HTTP/1.1" %s %s', self.remote_addr, self.remote_port, self.method, self.path, response.status, response.getheader('Content-Length', '-'))
+            logging.info('%s:%s "GAE %s %s HTTP/1.1" %s %s', self.remote_addr, self.remote_port, self.method, self.path, response.status, response.getheader('Content-Length', '-'))
 
             if response.status == 206:
                 fetchservers = [re.sub(r'//\w+\.appspot\.com', '//%s.appspot.com' % x, common.GAE_FETCHSERVER) for x in common.GAE_APPIDS]
@@ -1557,7 +1584,7 @@ class GAEProxyHandler(object):
                 return rangefetch.fetch()
 
             if 'Set-Cookie' in response.msg:
-                response.msg['Set-Cookie'] = re.sub(', ([^ =]+(?:=|$))', '\\r\\nSet-Cookie: \\1', response.msg['Set-Cookie'])
+                response.msg['Set-Cookie'] = self.normcookie(response.msg['Set-Cookie'])
             wfile.write('HTTP/1.1 %s\r\n%s\r\n' % (response.status, ''.join('%s: %s\r\n' % (k.title(), v) for k, v in response.getheaders() if k != 'transfer-encoding')))
 
             while 1:
@@ -1583,21 +1610,22 @@ class GAEProxyHandler(object):
         """socket forward for http CONNECT command"""
         host, _, port = self.path.rpartition(':')
         port = int(port)
-        logging.info('%s:%s "%s %s:%d HTTP/1.1" - -', self.remote_addr, self.remote_port, self.method, host, port)
+        logging.info('%s:%s "FWD %s %s:%d HTTP/1.1" - -', self.remote_addr, self.remote_port, self.method, host, port)
         #http_headers = ''.join('%s: %s\r\n' % (k, v) for k, v in self.headers.iteritems())
-        self.sock.send('HTTP/1.1 200 OK\r\n\r\n')
         if not common.PROXY_ENABLE:
             if host not in http.dns:
                 http.dns[host] = common.GOOGLE_HOSTS
+            self.sock.send('HTTP/1.1 200 OK\r\n\r\n')
             data = self.sock.recv(1024)
             for i in xrange(5):
                 try:
                     timeout = 5
                     remote = http.create_connection((host, port), timeout)
-                    if remote is not None:
+                    if remote is not None and data:
                         remote.sendall(data)
                         break
-                    else:
+                    elif i == 0:
+                        # only print first create_connection error
                         logging.error('http.create_connection((host=%r, port=%r), %r) timeout', host, port, timeout)
                 except socket.error as e:
                     if e[0] == 9:
@@ -1606,26 +1634,27 @@ class GAEProxyHandler(object):
                     else:
                         raise
             if hasattr(remote, 'fileno'):
-                http.forward_socket(self.sock, remote, bufsize=self.bufsize, pongcallback=None)
+                http.forward_socket(self.sock, remote, bufsize=self.bufsize)
         else:
             hostip = random.choice(common.GOOGLE_HOSTS)
             remote = http.create_connection_withproxy((hostip, int(port)), proxy=common.proxy)
             if not remote:
                 logging.error('GAEProxyHandler proxy connect remote (%r, %r) failed', host, port)
                 return
+            self.sock.send('HTTP/1.1 200 OK\r\n\r\n')
             http.forward_socket(self.sock, remote, bufsize=self.bufsize)
 
     def handle_connect_urlfetch(self):
         """deploy fake cert to client"""
         host, _, port = self.path.rpartition(':')
         port = int(port)
-        keyfile, certfile = CertUtil.get_cert(host)
-        logging.info('%s:%s "%s %s:%d HTTP/1.1" - -', self.remote_addr, self.remote_port, self.method, host, port)
+        certfile = CertUtil.get_cert(host)
+        logging.info('%s:%s "GAE %s %s:%d HTTP/1.1" - -', self.remote_addr, self.remote_port, self.method, host, port)
         self.__realsock = None
         self.__realrfile = None
         self.sock.sendall('HTTP/1.1 200 OK\r\n\r\n')
         try:
-            ssl_sock = ssl.wrap_socket(self.sock, certfile=certfile, keyfile=keyfile, server_side=True, ssl_version=ssl.PROTOCOL_SSLv23)
+            ssl_sock = ssl.wrap_socket(self.sock, certfile=certfile, keyfile=certfile, server_side=True, ssl_version=ssl.PROTOCOL_SSLv23)
         except Exception as e:
             if e[0] not in (10053, 10054):
                 logging.error('ssl.wrap_socket(self.sock=%r) failed: %s', self.sock, e)
@@ -1749,7 +1778,7 @@ class PAASProxyHandler(GAEProxyHandler):
                 self.sock.sendall('HTTP/1.0 502\r\nContent-Type: text/html\r\n\r\n' + message_html)
                 return
 
-            logging.info('%s:%s "%s %s HTTP/1.1" %s -', self.remote_addr, self.remote_port, self.method, self.path, response.status)
+            logging.info('%s:%s "PAAS %s %s HTTP/1.1" %s -', self.remote_addr, self.remote_port, self.method, self.path, response.status)
             if response.app_status in (400, 405):
                 http.crlf = 0
 
@@ -1831,7 +1860,7 @@ class LightProxyHandler(object):
     def handle_method(self):
         """Direct http forward"""
         try:
-            logging.info('%s:%s "%s %s HTTP/1.1" - -', self.remote_addr, self.remote_port, self.method, self.path)
+            logging.info('%s:%s "PAAS %s %s HTTP/1.1" - -', self.remote_addr, self.remote_port, self.method, self.path)
             content_length = int(self.headers.get('Content-Length', 0))
             payload = self.rfile.read(content_length) if content_length else None
             server_ip, _, server_port = common.LIGHT_SERVER.rpartition(':')
@@ -2083,6 +2112,10 @@ def pre_start():
         if gevent.version_info[0] == 0:
             logging.critical('GoAgent DNSServer needs python-gevent 1.0, Please disable DNS Server or upgarde gevent version.')
             sys.exit()
+    if 'uvent.loop' in sys.modules and gevent.__version__ != '1.0fake':
+        if isinstance(gevent.get_hub().loop, __import__('uvent').loop.UVLoop):
+            logging.info('Uvent enabled, patch forward_socket')
+            http.forward_socket = http.green_forward_socket
 
 
 def main():
@@ -2090,10 +2123,13 @@ def main():
     global common
     __file__ = os.path.abspath(__file__)
     if os.path.islink(__file__):
-        __file__ = getattr(os, 'readlink', lambda x:x)(__file__)
+        __file__ = getattr(os, 'readlink', lambda x: x)(__file__)
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    import check_google_ip
-    check_google_ip.main()
+    try:
+        import check_google_ip
+        check_google_ip.main()
+    except ImportError:
+        pass
     common = Common()
     logging.basicConfig(level=logging.DEBUG if common.LISTEN_DEBUGINFO else logging.INFO, format='%(levelname)s - %(asctime)s %(message)s', datefmt='[%b %d %H:%M:%S]')
     CertUtil.check_ca()
