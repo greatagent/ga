@@ -9,6 +9,7 @@
 32b4c124c5b90af2443103233b46c004  .\miscellaneous.php
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
+3d292791341130804f65f65d92676a1b  .\goagent-local\addto-startup.py
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 3f2fb2b19998e24820c750bc2fa77748  .\FirefoxPortable\Data\profile\cert8.db
 3f6ef55b3588986af12d0b989f001e42  .\goagent-local\proxy.pac
@@ -31,17 +32,16 @@ ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 afc917ec6dd10e1a649e214137f87b3a  .\goagent-local\proxy.ini
 b64ff9575a3202c1c3e18727a17306dd  .\makegservers.inc.php
-bd1a484443e9136108142ba2069bb873  .\goagent-local\addto-startup.py
 bde0984f77af9c671e3f2453e44e9cd2  .\data\host
 d38e375b683b5cbc0cb6da31c5b8aefc  .\goagent-local\python27.exe
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
 d60725689326e73aa630cd2b991f9f21  .\string.inc.php
-db73ebc12959d0d740681bfeab1020c3  .\data\version
 de61d8a034891853a82080d478a7d082  .\runner.bat
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
+e51fac381f2146e100e857bff6912374  .\goagent-local\uvent.bat
 e61410e6a334b5affbb13b9e0206cb1a  .\goagent-local\SwitchyOptions.bak
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
 eaaa0ccacf0611d7a57acc0f5d231542  .\goagent-local\python27.zip
+eef4d5f5dd88d981766ba00bc3e2a097  .\data\version
 f3ffd53aecb876447274ddc17d5a2cdc  .\goagent-local\addto-startup.vbs
-f96ff93298192f999b6b12cb686bfaaa  .\goagent-local\uvent.bat
