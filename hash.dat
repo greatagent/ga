@@ -1,7 +1,6 @@
 
 009f493270ccb2519456b71703a98b7d  .\goagent-local\SwitchySharp_1_9_52.crx
 04687dec01535b1cc4cc1ea3b36ef09c  .\get-last-kown-good.inc.php
-0f030404376e7208abbcaf6f861128c2  .\data\version
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
@@ -10,6 +9,7 @@
 32b4c124c5b90af2443103233b46c004  .\miscellaneous.php
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
+3cd53ae398f1cb47c3c6ec0df8a35516  .\data\version
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 3f2fb2b19998e24820c750bc2fa77748  .\FirefoxPortable\Data\profile\cert8.db
 3f6ef55b3588986af12d0b989f001e42  .\goagent-local\proxy.pac
@@ -17,7 +17,6 @@
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 515cd561b02cece6a349d2b271b6f2d7  .\goagent-local\goagent.exe
 665ccc57a84c5639c4e5151686cc0432  .\utility\sha1deep64.exe
-67a361f869aec41d444525c0ed1ff1f3  .\goagent-local\proxy.ini
 68d158a17fd2f091bfa356fd79f854fb  .\goagent-local\proxy.py
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
@@ -31,8 +30,8 @@
 a0220ac88bbd95a0862002a2365b6275  .\goagent-local\check_google_ip.py
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
+afc917ec6dd10e1a649e214137f87b3a  .\goagent-local\proxy.ini
 b64ff9575a3202c1c3e18727a17306dd  .\makegservers.inc.php
-b97f39e9f7a4e74e8d170de89833b8df  .\goagent-local\check_google_ip.pyo
 bd1a484443e9136108142ba2069bb873  .\goagent-local\addto-startup.py
 bde0984f77af9c671e3f2453e44e9cd2  .\data\host
 d38e375b683b5cbc0cb6da31c5b8aefc  .\goagent-local\python27.exe
