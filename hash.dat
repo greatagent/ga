@@ -18,6 +18,7 @@
 665ccc57a84c5639c4e5151686cc0432  .\utility\sha1deep64.exe
 68d158a17fd2f091bfa356fd79f854fb  .\goagent-local\proxy.py
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
+6ad3e130a17c36fc416a01135572b3c6  .\data\version
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
 7422cd4ae340e3c8544184bc6ccbdfa3  .\goagent-local\goagent-gtk.py
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
@@ -42,6 +43,5 @@ df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e61410e6a334b5affbb13b9e0206cb1a  .\goagent-local\SwitchyOptions.bak
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
 eaaa0ccacf0611d7a57acc0f5d231542  .\goagent-local\python27.zip
-eef41f1e310eee955cf11fb184db51a4  .\data\version
 f3ffd53aecb876447274ddc17d5a2cdc  .\goagent-local\addto-startup.vbs
 f96ff93298192f999b6b12cb686bfaaa  .\goagent-local\uvent.bat
