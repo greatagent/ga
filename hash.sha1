@@ -4,7 +4,6 @@
 13a3d8bc33a7c59fb00161e99914f71c0247e71c  .\miscellaneous.php
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
-1721988010f70feb2c11c2a2587621ef98e3c1df  .\data\version
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29acceb00958d41734b5d5aef5510b9c471cf95d  .\data\host
 30b271baa044b9b48931a7ff318d0c6e5ad4e01c  .\goagent-local\CA.crt
@@ -15,6 +14,7 @@
 482029cb5642995ab06837aa00175c78ef65c8fb  .\get-last-kown-good.inc.php
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
+56cce190161908c9b460bb4b02b628ad9d0bc9c9  .\data\version
 61c3543522d64af4848c10057897d9c639b63d63  .\goagent-local\python27.zip
 673a814442244efcca3ecf8652f71c86f240afb3  .\utility\php\ext\php_sockets.dll
 681094e1e5c70378821597fc157bf2763c408208  .\goagent-local\proxy.pac

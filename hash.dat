@@ -15,7 +15,6 @@
 49731f272f7c5227f60660fff6d7c2d1  .\cleanhash.php
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 515cd561b02cece6a349d2b271b6f2d7  .\goagent-local\goagent.exe
-5a12bfa12e7f6dae541127a17d988d50  .\data\version
 665ccc57a84c5639c4e5151686cc0432  .\utility\sha1deep64.exe
 68d158a17fd2f091bfa356fd79f854fb  .\goagent-local\proxy.py
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
@@ -38,6 +37,7 @@ d38e375b683b5cbc0cb6da31c5b8aefc  .\goagent-local\python27.exe
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
 d60725689326e73aa630cd2b991f9f21  .\string.inc.php
+db73ebc12959d0d740681bfeab1020c3  .\data\version
 de61d8a034891853a82080d478a7d082  .\runner.bat
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e61410e6a334b5affbb13b9e0206cb1a  .\goagent-local\SwitchyOptions.bak
