@@ -1,11 +1,13 @@
 
 009f493270ccb2519456b71703a98b7d  .\goagent-local\SwitchySharp_1_9_52.crx
 04687dec01535b1cc4cc1ea3b36ef09c  .\get-last-kown-good.inc.php
+0f030404376e7208abbcaf6f861128c2  .\data\version
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
 2a0234e7d6f39d2fc2738b156482639d  .\wwqgtxx-goagent.bat
+32b4c124c5b90af2443103233b46c004  .\miscellaneous.php
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
@@ -13,7 +15,6 @@
 3f6ef55b3588986af12d0b989f001e42  .\goagent-local\proxy.pac
 49731f272f7c5227f60660fff6d7c2d1  .\cleanhash.php
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
-4bb498277b8e414056dc0ddd3a9a0ade  .\data\version
 515cd561b02cece6a349d2b271b6f2d7  .\goagent-local\goagent.exe
 665ccc57a84c5639c4e5151686cc0432  .\utility\sha1deep64.exe
 67a361f869aec41d444525c0ed1ff1f3  .\goagent-local\proxy.ini
@@ -23,7 +24,6 @@
 7422cd4ae340e3c8544184bc6ccbdfa3  .\goagent-local\goagent-gtk.py
 7584228b7aa01d99944df388ba62a197  .\goagent-local\python27.dll
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
-881483fb06dfab8fbf4e5a3584e8de01  .\miscellaneous.php
 8a7741058a60a461593a4d589281d030  .\goagent-local\myproxy.ini.sample
 8e74392880c3b281d5724381e9eab57c  .\goagent-local\CA.crt
 957e4e2dcc678e8464aa4b9a54eed0da  .\updategc.php

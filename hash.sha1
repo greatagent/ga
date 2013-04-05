@@ -1,5 +1,6 @@
 
 028d2e6d663274b03705306e5546cdee965de528  .\updategc.php
+13a3d8bc33a7c59fb00161e99914f71c0247e71c  .\miscellaneous.php
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
@@ -9,6 +10,7 @@
 3c0801c9b3bea44d4d402b6ba0d2801da5f2d9ab  .\goagent-local\proxy.ini
 41e67195f7258c73ed248acb193598b267ef87f1  .\goagent-local\SwitchySharp_1_9_52.crx
 430061cff44cc0f580041eebdadb1b4dfbabe02c  .\goagent-local\goagent-gtk.py
+454b9082220265f10c09ae85a6c1c9da565f40b0  .\data\version
 46a4d8c234aee298dbee4edce9fc24e6349526fd  .\goagent-local\uvent.bat
 482029cb5642995ab06837aa00175c78ef65c8fb  .\get-last-kown-good.inc.php
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
@@ -27,8 +29,6 @@
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
 8b4f9f8602718d0b03a5ef8f501842099b2b5d3f  .\goagent-local\python27.exe
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
-94ab8b4cc26d787939c9e78234fd7a2d59353825  .\miscellaneous.php
-99f9664b42dc8fb697465fb7841c0fa1961aeb90  .\data\version
 9a9f1c6d5324c0d08610897e728179a4becd427b  .\goagent-local\addto-startup.vbs
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 9e3d84241053d0ff82d83104fe9f73b9f02a3b3e  .\goagent-local\python27.dll

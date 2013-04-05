@@ -4,35 +4,35 @@
 #  
 #  miscellaneous.php - Last cleanup
 
-delete("goagent-local/check_google_ip.pyo");
-delete("goagent-local/ip.txt");
-delete("goagent-local/certmgr.exe");
-delete("goagent-local/msvcr100.dll");
-delete("goagent-local/CA.key");
+@unlink("goagent-local/check_google_ip.pyo");
+@unlink("goagent-local/ip.txt");
+@unlink("goagent-local/certmgr.exe");
+@unlink("goagent-local/msvcr100.dll");
+@unlink("goagent-local/CA.key");
 
 
-delete("hash.dat");
-delete("sign.dat");
-delete("utility/md5deep.exe");
-delete("utility/md5deep64.exe");
-delete("git.txt");
-delete("utility/certenc.dll");
-delete("utility/certutil.exe");
+@unlink("hash.dat");
+@unlink("sign.dat");
+@unlink("utility/md5deep.exe");
+@unlink("utility/md5deep64.exe");
+@unlink("git.txt");
+@unlink("utility/certenc.dll");
+@unlink("utility/certutil.exe");
 
-delete("firefox.inc.php");
-delete("startfirefox.inc.bat");
-delete("startgoagent.inc.bat");
-delete("update.inc.bat");
-delete("miscellaneous.inc.bat");
-delete("genhash.inc.bat");
-delete(".gitattributes");
-delete("wwqgtxx-goagent-standalone.bat");
+@unlink("firefox.inc.php");
+@unlink("startfirefox.inc.bat");
+@unlink("startgoagent.inc.bat");
+@unlink("update.inc.bat");
+@unlink("miscellaneous.inc.bat");
+@unlink("genhash.inc.bat");
+@unlink(".gitattributes");
+@unlink("wwqgtxx-goagent-standalone.bat");
 
 
 /* 20121207 Remove incorrect Pinyin Filename */
-delete("wwqgtxx-goagent-debug.bat");
-delete("wwqgtxx-goagent-donotupdate.bat");
-delete("wwqgtxx-goagent-donotupdate-debug.bat");
+@unlink("wwqgtxx-goagent-debug.bat");
+@unlink("wwqgtxx-goagent-donotupdate.bat");
+@unlink("wwqgtxx-goagent-donotupdate-debug.bat");
 
 
 /* 20121218 Remove proxy.custom */
@@ -42,15 +42,6 @@ if(file_exists('data/proxy.custom')){
 }
 
 
-function delete($link) {
-	if(file_exists($link)){
-		echo "Delete : ";
-		echo $link;
-		@unlink($link);
-		echo "OK!\r\n"
-	}
-
-}
 
 function set_flag($seq){
 	touch("data/flag/{$seq}.flag");
