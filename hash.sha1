@@ -26,6 +26,7 @@
 86e6801e91476bea79c7351a34646edc8b656cbd  .\goagent-local\proxy.py
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
 8b4f9f8602718d0b03a5ef8f501842099b2b5d3f  .\goagent-local\python27.exe
+8c3806ca75b53b1185aab7f8422f7a0c45c2f789  .\data\version
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9a9f1c6d5324c0d08610897e728179a4becd427b  .\goagent-local\addto-startup.vbs
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
@@ -43,5 +44,4 @@ e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 ec41a298bb999bc77a27d62465566b0349b53bd6  .\makegservers.inc.php
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
 f823769951127b52b4ed4851c9bb38a94577388b  .\goagent-local\check_google_ip.py
-f889d9cba6e66c6e273a563709dcc583080a45df  .\data\version
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
