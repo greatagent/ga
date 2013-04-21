@@ -13,7 +13,6 @@
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 3f2fb2b19998e24820c750bc2fa77748  .\FirefoxPortable\Data\profile\cert8.db
 49731f272f7c5227f60660fff6d7c2d1  .\cleanhash.php
-49acdd30b773f0ca10c009376093549e  .\data\version
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 4a32ba9892c237b5922ed93abc4797b0  .\goagent-local\goagent.exe
 4c7d1e94ab00d348adfd87e395be7f34  .\goagent-local\python27.dll
@@ -25,6 +24,7 @@
 771447c10e1b450c602af2329a332aca  .\goagent-local\python27.exe
 7adcb99ba6af8008eda3ff0ee7d19411  .\goagent-local\uvent.bat
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
+8a6c99412acf6648020a91753620f3f5  .\data\version
 8a7741058a60a461593a4d589281d030  .\goagent-local\myproxy.ini.sample
 8daf98f938358d34b77f27d13f4e9546  .\goagent-local\python27.zip
 8e74392880c3b281d5724381e9eab57c  .\goagent-local\CA.crt
