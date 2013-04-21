@@ -6,6 +6,7 @@
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
+29268ef0cd220ad3c5e9812befd3f5759b27a266  .\utility\php\msvcr90.dll
 29acceb00958d41734b5d5aef5510b9c471cf95d  .\data\host
 30b271baa044b9b48931a7ff318d0c6e5ad4e01c  .\goagent-local\CA.crt
 3a450d7c21b4cc96581d4f0389e4fed7ee0a9e57  .\runner.bat
@@ -14,16 +15,17 @@
 482029cb5642995ab06837aa00175c78ef65c8fb  .\get-last-kown-good.inc.php
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
-607840adeb3c4774b3a4de88d363e88b721273c0  .\data\version
 61c3543522d64af4848c10057897d9c639b63d63  .\goagent-local\python27.zip
 673a814442244efcca3ecf8652f71c86f240afb3  .\utility\php\ext\php_sockets.dll
 681094e1e5c70378821597fc157bf2763c408208  .\goagent-local\proxy.pac
 6a72583c5b42636f0f8a8e2586fb3d1dd0fe4aad  .\goagent-local\proxy.bat
+6c206da5f50fd301d1e66d21e61f479dfb2df265  .\utility\php\ext\Microsoft.VC90.CRT.manifest
 78d00c903f15e2b98cab23e626f38fd04be93498  .\string.inc.php
 7bdfee948bda23d52eaed0c7688e84e32ac24124  .\goagent-local\myproxy.ini.sample
 7e93e69e4214721164548a5587cf91823bc2dce1  .\startfirefox.inc.php
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
 82fb639fca1f6361a98be4fc8bc2f6960f973047  .\goagent-local\uvent.bat
+860efefb78cac2d65551d3791c508be19be18e4d  .\data\version
 86e6801e91476bea79c7351a34646edc8b656cbd  .\goagent-local\proxy.py
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
 8b4f9f8602718d0b03a5ef8f501842099b2b5d3f  .\goagent-local\python27.exe
@@ -33,6 +35,7 @@
 9e3d84241053d0ff82d83104fe9f73b9f02a3b3e  .\goagent-local\python27.dll
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\wwqgtxx-goagent.pubkey
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\goagent-local\Microsoft.VC90.CRT.manifest
+b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\utility\php\Microsoft.VC90.CRT.manifest
 b43a51387a3788dae34568269bc5d852de7142da  .\utility\vcredist_x86_sc.exe
 c6f7a1b457d042976e6900483172501c53db725e  .\utility\php\php.exe
 cb9883e359913c81057e9af3419b38c5cf61baf1  .\goagent-local\goagent.exe
