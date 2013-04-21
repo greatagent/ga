@@ -15,6 +15,7 @@
 41e67195f7258c73ed248acb193598b267ef87f1  .\goagent-local\SwitchySharp_1_9_52.crx
 430061cff44cc0f580041eebdadb1b4dfbabe02c  .\goagent-local\goagent-gtk.py
 482029cb5642995ab06837aa00175c78ef65c8fb  .\get-last-kown-good.inc.php
+4e5a92afd0c2b68305f759f706b7cb1cfec4bb3f  .\data\version
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
 673a814442244efcca3ecf8652f71c86f240afb3  .\utility\php\ext\php_sockets.dll
@@ -34,7 +35,6 @@ b43a51387a3788dae34568269bc5d852de7142da  .\utility\vcredist_x86_sc.exe
 b7de249b06c6661b52a6ef6d3e04dcf99a65b9d4  .\goagent-local\python27.exe
 ba6df4a1c962c54166586baaaa22cff1030e66cc  .\goagent-local\python27.zip
 c6f7a1b457d042976e6900483172501c53db725e  .\utility\php\php.exe
-cd674c465b839ef4c97e7bed42782b8aa95debfd  .\data\version
 cd6b45b4db9022f432769c1ca88660d856db19e6  .\goagent-local\SwitchyOptions.bak
 da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
 da7f80a357020f08757c5eb5d555d7f821edfa51  .\goagent-local\uvent.bat
