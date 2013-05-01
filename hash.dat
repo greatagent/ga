@@ -4,6 +4,7 @@
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 1a5559dd1b6091843d42d3ac8dc6f587  .\goagent-local\addto-startup.py
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
+249acec09c47f1b6875439f03ab8182f  .\goagent-local\proxy.py
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
 2a0234e7d6f39d2fc2738b156482639d  .\wwqgtxx-goagent.bat
@@ -16,7 +17,6 @@
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 4a32ba9892c237b5922ed93abc4797b0  .\goagent-local\goagent.exe
 4c7d1e94ab00d348adfd87e395be7f34  .\goagent-local\python27.dll
-60a730420f4542c65b94089a5d44f40e  .\data\version
 645e6e03535b76cad5e6233d3fd10568  .\utility\php\ext\Microsoft.VC90.CRT.manifest
 665ccc57a84c5639c4e5151686cc0432  .\utility\sha1deep64.exe
 6a837b8f13bbe6cd50850ab455762f49  .\goagent-local\proxy.bat
@@ -26,8 +26,8 @@
 7ad11372b22e828f8412884c041d8d90  .\goagent-local\goagent-osx.py
 7adcb99ba6af8008eda3ff0ee7d19411  .\goagent-local\uvent.bat
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
-84bbfaaf237dbaba1de13f39860a8994  .\goagent-local\proxy.py
 8a7741058a60a461593a4d589281d030  .\goagent-local\myproxy.ini.sample
+8d6827103dd04c730c48d905b575e8d7  .\data\version
 8daf98f938358d34b77f27d13f4e9546  .\goagent-local\python27.zip
 8e74392880c3b281d5724381e9eab57c  .\goagent-local\CA.crt
 957e4e2dcc678e8464aa4b9a54eed0da  .\updategc.php
