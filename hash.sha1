@@ -3,7 +3,6 @@
 13a3d8bc33a7c59fb00161e99914f71c0247e71c  .\miscellaneous.php
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
-25d336e78186aefc66c2a7d2f462b22df8c580a4  .\goagent-local\proxy.py
 2809fa4979e8dda8d019eec7f1b2f734bfe9bef5  .\goagent-local\addto-startup.py
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\utility\php\msvcr90.dll
@@ -17,6 +16,7 @@
 430061cff44cc0f580041eebdadb1b4dfbabe02c  .\goagent-local\goagent-gtk.py
 43a7603c3c3bcc9b043b7a3a5df36ae2856da1c4  .\goagent-local\proxy.ini
 482029cb5642995ab06837aa00175c78ef65c8fb  .\get-last-kown-good.inc.php
+517db0a13e83677f55e84d4be4debc07725cac6b  .\goagent-local\proxy.py
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
 673a814442244efcca3ecf8652f71c86f240afb3  .\utility\php\ext\php_sockets.dll
@@ -30,6 +30,7 @@
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\wwqgtxx-goagent.pubkey
+ab6e7ee37da2cb26fdf423ced066a3e27d4825cf  .\data\version
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\goagent-local\Microsoft.VC90.CRT.manifest
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\utility\php\Microsoft.VC90.CRT.manifest
 b43a51387a3788dae34568269bc5d852de7142da  .\utility\vcredist_x86_sc.exe
@@ -45,7 +46,6 @@ e43cd8ab4b4b5ba08e13df2aed14ce927abc7bdd  .\cleanhash.php
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 ec41a298bb999bc77a27d62465566b0349b53bd6  .\makegservers.inc.php
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
-f1b00c0c7c75a9de1eb899d32b67fa3cc24cd1b6  .\data\version
 f823769951127b52b4ed4851c9bb38a94577388b  .\goagent-local\check_google_ip.py
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
 ffe6cb460ef750db72ee81520fe1c21fdc3efc27  .\goagent-local\proxy.pac
