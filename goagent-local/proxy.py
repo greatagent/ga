@@ -1061,6 +1061,7 @@ class Common(object):
         self.GAE_PATH = self.CONFIG.get('gae', 'path')
         self.GAE_PROFILE = self.CONFIG.get('gae', 'profile')
         self.GAE_CRLF = self.CONFIG.getint('gae', 'crlf')
+        self.GAE_VALIDATE = self.CONFIG.getint('gae', 'validate')
         self.GAE_OBFUSCATE = self.CONFIG.getint('gae', 'obfuscate') if self.CONFIG.has_option('gae', 'obfuscate') else 0
 
         self.PAC_ENABLE = self.CONFIG.getint('pac', 'enable')
