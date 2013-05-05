@@ -2,11 +2,11 @@
 #  wwqgtxx-goagent   - Software suite for breakthrough GFW
 #  wwqgtxx-wallproxy - Software suite for breakthrough GFW
 #  
-#  cleanhash.php - Cleanup hash table
+#  clean-sha1.php - Cleanup sha1 table
 #  some files do not need to appear in hash table
 
 /* Set Current Directory */
-preg_match('/(.*?)\\\cleanhash\.php$/',__FILE__,$currentdir); 
+preg_match('/(.*?)\\\clean-sha1\.php$/',__FILE__,$currentdir); 
 chdir($currentdir[1]);
 
 function cleanup($line) {
@@ -70,7 +70,7 @@ if(file_exists("hash.dat")){
 }
 
 
-/* Check local hash.dat exists or not*/
+/* Check local hash.sha1 exists or not*/
 if(! file_exists("hash.sha1")){
 	die("Fatal Error: hash.sha1 not exists!");
 }

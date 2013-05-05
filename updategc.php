@@ -23,7 +23,7 @@ if(file_exists("data/usegctest")){
 
 /* */
 file_exists("string.inc.php") && require_once("string.inc.php");
-require_once("makegservers.inc.php");
+require_once("gservers-common.inc.php");
 
 /* FUNCTION */
 function update($filename,$hash){

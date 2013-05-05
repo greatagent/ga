@@ -7,7 +7,7 @@ title wwqgtxx-goagent
 :: genhash.inc.bat
 :: Step1 - Try to generate hash table until success
 
-echo Generating hash table...
+echo Generating SHA1 table...
 
 :try
 del hash.sha1
@@ -37,9 +37,9 @@ if "%length%"=="0" (
 :: update.inc.bat
 :: Step2 - Clean up hash file and do update
 
-echo Checking for update...
-utility\php\php.exe cleanhash.php
-utility\php\php.exe updategc.php
+echo Checking for new update...
+utility\php\php.exe -c utility\php\php.ini clean-sha1.php
+utility\php\php.exe -c utility\php\php.ini updategc.php
 utility\sleep.exe -m 1000
 
 :: runner.bat

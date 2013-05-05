@@ -2,7 +2,7 @@
 #  wwqgtxx-goagent   - Software suite for breakthrough GFW
 #  wwqgtxx-wallproxy - Software suite for breakthrough GFW
 #  
-#  miscellaneous.php - Last cleanup
+#  clean-old-file.php - Last cleanup
 
 @unlink("goagent-local/check_google_ip.pyo");
 @unlink("goagent-local/ip.txt");
