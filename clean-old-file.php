@@ -4,6 +4,10 @@
 #  
 #  clean-old-file.php - Last cleanup
 
+@unlink("cleanhash.php");
+@unlink("makegservers.inc.php");
+@unlink("miscellaneous.php");
+
 @unlink("goagent-local/check_google_ip.pyo");
 @unlink("goagent-local/ip.txt");
 @unlink("goagent-local/certmgr.exe");
