@@ -2,10 +2,10 @@
 #  wwqgtxx-goagent   - Software suite for breakthrough GFW
 #  wwqgtxx-wallproxy - Software suite for breakthrough GFW
 #  
-#  makegserver.inc.php - Reslove Google Server IP
+#  gservers-common.inc.php - Reslove Google Server IP
 
 $gservers=array();
-$gdomains=array("www.google.com","mail.google.com","www.l.google.com","mail.l.google.com","www.google.cn","www.g.cn");
+$gdomains=array("www.google.cn","www.g.cn","www.google.com","mail.google.com","www.android.com","ssl.google-analytics.com");
 
 function request($query,$host){
 	global $gservers;

@@ -7,7 +7,7 @@ echo "\r\n";
 echo "Grabbing last-known-good file from SmartHosts and Huhamhire-Hosts:\r\n";
 
 /* FUNCTION */
-require_once("makegservers.inc.php");
+require_once("gservers-common.inc.php");
 
 echo "Grabbing SmartHosts hosts:\r\n";
 $googleip1=array();
