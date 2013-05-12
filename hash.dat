@@ -24,7 +24,6 @@
 771447c10e1b450c602af2329a332aca  .\goagent-local\python27.exe
 7ad11372b22e828f8412884c041d8d90  .\goagent-local\goagent-osx.py
 7adcb99ba6af8008eda3ff0ee7d19411  .\goagent-local\uvent.bat
-7c3b1b9fc45af25f6f87c839513066a8  .\data\version
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8a7741058a60a461593a4d589281d030  .\goagent-local\myproxy.ini.sample
 8d8be7b3644e89aee417745f8963687a  .\clean-old-file.php
@@ -32,11 +31,12 @@
 8e74392880c3b281d5724381e9eab57c  .\goagent-local\CA.crt
 9b756caf11ea03e76940f9a11cfe13bf  .\gservers-common.inc.php
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
-a0220ac88bbd95a0862002a2365b6275  .\goagent-local\check_google_ip0.py
+a0220ac88bbd95a0862002a2365b6275  .\goagent-local\check_google_ip.py
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 ae8a2552dfc7ae9caed84250efcb894b  .\utility\php\Microsoft.VC90.CRT.manifest
 bde0984f77af9c671e3f2453e44e9cd2  .\data\host
+d19afdc5ebd8115a947b4522817d12cc  .\data\version
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
 d5bbc7b91cdfa7f329dd055fd7d84e25  .\runner.bat
