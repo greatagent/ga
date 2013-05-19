@@ -1152,7 +1152,7 @@ class Common(object):
 
 
 
-        #random.shuffle(self.GAE_APPIDS)
+        random.shuffle(self.GAE_APPIDS)
         self.GAE_PASSWORD = base92.encode(self.GAE_PASSWORD)
         self.FIRST_APPID = self.GAE_APPIDS[0]
         self.NEED_SWITCH   = True
