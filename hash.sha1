@@ -1,5 +1,4 @@
 
-0995679e0813a1e308a000689a69932fffef21ba  .\data\version
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 2649591b242f832b4787d207950e2201d6ef3663  .\runner.bat
@@ -45,6 +44,7 @@ da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
 da7f80a357020f08757c5eb5d555d7f821edfa51  .\goagent-local\uvent.bat
 e173a0c39703982fbf64302f53ac684f2f44d087  .\goagent-local\goagent-osx.py
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
+ed3ffc9c8287763694c694eee0c3673094478943  .\data\version
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
 f823769951127b52b4ed4851c9bb38a94577388b  .\goagent-local\check_google_ip.py
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
