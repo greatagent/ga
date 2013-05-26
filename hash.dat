@@ -4,12 +4,12 @@
 0578b845ccdeb79b3c5a33759b437a88  .\clean-sha1.php
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 1506aeb1c458607328533136a13bd18e  .\wwqgtxx-goagent.bat
-181b03350d6bf17a874c3d7a194b06f5  .\data\version
 1a5559dd1b6091843d42d3ac8dc6f587  .\goagent-local\addto-startup.py
 21c54ecd1549e2905d8d6ad0005fa643  .\get-last-kown-good.inc.php
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
+392c63fb2f48d9b120ef833b188094d0  .\goagent-local\proxy.ini
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
@@ -37,7 +37,7 @@ a0220ac88bbd95a0862002a2365b6275  .\goagent-local\check_google_ip.py
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\goagent-local\Microsoft.VC90.CRT.manifest
 ae8a2552dfc7ae9caed84250efcb894b  .\utility\php\Microsoft.VC90.CRT.manifest
-b4c9f8ec28a23ab2e57798644b02a860  .\goagent-local\proxy.ini
+b43fd32c1a615828bd8d605f4d05b4ef  .\data\version
 bde0984f77af9c671e3f2453e44e9cd2  .\data\host
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
