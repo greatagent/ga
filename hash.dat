@@ -26,7 +26,6 @@
 6fa5bd12072631730819e73459e0f78c  .\utility\php\ext\php_sockets.dll
 771447c10e1b450c602af2329a332aca  .\goagent-local\python27.exe
 7ad11372b22e828f8412884c041d8d90  .\goagent-local\goagent-osx.py
-7f920303f3170e002ec90e04c4f20e5c  .\data\version
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8a7741058a60a461593a4d589281d030  .\goagent-local\myproxy.ini.sample
 8c9ae240b7edb3651968b355ede7c779  .\goagent-local\proxy.py
@@ -35,6 +34,7 @@
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
 a5ccafbdb3b9696bb2967049fcaf51dd  .\runner.bat
 a6729e64319d9cb01a48cd9947406492  .\goagent-local\SwitchyOptions.bak
+a6fdaed561cab3a9e81c334deaed3f8b  .\data\version
 a900cfa47a5922d0059c376e6e8aaf06  .\goagent-local\python33.dll
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\utility\php\Microsoft.VC90.CRT.manifest
