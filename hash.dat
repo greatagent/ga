@@ -2,7 +2,6 @@
 009f493270ccb2519456b71703a98b7d  .\goagent-local\SwitchySharp_1_9_52.crx
 052ea7ebec4a87d960d007e545d181db  .\updategc.php
 0578b845ccdeb79b3c5a33759b437a88  .\clean-sha1.php
-0a23fd64bf2e2e83de1fd607c3ea4606  .\goagent-local\proxy.ini
 0b080a72d7608f4682a429db2086eb12  .\goagent-local\uvent.bat
 0c626833a137582ff171da819f2855aa  .\clean-old-file.php
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
@@ -28,7 +27,6 @@
 7ad11372b22e828f8412884c041d8d90  .\goagent-local\goagent-osx.py
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8a7741058a60a461593a4d589281d030  .\goagent-local\myproxy.ini.sample
-8c27310b75a8b260497cf511748ec50a  .\data\version
 8c9ae240b7edb3651968b355ede7c779  .\goagent-local\proxy.py
 8e74392880c3b281d5724381e9eab57c  .\goagent-local\CA.crt
 91f555154deadd9ff2a6d0b518550394  .\runner2.bat
@@ -52,7 +50,9 @@ df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
 e77199003234b9529050d74382fda40f  .\goagent-local\goagent.exe
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
 e7d91d008fe76423962b91c43c88e4eb  .\utility\php\msvcr90.dll
+ea7121195aa9e0d6e32b9326239c50c2  .\data\version
 ec3dfab4a931c3d14fbf2f596e318ad6  .\goagent-local\python27.zip
 eddb5839e3257bff3a94a27a8d896b55  .\goagent-local\python33.exe
 f2afbea78239aa1704ee6b10672df02f  .\goagent-local\goagent-osx.command
 f2df23b2293dce5b39660c6a9bc1f4d0  .\goagent-local\python33.zip
+fbdea23b78ffec58f47720c538318a8f  .\goagent-local\proxy.ini
