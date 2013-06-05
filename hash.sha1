@@ -53,6 +53,6 @@ e173a0c39703982fbf64302f53ac684f2f44d087  .\goagent-local\goagent-osx.py
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 ed3fdf970a4e5aa3d7fbe63ec46b07f8c2cc114a  .\goagent-local\proxy.pac
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
-f6b33ef37ac49bf51c5053dcb224c726d612d762  .\data\version
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
 fdb885d2682bd79516bca7395324379095d793a5  .\goagent-local\memimporter.pyd
+ffc8ba41fbc2d76568960a782e8fe9015cf2f25e  .\data\version
