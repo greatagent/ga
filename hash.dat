@@ -8,6 +8,7 @@
 1506aeb1c458607328533136a13bd18e  .\wwqgtxx-goagent.bat
 21c54ecd1549e2905d8d6ad0005fa643  .\get-last-kown-good.inc.php
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
+23aac815b1e92fa207dcb6ef0a2b4f0c  .\data\version
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
 3308026b5591c68f6b19aa7697d1f5e9  .\goagent-local\Microsoft.VC90.CRT.manifest
@@ -47,12 +48,11 @@ d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
 d59a54829073e1bb995ea8f3df39605c  .\goagent-local\addto-startup.py
 d60725689326e73aa630cd2b991f9f21  .\string.inc.php
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
+e52b7007f5cc0137e986e24c65f59958  .\goagent-local\proxy.ini
 e77199003234b9529050d74382fda40f  .\goagent-local\goagent.exe
 e7d91d008fe76423962b91c43c88e4eb  .\goagent-local\msvcr90.dll
 e7d91d008fe76423962b91c43c88e4eb  .\utility\php\msvcr90.dll
-ea7121195aa9e0d6e32b9326239c50c2  .\data\version
 ec3dfab4a931c3d14fbf2f596e318ad6  .\goagent-local\python27.zip
 eddb5839e3257bff3a94a27a8d896b55  .\goagent-local\python33.exe
 f2afbea78239aa1704ee6b10672df02f  .\goagent-local\goagent-osx.command
 f2df23b2293dce5b39660c6a9bc1f4d0  .\goagent-local\python33.zip
-fbdea23b78ffec58f47720c538318a8f  .\goagent-local\proxy.ini
