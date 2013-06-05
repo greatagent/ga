@@ -3,7 +3,6 @@
 052ea7ebec4a87d960d007e545d181db  .\updategc.php
 0578b845ccdeb79b3c5a33759b437a88  .\clean-sha1.php
 0b080a72d7608f4682a429db2086eb12  .\goagent-local\uvent.bat
-0f3cb62a833846fe4e783e229bc26b12  .\data\version
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
 11a91fc07703eec5e2c675895824a415  .\clean-old-file.php
 1506aeb1c458607328533136a13bd18e  .\wwqgtxx-goagent.bat
@@ -22,6 +21,7 @@
 48ee0c7b69d07fa0be0a5c35b634fdd7  .\goagent-local\memimporter.pyd
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
 4c7d1e94ab00d348adfd87e395be7f34  .\goagent-local\python27.dll
+4e6c172653defb7e8ad14c158ca31d9f  .\data\version
 5801c4e919a562b4479dc409e48c4dae  .\goagent-local\addto-startup.vbs
 645e6e03535b76cad5e6233d3fd10568  .\utility\php\ext\Microsoft.VC90.CRT.manifest
 665ccc57a84c5639c4e5151686cc0432  .\utility\sha1deep64.exe

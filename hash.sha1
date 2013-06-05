@@ -35,11 +35,11 @@
 9f065e0c01a4a6fb910df546949b1a532c971f26  .\clean-old-file.php
 a71f102d68896a675fff232179e6ebe7f2e2bcaa  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\wwqgtxx-goagent.pubkey
+b04c2188f94d6f355f9aa17a624de85f538fed13  .\data\version
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\utility\php\Microsoft.VC90.CRT.manifest
 b43a51387a3788dae34568269bc5d852de7142da  .\utility\vcredist_x86_sc.exe
 b52fa2812a48c15fe9a36a24b3dc777272680745  .\goagent-local\check_google_ip.py
 b7de249b06c6661b52a6ef6d3e04dcf99a65b9d4  .\goagent-local\python27.exe
-ba5d856c2c516ddbaa7628e5d28d7176f97168f0  .\data\version
 c2bb649c2ea1b33b865eda0d5d36ddb6fd97e09e  .\goagent-local\addto-startup.vbs
 c60b3b5b213bff18a091cb92a6dea8e2e9cd9a73  .\gservers-common.inc.php
 c6f7a1b457d042976e6900483172501c53db725e  .\utility\php\php.exe
