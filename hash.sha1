@@ -5,7 +5,6 @@
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 1b094ed78a73180138df849a153786db31163e07  .\goagent-local\goagent.exe
 1b940115edd500d6e8a34a68545c5721e0a7264c  .\goagent-local\SwitchyOptions.bak
-1c081ec30887e4d927bdc41eee4e3869d30085b0  .\goagent-local\proxy.ini
 2109a407dd4812fc09314260a03b7151da589712  .\goagent-local\python33.zip
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\utility\php\msvcr90.dll
@@ -27,6 +26,7 @@
 78d00c903f15e2b98cab23e626f38fd04be93498  .\string.inc.php
 7bdfee948bda23d52eaed0c7688e84e32ac24124  .\goagent-local\myproxy.ini.sample
 7e93e69e4214721164548a5587cf91823bc2dce1  .\startfirefox.inc.php
+7f0f918c301a9ee55edcea835f7c7d0ee1379c40  .\data\version
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
 8212fb15be3e647d74a79004ddda249cf5b52116  .\clean-old-file.php
 823e48a0cd1ae65abb76cf9b55f1f9230ed6fc6a  .\clean-sha1.php
@@ -51,8 +51,8 @@ d8259182ae6c529715b153841134f603bd6d2a53  .\runner.bat
 da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
 e173a0c39703982fbf64302f53ac684f2f44d087  .\goagent-local\goagent-osx.py
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
-e58a903a36aac23914b75be792d9ed0e4c459bf4  .\data\version
 ed3fdf970a4e5aa3d7fbe63ec46b07f8c2cc114a  .\goagent-local\proxy.pac
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
+f2fa9460d331fe027aaa4d901bf77a1ab385178e  .\goagent-local\proxy.ini
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
 fdb885d2682bd79516bca7395324379095d793a5  .\goagent-local\memimporter.pyd
