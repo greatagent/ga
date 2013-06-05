@@ -9,6 +9,7 @@
 @unlink("miscellaneous.php");
 
 @unlink("goagent-local/check_google_ip.pyo");
+
 @unlink("goagent-local/ip.txt");
 @unlink("goagent-local/certmgr.exe");
 @unlink("goagent-local/CA.key");
