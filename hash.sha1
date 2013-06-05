@@ -1,12 +1,12 @@
 
 0601841ada90ad8a89e791a6ceefc0226dd41daf  .\goagent-local\proxy.bat
+07c6b6ab202a3a4b764fe4b5e4b4cb588e2c1784  .\data\version
 0b51fb415ec89848f339f8989d323bea722bfd70  .\goagent-local\msvcr100.dll
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 1b094ed78a73180138df849a153786db31163e07  .\goagent-local\goagent.exe
 1b940115edd500d6e8a34a68545c5721e0a7264c  .\goagent-local\SwitchyOptions.bak
 2109a407dd4812fc09314260a03b7151da589712  .\goagent-local\python33.zip
-27c9d2bb251455a87704ab4e3ecffa9159e1a5f0  .\data\version
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\utility\php\msvcr90.dll
 29acceb00958d41734b5d5aef5510b9c471cf95d  .\data\host
@@ -52,7 +52,7 @@ e173a0c39703982fbf64302f53ac684f2f44d087  .\goagent-local\goagent-osx.py
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 ed3fdf970a4e5aa3d7fbe63ec46b07f8c2cc114a  .\goagent-local\proxy.pac
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
-f2fe72bed297d99bd7eb09442407a62402841bcc  .\runner2.bat
+f3e7e636d83cce117a555843cf1a458a8cc3ce8d  .\runner2.bat
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
 fa4304bf742f3b66ed429b2d2c1e45a48898eeb3  .\goagent-local\proxy.ini
 fdb885d2682bd79516bca7395324379095d793a5  .\goagent-local\memimporter.pyd
