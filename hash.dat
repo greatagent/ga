@@ -3,7 +3,9 @@
 052ea7ebec4a87d960d007e545d181db  .\updategc.php
 0578b845ccdeb79b3c5a33759b437a88  .\clean-sha1.php
 0b080a72d7608f4682a429db2086eb12  .\goagent-local\uvent.bat
+0f3cb62a833846fe4e783e229bc26b12  .\data\version
 108368264a102669e271abce6b4d7b45  .\utility\php\php5ts.dll
+11a91fc07703eec5e2c675895824a415  .\clean-old-file.php
 1506aeb1c458607328533136a13bd18e  .\wwqgtxx-goagent.bat
 1c3d2573383629a77aaa87884853b284  .\goagent-local\proxy.py
 21c54ecd1549e2905d8d6ad0005fa643  .\get-last-kown-good.inc.php
@@ -29,7 +31,6 @@
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 841d06b47d6cbbbfd8ad782b75342602  .\runner.bat
 8a7741058a60a461593a4d589281d030  .\goagent-local\myproxy.ini.sample
-8d8be7b3644e89aee417745f8963687a  .\clean-old-file.php
 8e74392880c3b281d5724381e9eab57c  .\goagent-local\CA.crt
 9b756caf11ea03e76940f9a11cfe13bf  .\gservers-common.inc.php
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
@@ -43,7 +44,6 @@ bfd5bea3e6715d0708c7cc13eb66bad4  .\goagent-local\proxy.bat
 c55787c1ead61959d8e1133b3d8de28a  .\goagent-local\proxy.pac
 cc81e46a33babc27f85ab0c671ff2bb6  .\goagent-local\proxy.ini
 d3d604c90c6afbdcc8205f0f1a6567d1  .\goagent-local\goagent-gtk.py
-d3e034c4d7621577070fa617bca7ab90  .\data\version
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
 d59a54829073e1bb995ea8f3df39605c  .\goagent-local\addto-startup.py
