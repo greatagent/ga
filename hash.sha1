@@ -1,5 +1,4 @@
 
-048db6a16773c7b45293ad38abf24374ba6158a3  .\goagent-local\proxy.ini
 0601841ada90ad8a89e791a6ceefc0226dd41daf  .\goagent-local\proxy.bat
 0b51fb415ec89848f339f8989d323bea722bfd70  .\goagent-local\msvcr100.dll
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
@@ -35,13 +34,14 @@
 91bbcdf1b8547ce88936fe9c3c88516cb169b98e  .\goagent-local\python33.dll
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
+9b8c670c5f227d1becac5c7e5e88b8d45bd8f883  .\data\version
 a71f102d68896a675fff232179e6ebe7f2e2bcaa  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\wwqgtxx-goagent.pubkey
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\utility\php\Microsoft.VC90.CRT.manifest
 b43a51387a3788dae34568269bc5d852de7142da  .\utility\vcredist_x86_sc.exe
 b52fa2812a48c15fe9a36a24b3dc777272680745  .\goagent-local\check_google_ip.py
 b7de249b06c6661b52a6ef6d3e04dcf99a65b9d4  .\goagent-local\python27.exe
-b813ab42b0e9c0950d2b9be2f1a692fea733575e  .\data\version
+b8439e640bae777ac71ad7be3128bbed588af5cc  .\goagent-local\proxy.ini
 c2bb649c2ea1b33b865eda0d5d36ddb6fd97e09e  .\goagent-local\addto-startup.vbs
 c60b3b5b213bff18a091cb92a6dea8e2e9cd9a73  .\gservers-common.inc.php
 c6f7a1b457d042976e6900483172501c53db725e  .\utility\php\php.exe
