@@ -172,6 +172,10 @@ check_ip = Check_ip()
 
 
 def main():
+	__file__ = os.path.abspath('check_google_ip.py')
+	if os.path.islink(__file__):
+		__file__ = getattr(os, 'readlink', lambda x:x)(__file__)
+	os.chdir(os.path.dirname(os.path.abspath(__file__)))
 	if ctypes and os.name == 'nt':
 		if not common.CONFIG.getint('listen', 'visible'):
 			ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
