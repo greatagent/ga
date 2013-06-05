@@ -27,6 +27,7 @@
 7ad11372b22e828f8412884c041d8d90  .\goagent-local\goagent-osx.py
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
 8a7741058a60a461593a4d589281d030  .\goagent-local\myproxy.ini.sample
+8a9bda8c66a45f9d72728b1a418c7ed3  .\data\version
 8c9ae240b7edb3651968b355ede7c779  .\goagent-local\proxy.py
 8e74392880c3b281d5724381e9eab57c  .\goagent-local\CA.crt
 91f555154deadd9ff2a6d0b518550394  .\runner2.bat
@@ -42,7 +43,6 @@ bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
 bfd5bea3e6715d0708c7cc13eb66bad4  .\goagent-local\proxy.bat
 c55787c1ead61959d8e1133b3d8de28a  .\goagent-local\proxy.pac
 cc81e46a33babc27f85ab0c671ff2bb6  .\goagent-local\proxy.ini
-cdcfb43e3004740fff89cfc21f711dfb  .\data\version
 d3d604c90c6afbdcc8205f0f1a6567d1  .\goagent-local\goagent-gtk.py
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
