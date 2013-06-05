@@ -17,6 +17,7 @@
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
 3f12c9300def52889994ac53a8c7641f  .\utility\php\ext\php_openssl.dll
 3f2fb2b19998e24820c750bc2fa77748  .\FirefoxPortable\Data\profile\cert8.db
+44feedb91dcebb34d689ce400ecdc918  .\data\version
 464a9be13b938de012ba259e3e9c1668  .\goagent-local\check_google_ip.py
 48ee0c7b69d07fa0be0a5c35b634fdd7  .\goagent-local\memimporter.pyd
 4a323b7ef9006018804b52ffc3e83c06  .\data\wwqgtxx-goagent.pubkey
@@ -42,7 +43,6 @@ bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
 bfd5bea3e6715d0708c7cc13eb66bad4  .\goagent-local\proxy.bat
 c55787c1ead61959d8e1133b3d8de28a  .\goagent-local\proxy.pac
 cc81e46a33babc27f85ab0c671ff2bb6  .\goagent-local\proxy.ini
-d3a91bb1fc3939853a048b34895ab833  .\data\version
 d3d604c90c6afbdcc8205f0f1a6567d1  .\goagent-local\goagent-gtk.py
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
