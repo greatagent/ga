@@ -11,7 +11,7 @@
 2303ea535203c79305490d6c20be8454  .\utility\sha1deep.exe
 2731ef3c6b5ac6c45050077ceb1750c3  .\utility\php\php.ini
 29b996a9aa3f4e63d9d68c53dbd02a04  .\utility\php\php5nsapi.dll
-32c1d20ee09d4f5f8473fd65e1b29556  .\start-goagent.bat
+32c1d20ee09d4f5f8473fd65e1b29556  .\runner2.bat
 3308026b5591c68f6b19aa7697d1f5e9  .\goagent-local\Microsoft.VC90.CRT.manifest
 3966fbba168463fd59fbebaace710b1c  .\utility\sleep.exe
 3a23458554ca77caf325fb895a896d55  .\utility\php\libeay32.dll
@@ -28,12 +28,11 @@
 771447c10e1b450c602af2329a332aca  .\goagent-local\python27.exe
 7ad11372b22e828f8412884c041d8d90  .\goagent-local\goagent-osx.py
 808f725bee1683ad743be4b2b950ca5b  .\utility\php\php.exe
-841d06b47d6cbbbfd8ad782b75342602  .\runner.bat
 8a7741058a60a461593a4d589281d030  .\goagent-local\myproxy.ini.sample
 8e74392880c3b281d5724381e9eab57c  .\goagent-local\CA.crt
 9b756caf11ea03e76940f9a11cfe13bf  .\gservers-common.inc.php
 9c5f8e677db489195d3c11ba4b449b15  .\utility\php\ssleay32.dll
-a07b52083ecde48c1c8dcb8a8cde2bdc  .\data\version
+a5ccafbdb3b9696bb2967049fcaf51dd  .\runner.bat
 a6729e64319d9cb01a48cd9947406492  .\goagent-local\SwitchyOptions.bak
 a900cfa47a5922d0059c376e6e8aaf06  .\goagent-local\python33.dll
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
@@ -43,6 +42,7 @@ bf38660a9125935658cfa3e53fdc7d65  .\goagent-local\msvcr100.dll
 bfd5bea3e6715d0708c7cc13eb66bad4  .\goagent-local\proxy.bat
 c55787c1ead61959d8e1133b3d8de28a  .\goagent-local\proxy.pac
 cc81e46a33babc27f85ab0c671ff2bb6  .\goagent-local\proxy.ini
+d3a91bb1fc3939853a048b34895ab833  .\data\version
 d3d604c90c6afbdcc8205f0f1a6567d1  .\goagent-local\goagent-gtk.py
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1

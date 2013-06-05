@@ -10,7 +10,7 @@ utility\sleep.exe -m 1000
 :: Step5 - Start GoAgent
 
 echo Starting GoAgent...
-start start-goagent.bat
+start runner2.bat
 
 :: get-last-kown-good.inc.bat
 :: Step6 - Start get-last-kown-good
