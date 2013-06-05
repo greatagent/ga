@@ -1073,7 +1073,7 @@ class Common(object):
         self.NEED_SWITCH   = True
         self.FIRST_SWITCH  = True
 
-        #random.shuffle(self.GAE_APPIDS)
+        random.shuffle(self.GAE_APPIDS)
 
 
         self.GAE_FETCHSERVER = '%s://%s.appspot.com%s?' % (self.GOOGLE_MODE, self.GAE_APPIDS[0], self.GAE_PATH)
