@@ -35,7 +35,6 @@
 a5ccafbdb3b9696bb2967049fcaf51dd  .\runner.bat
 a6729e64319d9cb01a48cd9947406492  .\goagent-local\SwitchyOptions.bak
 a900cfa47a5922d0059c376e6e8aaf06  .\goagent-local\python33.dll
-aa297006d7921d9d0224f6f455b4300e  .\data\version
 ac94cccfdb64bf926a16cd273aaee713  .\startfirefox.inc.php
 ae8a2552dfc7ae9caed84250efcb894b  .\utility\php\Microsoft.VC90.CRT.manifest
 bde0984f77af9c671e3f2453e44e9cd2  .\data\host
@@ -45,6 +44,7 @@ c55787c1ead61959d8e1133b3d8de28a  .\goagent-local\proxy.pac
 d3d604c90c6afbdcc8205f0f1a6567d1  .\goagent-local\goagent-gtk.py
 d40647dbece40ccca68b7ae627895073  .\utility\vcredist_x86_sc.exe
 d41d8cd98f00b204e9800998ecf8427e  .\data\usegc1
+d55de0034fafd9ffe02aed0b051f669d  .\data\version
 d59a54829073e1bb995ea8f3df39605c  .\goagent-local\addto-startup.py
 d60725689326e73aa630cd2b991f9f21  .\string.inc.php
 df8d015b1c666c8b49853d186cb51853  .\goagent-local\cacert.pem
