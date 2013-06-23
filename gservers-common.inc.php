@@ -1,6 +1,6 @@
 <?php
-#  wwqgtxx-goagent   - Software suite for breakthrough GFW
-#  wwqgtxx-wallproxy - Software suite for breakthrough GFW
+#  greatagent-ga   - Software suite for breakthrough GFW
+#  greatagent-ga - Software suite for breakthrough GFW
 #  
 #  gservers-common.inc.php - Reslove Google Server IP
 

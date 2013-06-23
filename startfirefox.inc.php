@@ -1,6 +1,6 @@
 <?php
-#  wwqgtxx-goagent   - Software suite for breakthrough GFW
-#  wwqgtxx-wallproxy - Software suite for breakthrough GFW
+#  greatagent-ga   - Software suite for breakthrough GFW
+#  greatagent-wp - Software suite for breakthrough GFW
 #  
 #  startfirefox.inc.php - Start Firefox
 function deldir($dir) { 
@@ -27,7 +27,7 @@ function deldir($dir) {
 } 
 
 if(file_exists("./FirefoxPortable/FirefoxPortable.exe")){
-	exec('start ./FirefoxPortable/FirefoxPortable.exe "https://wwqgtxx-goagent.googlecode.com/git-history/web/ifanqiang.htm"');
+	exec('start ./FirefoxPortable/FirefoxPortable.exe "https://greatagent-ga.googlecode.com/git-history/web/ifanqiang.htm"');
 }
 else{
 	echo "Don't Have FirefoxPortable.\r\n";

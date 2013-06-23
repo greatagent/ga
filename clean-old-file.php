@@ -1,8 +1,12 @@
 <?php
-#  wwqgtxx-goagent   - Software suite for breakthrough GFW
-#  wwqgtxx-wallproxy - Software suite for breakthrough GFW
+#  greatagent-ga   - Software suite for breakthrough GFW
+#  greatagent-wp - Software suite for breakthrough GFW
 #  
 #  clean-old-file.php - Last cleanup
+
+@unlink("data/usegc2");
+@unlink("data/wwqgtxx-goagent.pubkey");
+
 
 @unlink("cleanhash.php");
 @unlink("makegservers.inc.php");
@@ -30,13 +34,13 @@
 @unlink("miscellaneous.inc.bat");
 @unlink("genhash.inc.bat");
 @unlink(".gitattributes");
-@unlink("wwqgtxx-goagent-standalone.bat");
+@unlink("greatagent-ga-standalone.bat");
 
 
 /* 20121207 Remove incorrect Pinyin Filename */
-@unlink("wwqgtxx-goagent-debug.bat");
-@unlink("wwqgtxx-goagent-donotupdate.bat");
-@unlink("wwqgtxx-goagent-donotupdate-debug.bat");
+@unlink("greatagent-ga-debug.bat");
+@unlink("greatagent-ga-donotupdate.bat");
+@unlink("greatagent-ga-donotupdate-debug.bat");
 
 
 /* 20121218 Remove proxy.custom */

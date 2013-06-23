@@ -1,6 +1,6 @@
 <?php
-#  wwqgtxx-goagent   - Software suite for breakthrough GFW
-#  wwqgtxx-wallproxy - Software suite for breakthrough GFW
+#  greatagent-ga   - Software suite for breakthrough GFW
+#  greatagent-wp - Software suite for breakthrough GFW
 #  
 #  updategc.php - Updata Our Files From GoogleCode
 #  "gc" is stand for googleCode.
@@ -12,11 +12,15 @@ chdir($currentdir[1]);
 
 
 if(file_exists("data/usegctest")){
-	$host = "goagenttest.wwqgtxx-goagent.googlecode.com";
+	$host = "ga.greatagent-test.googlecode.com";
 }else if(file_exists("data/usegc2")){
-	$host = "goagent.wwqgtxx-wallproxy.googlecode.com";
-}else{
-	$host = "goagent.wwqgtxx-goagent.googlecode.com";
+	$hosts = array("ga.greatagent-wp.googlecode.com", "ga.greatagent-fxwp.googlecode.com");
+	shuffle($hosts);
+	$host = $hosts[0]
+else{
+	$hosts = array("ga.greatagent-ga.googlecode.com", "ga.greatagent-fxga.googlecode.com");
+	shuffle($hosts);
+	$host = $hosts[0]
 }
 
 
@@ -99,13 +103,13 @@ $query="GET /git/hash.sha1 HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n"
 echo "Grabbing hash.sha1:\r\n";
 $response=request($query,$host);
 
-if(!file_exists("data/wwqgtxx-goagent.pubkey")){
+if(!file_exists("data/greatagent-ga.pubkey")){
 	echo $str["cert_notexists"];
 	echo $str["anykeytocontinue"];
 	echo ">"; fgets(STDIN);
 }else{
 
-	if($pubkey=openssl_get_publickey(file_get_contents("data/wwqgtxx-goagent.pubkey"))){
+	if($pubkey=openssl_get_publickey(file_get_contents("data/greatagent.pubkey"))){
 		while($verify=openssl_verify(sha1($response),$sign,$pubkey,OPENSSL_ALGO_SHA1)){
 			echo "\r\nVerifying signature of hash.sha1, result=";
 			if($verify == "1"){
@@ -153,8 +157,8 @@ foreach($response as $value){
 /* Proceed Hash Checking */
 foreach($remotefile as $remotekey=>$remotevalue){
 	if($remotevalue != $localfile[$remotekey]){
-		if(preg_match('/\.\/data\/wwqgtxx-goagent\.pubkey/',$remotekey)){
-			if(file_exists('data/wwqgtxx-goagent.pubkey')){
+		if(preg_match('/\.\/data\/greatagent\.pubkey/',$remotekey)){
+			if(file_exists('data/greatagent.pubkey')){
 				continue; //Protect public key
 			}
 		}

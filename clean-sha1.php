@@ -1,6 +1,6 @@
 <?php
-#  wwqgtxx-goagent   - Software suite for breakthrough GFW
-#  wwqgtxx-wallproxy - Software suite for breakthrough GFW
+#  greatagent-ga   - Software suite for breakthrough GFW
+#  greatagent-ga - Software suite for breakthrough GFW
 #  
 #  clean-sha1.php - Cleanup sha1 table
 #  some files do not need to appear in hash table
