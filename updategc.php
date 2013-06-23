@@ -103,7 +103,7 @@ $query="GET /git/hash.sha1 HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n"
 echo "Grabbing hash.sha1:\r\n";
 $response=request($query,$host);
 
-if(!file_exists("data/greatagent-ga.pubkey")){
+if(!file_exists("data/greatagent.pubkey")){
 	echo $str["cert_notexists"];
 	echo $str["anykeytocontinue"];
 	echo ">"; fgets(STDIN);
