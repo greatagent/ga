@@ -1,5 +1,4 @@
 
-04e77a10720de44ccedd45006777c4af8e87f2ed  .\data\version
 0601841ada90ad8a89e791a6ceefc0226dd41daf  .\goagent-local\proxy.bat
 0b51fb415ec89848f339f8989d323bea722bfd70  .\goagent-local\msvcr100.dll
 0c1cf1c8dc4ded0e2c99466da1ee38728c3b4663  .\clean-old-file.php
@@ -27,8 +26,8 @@
 764b7bbcd63231808ae341e6b346c5117176b2a1  .\runner2.bat
 77b88c24b76b6d66ae553cae538e5447c3407226  .\goagent-local\uvent.bat
 7bdfee948bda23d52eaed0c7688e84e32ac24124  .\goagent-local\myproxy.ini.sample
-7fedb8f987831dbb1b184bb433944de89faff7cf  .\updategc.php
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
+82d632af0341a7b5d20c5ad2d433d44bfe819e24  .\data\version
 83232fe8052d7d9b7f4a8ecacc000d5d4adda73d  .\goagent-local\proxy.py
 87de20f2b4ff84eeece6a1baf721cb4096b9a14f  .\gservers-common.inc.php
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
@@ -36,6 +35,7 @@
 91bbcdf1b8547ce88936fe9c3c88516cb169b98e  .\goagent-local\python33.dll
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
+a1e43776dc298cab8558867c872ae3309ea4a99e  .\updategc.php
 a71f102d68896a675fff232179e6ebe7f2e2bcaa  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\greatagent.pubkey
 ac429e1766fe3bb0ad63ff5234cfd982146d5c21  .\goagent-local\proxy.ini
