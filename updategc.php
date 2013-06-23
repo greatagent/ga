@@ -17,7 +17,7 @@ if(file_exists("data/usegctest")){
 	$hosts = array("ga.greatagent-wp.googlecode.com", "ga.greatagent-fxwp.googlecode.com");
 	shuffle($hosts);
 	$host = $hosts[0];
-else{
+}else{
 	$hosts = array("ga.greatagent-ga.googlecode.com", "ga.greatagent-fxga.googlecode.com");
 	shuffle($hosts);
 	$host = $hosts[0];
