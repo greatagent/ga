@@ -57,19 +57,6 @@ function cleanup($line) {
 }
 
 
-/* Check local hash.dat exists or not*/
-if(file_exists("hash.dat")){
-	$hashtable=file_get_contents("hash.dat");
-	$hashtable=explode("\r\n",$hashtable);
-	$hashtable=array_filter($hashtable,"cleanup");
-	sort($hashtable);
-	$hashtable=implode("\r\n",$hashtable);
-
-	/* Output hash.dat */
-	if(! file_put_contents("hash.dat",$hashtable)){ echo "ERROR to wrtie hash.dat!"; }
-}
-
-
 /* Check local hash.sha1 exists or not*/
 if(! file_exists("hash.sha1")){
 	die("Fatal Error: hash.sha1 not exists!");

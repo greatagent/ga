@@ -27,7 +27,7 @@ function deldir($dir) {
 } 
 
 if(file_exists("./FirefoxPortable/FirefoxPortable.exe")){
-	exec('start ./FirefoxPortable/FirefoxPortable.exe "https://greatagent-ga.googlecode.com/git-history/web/ifanqiang.htm"');
+	exec('start ./FirefoxPortable/FirefoxPortable.exe  -no-remote "https://greatagent-ifanqiang.googlecode.com/git-history/web/ifanqiang.htm"');
 }
 else{
 	echo "Don't Have FirefoxPortable.\r\n";

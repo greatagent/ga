@@ -1,8 +1,8 @@
 
 0601841ada90ad8a89e791a6ceefc0226dd41daf  .\goagent-local\proxy.bat
+090d21e83d03b9c9b66d743cb3f18b2c481a29ca  .\startfirefox.inc.php
 0b51fb415ec89848f339f8989d323bea722bfd70  .\goagent-local\msvcr100.dll
 0c1cf1c8dc4ded0e2c99466da1ee38728c3b4663  .\clean-old-file.php
-140b8dd7870aedb66250f9bfa62a8662fafe5bd2  .\data\version
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 1b094ed78a73180138df849a153786db31163e07  .\goagent-local\goagent.exe
@@ -11,7 +11,7 @@
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\utility\php\msvcr90.dll
 29acceb00958d41734b5d5aef5510b9c471cf95d  .\data\host
-2e5dcc3bf1b3fe9ec565a6a55edbd4a6bd80a267  .\clean-sha1.php
+2dd963b0b2a34fed761dd2ae592ffbcfc93d8bfb  .\data\version
 2f19845e7db7709eb448bf5ea52460df10f5f134  .\goagent-local\Microsoft.VC90.CRT.manifest
 30b271baa044b9b48931a7ff318d0c6e5ad4e01c  .\goagent-local\CA.crt
 337af926b096ced435c9acbc30c9241274ff64bd  .\goagent-local\python27.dll
@@ -25,6 +25,7 @@
 673a814442244efcca3ecf8652f71c86f240afb3  .\utility\php\ext\php_sockets.dll
 6bdbb3084d1310d5236249c2b40808605d039aaa  .\goagent-local\goagent-osx.command
 6c206da5f50fd301d1e66d21e61f479dfb2df265  .\utility\php\ext\Microsoft.VC90.CRT.manifest
+7125ecf9ed61b0b73a83c7fed74fa4fc06189ea2  .\clean-sha1.php
 764b7bbcd63231808ae341e6b346c5117176b2a1  .\runner2.bat
 77b88c24b76b6d66ae553cae538e5447c3407226  .\goagent-local\uvent.bat
 7bdfee948bda23d52eaed0c7688e84e32ac24124  .\goagent-local\myproxy.ini.sample
@@ -32,7 +33,6 @@
 83232fe8052d7d9b7f4a8ecacc000d5d4adda73d  .\goagent-local\proxy.py
 87de20f2b4ff84eeece6a1baf721cb4096b9a14f  .\gservers-common.inc.php
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
-8b06b3e87b6c6fbb793e18cfab48d7a90d9fda12  .\startfirefox.inc.php
 91bbcdf1b8547ce88936fe9c3c88516cb169b98e  .\goagent-local\python33.dll
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
