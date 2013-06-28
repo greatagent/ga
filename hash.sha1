@@ -32,13 +32,11 @@
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
 87de20f2b4ff84eeece6a1baf721cb4096b9a14f  .\gservers-common.inc.php
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
-8bb988113564d6945020229544e06d8e5c8c196a  .\data\version
 91bbcdf1b8547ce88936fe9c3c88516cb169b98e  .\goagent-local\python33.dll
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 a71f102d68896a675fff232179e6ebe7f2e2bcaa  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\greatagent.pubkey
-ac429e1766fe3bb0ad63ff5234cfd982146d5c21  .\goagent-local\proxy.ini
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\utility\php\Microsoft.VC90.CRT.manifest
 b52fa2812a48c15fe9a36a24b3dc777272680745  .\goagent-local\check_google_ip.py
 b6db85cd30a388c86748c34e6165cf5441a0f298  .\greatagent.bat
@@ -53,7 +51,9 @@ da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
 e173a0c39703982fbf64302f53ac684f2f44d087  .\goagent-local\goagent-osx.py
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 e7938f1f999a58e6a036f955438b82dabfb7bc15  .\string.inc.php
+e9abd371480629ba7490900ef246023508237327  .\goagent-local\proxy.ini
 ed3fdf970a4e5aa3d7fbe63ec46b07f8c2cc114a  .\goagent-local\proxy.pac
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
+f98b33e7f52ec51332a806d1eefbd81ba8723324  .\data\version
 fdb885d2682bd79516bca7395324379095d793a5  .\goagent-local\memimporter.pyd
