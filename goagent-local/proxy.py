@@ -292,15 +292,13 @@ class CertUtil(object):
                     begin = b'-----BEGIN CERTIFICATE-----'
                     end = b'-----END CERTIFICATE-----'
                     certdata = base64.b64decode(b''.join(certdata[certdata.find(begin)+len(begin):certdata.find(end)].strip().splitlines()))
-                crypt32_handle = ctypes.windll.kernel32.LoadLibraryW(b'crypt32.dll'.decode())
-                crypt32 = ctypes.WinDLL(None, handle=crypt32_handle)
+                crypt32 = ctypes.WinDLL(b'crypt32.dll'.decode())
                 store_handle = crypt32.CertOpenStore(10, 0, 0, 0x4000 | 0x20000, b'ROOT'.decode())
                 if not store_handle:
                     return -1
                 ret = crypt32.CertAddEncodedCertificateToStore(store_handle, 0x1, certdata, len(certdata), 4, None)
                 crypt32.CertCloseStore(store_handle, 0)
                 del crypt32
-                ctypes.windll.kernel32.FreeLibrary(crypt32_handle)
                 return 0 if ret else -1
         elif sys.platform == 'darwin':
             return os.system('security find-certificate -a -c "%s" | grep "%s" >/dev/null || security add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" "%s"' % (commonname, commonname, certfile))
@@ -1374,18 +1372,15 @@ class LocalProxyServer(socketserver.ThreadingTCPServer):
         except:
             pass
 
-    def finish_request(self, request, client_address):
-        """make python2 SocketServer happy"""
-        try:
-            return socketserver.ThreadingTCPServer.finish_request(self, request, client_address)
-        except (socket.error, ssl.SSLError) as e:
-            if e.args[0] not in (errno.ECONNABORTED, errno.EPIPE):
-                raise
-
+    def handle_error(self, request, client_address):
+        """make ThreadingTCPServer happy"""
+        etype, value, tb = sys.exc_info()
+        if isinstance(value, ssl.SSLError) and 'bad write retry' in value.args[1]:
+            etype = value = tb = None
+        else:
+            socketserver.ThreadingTCPServer.handle_error(self, request, client_address)
 
 class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
-
-    bufsize = 256*1024
 
     bufsize = 256*1024
     first_run_lock = threading.Lock()
@@ -1400,15 +1395,17 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
                 if not re.match(r'\d+\.\d+\.\d+\.\d+', domain):
                     try:
                         iplist = socket.gethostbyname_ex(domain)[-1]
-                        if len(iplist) >= 3:
+                        if len(iplist) >= 2:
                             google_ipmap[domain] = iplist
-                        if len(iplist) < 4:
-                            need_resolve_remote.append(domain)
                     except (socket.error, ssl.SSLError, OSError):
                         need_resolve_remote.append(domain)
                         continue
                 else:
                     google_ipmap[domain] = [domain]
+            google_iplist = list(set(sum(list(google_ipmap.values()), [])))
+            if len(google_iplist) < 10 or len(set(x.split('.', 1)[0] for x in google_iplist)) == 1:
+                logging.warning('local google_iplist=%s is too short, try remote_resolve', google_iplist)
+                need_resolve_remote += list(common.GOOGLE_HOSTS)
             for dnsserver in ('8.8.8.8', '8.8.4.4', '114.114.114.114', '114.114.115.115'):
                 for domain in need_resolve_remote:
                     logging.info('resolve remote domain=%r from dnsserver=%r', domain, dnsserver)
@@ -1591,7 +1588,6 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
             start = int(m.group(1) if m else 0)
             self.headers['Range'] = 'bytes=%d-%d' % (start, start+common.AUTORANGE_MAXSIZE-1)
             logging.info('autorange range=%r match url=%r', self.headers['Range'], self.path)
-
         elif not range_in_query and special_range:
             try:
                 logging.info('Found [autorange]endswith match url=%r', self.path)
@@ -2064,7 +2060,10 @@ class PACServerHandler(http.server.BaseHTTPRequestHandler):
             listen_ip = common.LISTEN_IP
             if listen_ip in ('', '0.0.0.0', '::'):
                 listen_ip = Autoproxy2Pac.get_listen_ip()
-            spawn_later(1, Autoproxy2Pac.update_filename, self.pacfile, common.PAC_GFWLIST, '%s:%s' % (listen_ip, common.LISTEN_PORT), default)
+            if 'gevent.monkey' in sys.modules and hasattr(gevent.get_hub(), 'threadpool'):
+                gevent.get_hub().threadpool.spawn(Autoproxy2Pac.update_filename, self.pacfile, common.PAC_GFWLIST, '%s:%s' % (listen_ip, common.LISTEN_PORT), default)
+            else:
+                threading._start_new_thread(Autoproxy2Pac.update_filename, (self.pacfile, common.PAC_GFWLIST, '%s:%s' % (listen_ip, common.LISTEN_PORT), default))
         return True
 
     def do_GET(self):

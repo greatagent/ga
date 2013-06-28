@@ -11,13 +11,13 @@
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\utility\php\msvcr90.dll
 29acceb00958d41734b5d5aef5510b9c471cf95d  .\data\host
-2dd963b0b2a34fed761dd2ae592ffbcfc93d8bfb  .\data\version
 2f19845e7db7709eb448bf5ea52460df10f5f134  .\goagent-local\Microsoft.VC90.CRT.manifest
 30b271baa044b9b48931a7ff318d0c6e5ad4e01c  .\goagent-local\CA.crt
 337af926b096ced435c9acbc30c9241274ff64bd  .\goagent-local\python27.dll
 3c2bc13cbdab9aa94fa313e8db1c206bf6842b32  .\greatagent-ga.bat
 3dc0cce2387543691ecc1737cf84c7f843c6b7d3  .\updategc.php
 3dc596e3f84c571a63e05e5606375b903b85453c  .\get-last-kown-good.inc.php
+413a850c24163d7969358e9bf8f8199f7a14a4e6  .\goagent-local\proxy.py
 41e67195f7258c73ed248acb193598b267ef87f1  .\goagent-local\SwitchySharp_1_9_52.crx
 50e3254a3827dd9b9d53ac8a5144a993a76fcf03  .\goagent-local\addto-startup.py
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
@@ -30,9 +30,9 @@
 77b88c24b76b6d66ae553cae538e5447c3407226  .\goagent-local\uvent.bat
 7bdfee948bda23d52eaed0c7688e84e32ac24124  .\goagent-local\myproxy.ini.sample
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
-83232fe8052d7d9b7f4a8ecacc000d5d4adda73d  .\goagent-local\proxy.py
 87de20f2b4ff84eeece6a1baf721cb4096b9a14f  .\gservers-common.inc.php
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
+8bb988113564d6945020229544e06d8e5c8c196a  .\data\version
 91bbcdf1b8547ce88936fe9c3c88516cb169b98e  .\goagent-local\python33.dll
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
