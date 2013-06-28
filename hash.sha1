@@ -54,6 +54,6 @@ e7938f1f999a58e6a036f955438b82dabfb7bc15  .\string.inc.php
 e9abd371480629ba7490900ef246023508237327  .\goagent-local\proxy.ini
 ed3fdf970a4e5aa3d7fbe63ec46b07f8c2cc114a  .\goagent-local\proxy.pac
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
+f6c140f5921d8a1011f9805e2393a5b0caca8f77  .\data\version
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
-f98b33e7f52ec51332a806d1eefbd81ba8723324  .\data\version
 fdb885d2682bd79516bca7395324379095d793a5  .\goagent-local\memimporter.pyd
