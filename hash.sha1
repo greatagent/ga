@@ -28,11 +28,11 @@
 77b88c24b76b6d66ae553cae538e5447c3407226  .\goagent-local\uvent.bat
 7bdfee948bda23d52eaed0c7688e84e32ac24124  .\goagent-local\myproxy.ini.sample
 81f2cd0b2a6f69340894e47c62545e0d43f59ec5  .\utility\php\php5nsapi.dll
-874aee5b80e48358b0cd36e1f19039e7596546da  .\data\version
 87de20f2b4ff84eeece6a1baf721cb4096b9a14f  .\gservers-common.inc.php
 8ae566230d7b5afd79fda2a0fca7cc758e7efb62  .\utility\php\php.ini
 91bbcdf1b8547ce88936fe9c3c88516cb169b98e  .\goagent-local\python33.dll
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
+995ffbad976a371b15f989807fdbd941b3b44b95  .\data\version
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 a71f102d68896a675fff232179e6ebe7f2e2bcaa  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\greatagent.pubkey
