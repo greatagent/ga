@@ -18,6 +18,7 @@ utility\php\php.exe -c utility\php\php.ini get-last-kown-good.inc.php
 
 :: startfirefox.inc.bat
 :: Step7 - Start Firefox
+utility\sleep.exe -m 1000
 echo Starting FirefoxPortable...
 utility\php\php.exe -c utility\php\php.ini startfirefox.inc.php
 
