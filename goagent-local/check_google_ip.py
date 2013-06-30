@@ -210,9 +210,11 @@ def main():
 		common.writeconfig('dns','timeout',myconfig.getconfig('dns','timeout'))
 		common.writeconfig('gae','validate',myconfig.getconfig('gae','validate'))
 		common.writeconfig('gae','obfuscate',myconfig.getconfig('gae','obfuscate'))
-		if(myconfig.getconfig('gae','ipv6' == 1)):
+		if(myconfig.getconfig('gae','ipv6')=='1'):
 			common.writeconfig('gae','profile','google_ipv6')
-			return
+			print 'You Are Choose IPV6 Mode. \n'
+			print 'Now Start Goagent ... \n'
+			sys.exit(0)
 	print '-'*60+'\n Google Ip Getter Started \n by wwqgtxx \n'+'-'*60+'\n'
 	need_google_hk = False
 	common.ifhasfile()
