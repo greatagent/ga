@@ -10,16 +10,18 @@ utility\sleep.exe -m 1000
 :: Step5 - Start GoAgent
 
 echo Starting GoAgent...
-start runner2.bat
-
-:: get-last-kown-good.inc.bat
-:: Step6 - Start get-last-kown-good
-utility\php\php.exe -c utility\php\php.ini get-last-kown-good.inc.php
+cd goagent-local
+python27.exe check_google_ip.py
+start goagent.exe
 
 :: startfirefox.inc.bat
-:: Step7 - Start Firefox
-utility\sleep.exe -m 1000
+:: Step6 - Start Firefox
 echo Starting FirefoxPortable...
-utility\php\php.exe -c utility\php\php.ini startfirefox.inc.php
+start utility\php\php.exe -c utility\php\php.ini startfirefox.inc.php
+
+
+:: get-last-kown-good.inc.bat
+:: Step7 - Start get-last-kown-good
+utility\php\php.exe -c utility\php\php.ini get-last-kown-good.inc.php
 
 pause
