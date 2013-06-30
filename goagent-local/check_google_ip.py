@@ -208,6 +208,11 @@ def main():
 		common.writeconfig('dns','remote',myconfig.getconfig('dns','remote'))
 		common.writeconfig('dns','cachesize',myconfig.getconfig('dns','cachesize'))
 		common.writeconfig('dns','timeout',myconfig.getconfig('dns','timeout'))
+		common.writeconfig('gae','validate',myconfig.getconfig('gae','validate'))
+		common.writeconfig('gae','obfuscate',myconfig.getconfig('gae','obfuscate'))
+		if(myconfig.getconfig('gae','ipv6' == 1)):
+			common.writeconfig('gae','profile','google_ipv6')
+			return
 	print '-'*60+'\n Google Ip Getter Started \n by wwqgtxx \n'+'-'*60+'\n'
 	need_google_hk = False
 	common.ifhasfile()

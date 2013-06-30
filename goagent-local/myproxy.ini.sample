@@ -10,6 +10,9 @@ enable = 1
 appid = yourappid1|yourappid2|yourappid3
 password = yourpassword
 path = /2
+validate = 0
+obfuscate = 0
+ipv6 = 0
 
 [pac]
 enable = 1
