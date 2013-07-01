@@ -1023,6 +1023,8 @@ class Common(object):
         self.GOOGLE_HOSTS = [x for x in self.CONFIG.get(self.GAE_PROFILE, 'hosts').split('|') if x]
         self.GOOGLE_SITES = tuple(x for x in self.CONFIG.get(self.GAE_PROFILE, 'sites').split('|') if x)
         self.GOOGLE_FORCEHTTPS = tuple('http://'+x for x in self.CONFIG.get(self.GAE_PROFILE, 'forcehttps').split('|') if x)
+        self.GOOGLE_FAKEHTTPS = tuple(x for x in self.CONFIG.get(self.GAE_PROFILE, 'fakehttps').split('|') if x)
+        self.GOOGLE_NOFAKEHTTPS = tuple(x for x in self.CONFIG.get(self.GAE_PROFILE, 'nofakehttps').split('|') if x)
         self.GOOGLE_WITHGAE = tuple(x for x in self.CONFIG.get(self.GAE_PROFILE, 'withgae').split('|') if x)
 
         self.AUTORANGE_HOSTS = self.CONFIG.get('autorange', 'hosts').split('|')
@@ -1060,20 +1062,11 @@ class Common(object):
         self.LOVE_ENABLE = self.CONFIG.getint('love', 'enable')
         self.LOVE_TIP = self.CONFIG.get('love', 'tip').encode('utf8').decode('unicode-escape').split('|')
 
-        self.HOSTS = collections.OrderedDict(self.CONFIG.items('hosts'))
+        self.HOSTS = getattr(collections, 'OrderedDict', dict)(self.CONFIG.items('hosts'))
         self.HOSTS_MATCH = collections.OrderedDict((re.compile(k).search, v) for k, v in self.HOSTS.items() if not re.search(r'\d+$', k))
         self.HOSTS_CONNECT_MATCH = collections.OrderedDict((re.compile(k).search, v) for k, v in self.HOSTS.items() if re.search(r'\d+$', k))
-        
-        if self.CONFIG.getint('gae', 'enable') == 1 :
-            self.GAE_PASSWORD = zlib.compress(self.GAE_PASSWORD.encode('latin-1'))[2:-4]
-            self.GAE_PASSWORD = base64.b64encode(self.GAE_PASSWORD).strip().decode('latin-1')
-        self.FIRST_APPID = self.GAE_APPIDS[0]
-        self.NEED_SWITCH   = True
-        self.FIRST_SWITCH  = True
 
         random.shuffle(self.GAE_APPIDS)
-
-
         self.GAE_FETCHSERVER = '%s://%s.appspot.com%s?' % (self.GOOGLE_MODE, self.GAE_APPIDS[0], self.GAE_PATH)
 
     def info(self):
@@ -1380,6 +1373,7 @@ class LocalProxyServer(socketserver.ThreadingTCPServer):
         else:
             socketserver.ThreadingTCPServer.handle_error(self, request, client_address)
 
+
 class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
 
     bufsize = 256*1024
@@ -1462,9 +1456,9 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
                         need_switch = True
                         break
                 average_timing = 1000 * connect_timing / len(sample_hosts)
-                #if average_timing > 768:
+                if average_timing > 768:
                     # avg connect time large than 768 ms, need switch
-                    #need_switch = True
+                    need_switch = True
                 logging.info('speedtest google_cn iplist average_timing=%0.2f ms, need_switch=%r', average_timing, need_switch)
                 if need_switch:
                     common.GAE_PROFILE = 'google_hk'
@@ -1474,7 +1468,6 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
                     common.GOOGLE_HOSTS = list(set(x for x in common.CONFIG.get(common.GAE_PROFILE, 'hosts').split('|') if x))
                     common.GOOGLE_WITHGAE = tuple(common.CONFIG.get('google_hk', 'withgae').split('|'))
             self._update_google_iplist()
-
 
     def setup(self):
         if isinstance(self.__class__.first_run, collections.Callable):
@@ -1520,7 +1513,7 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
 
         """rules match algorithm, need_forward= True or False"""
         need_forward = False
-        if common.HOSTS_MATCH and any(x(self.path) for x in common.HOSTS_MATCH):
+        if common.HOSTS_MATCH and any(x(self.path) for x in common.HOSTS_MATCH) or self.command not in ('GET', 'POST', 'HEAD', 'PUT', 'DELETE', 'PATCH'):
             need_forward = True
         elif host.endswith(common.GOOGLE_SITES) and not host.endswith(common.GOOGLE_WITHGAE):
             if self.path.startswith(('http://www.google.com/url', 'http://www.google.com.hk/url', 'https://www.google.com/url', 'https://www.google.com.hk/url')):
@@ -1569,7 +1562,7 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
         except (socket.error, ssl.SSLError, OSError) as e:
             if e.args[0] in (errno.ECONNRESET, 10063, errno.ENAMETOOLONG):
                 logging.warn('http_util.request "%s %s" failed:%s, try addto `withgae`', self.command, self.path, e)
-                common.GOOGLE_WITHGAE.add(re.sub(r':\d+$', '', self.parsed_url.netloc))
+                common.GOOGLE_WITHGAE = tuple(list(common.GOOGLE_WITHGAE)+[re.sub(r':\d+$', '', self.parsed_url.netloc)])
             elif e.args[0] not in (errno.ECONNABORTED, errno.EPIPE):
                 raise
         except Exception as e:
@@ -1628,33 +1621,11 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
                     continue
                 # appid over qouta, switch to next appid
                 if response.app_status == 503:
-                    if common.FIRST_SWITCH:
-                        common.FIRST_SWITCH = False
-                        common.GAE_APPIDS.append(common.GAE_APPIDS.pop(0))
-                        common.GAE_FETCHSERVER = '%s://%s.appspot.com%s?' % (common.GOOGLE_MODE, common.GAE_APPIDS[0], common.GAE_PATH)
-                        http_util.dns[urllib.parse.urlparse(common.GAE_FETCHSERVER).netloc] = common.GOOGLE_HOSTS
-                        logging.info('APPID Over Quota,Auto Switch to [%s]' % (common.GAE_APPIDS[0]))
-                        self.do_METHOD_GAE()
-                        return
-                    if common.NEED_SWITCH:
-                        common.GAE_APPIDS.append(common.GAE_APPIDS.pop(0))
-                        if common.GAE_APPIDS[0] != common.FIRST_APPID:
-                            common.GAE_FETCHSERVER = '%s://%s.appspot.com%s?' % (common.GOOGLE_MODE, common.GAE_APPIDS[0], common.GAE_PATH)
-                            http_util.dns[urllib.parse.urlparse(common.GAE_FETCHSERVER).netloc] = common.GOOGLE_HOSTS
-                            logging.info('APPID Over Quota,Auto Switch to [%s]' % (common.GAE_APPIDS[0]))
-                            self.do_METHOD_GAE()
-                            return
-                        else :
-                            common.NEED_SWITCH = False
-                            error_html = message_html('503', 'Over Quota', 'All APPID Over Quota,Please Wait Some Time')
-                            self.sock.sendall('HTTP/1.0 503\r\nContent-Type: text/html\r\n\r\n' + error_html)
-                            logging.error('All APPID Over Quota,Please Wait Some Time')
-                            return
-                    else :
-                        error_html = message_html('503', 'Over Quota', 'All APPID Over Quota,Please Wait Some Time')
-                        self.sock.sendall('HTTP/1.0 503\r\nContent-Type: text/html\r\n\r\n' + error_html)
-                        logging.error('All APPID Over Quota,Please Wait Some Time')
-                        return
+                    common.GAE_APPIDS.append(common.GAE_APPIDS.pop(0))
+                    common.GAE_FETCHSERVER = '%s://%s.appspot.com%s?' % (common.GOOGLE_MODE, common.GAE_APPIDS[0], common.GAE_PATH)
+                    http_util.dns[urllib.parse.urlparse(common.GAE_FETCHSERVER).netloc] = common.GOOGLE_HOSTS
+                    logging.info('APPID Over Quota,Auto Switch to [%s]' % (common.GAE_APPIDS[0]))
+                    continue
                 # bad request, disable CRLF injection
                 if response.app_status in (400, 405):
                     http_util.crlf = 0
@@ -1725,9 +1696,9 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
     def do_CONNECT(self):
         """handle CONNECT cmmand, socket forward or deploy a fake cert"""
         host = self.path.rpartition(':')[0]
-        if common.HOSTS_CONNECT_MATCH and any(x(self.path) for x in common.HOSTS_CONNECT_MATCH):
+        if common.HOSTS_CONNECT_MATCH and any(x(self.path) for x in common.HOSTS_CONNECT_MATCH) or host.endswith(common.GOOGLE_NOFAKEHTTPS):
             self.do_CONNECT_FWD()
-        elif host.endswith(common.GOOGLE_SITES) and not host.endswith(common.GOOGLE_WITHGAE):
+        elif host.endswith(common.GOOGLE_SITES) and not host.endswith(common.GOOGLE_WITHGAE) and not host.endswith(common.GOOGLE_FAKEHTTPS):
             http_util.dns[host] = common.GOOGLE_HOSTS
             self.do_CONNECT_FWD()
         else:
