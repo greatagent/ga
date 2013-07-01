@@ -291,7 +291,6 @@ class CertUtil(object):
                 if certdata.startswith(b'-----'):
                     begin = b'-----BEGIN CERTIFICATE-----'
                     end = b'-----END CERTIFICATE-----'
-                    certdata = base64.b64decode(b''.join(certdata[certdata.find(begin)+len(begin):certdata.find(end)].strip().splitlines()))
                 crypt32 = ctypes.WinDLL(b'crypt32.dll'.decode())
                 store_handle = crypt32.CertOpenStore(10, 0, 0, 0x4000 | 0x20000, b'ROOT'.decode())
                 if not store_handle:
@@ -1065,8 +1064,17 @@ class Common(object):
         self.HOSTS = getattr(collections, 'OrderedDict', dict)(self.CONFIG.items('hosts'))
         self.HOSTS_MATCH = collections.OrderedDict((re.compile(k).search, v) for k, v in self.HOSTS.items() if not re.search(r'\d+$', k))
         self.HOSTS_CONNECT_MATCH = collections.OrderedDict((re.compile(k).search, v) for k, v in self.HOSTS.items() if re.search(r'\d+$', k))
+        
+        if self.CONFIG.getint('gae', 'enable') == 1 :
+            self.GAE_PASSWORD = zlib.compress(self.GAE_PASSWORD.encode())[2:-4]
+            self.GAE_PASSWORD = base64.b64encode(self.GAE_PASSWORD).strip().decode()
+        self.FIRST_APPID = self.GAE_APPIDS[0]
+        self.NEED_SWITCH   = True
+        self.FIRST_SWITCH  = True
 
-        random.shuffle(self.GAE_APPIDS)
+        #random.shuffle(self.GAE_APPIDS)
+
+
         self.GAE_FETCHSERVER = '%s://%s.appspot.com%s?' % (self.GOOGLE_MODE, self.GAE_APPIDS[0], self.GAE_PATH)
 
     def info(self):
@@ -1456,9 +1464,9 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
                         need_switch = True
                         break
                 average_timing = 1000 * connect_timing / len(sample_hosts)
-                if average_timing > 768:
+                #if average_timing > 768:
                     # avg connect time large than 768 ms, need switch
-                    need_switch = True
+                    #need_switch = True
                 logging.info('speedtest google_cn iplist average_timing=%0.2f ms, need_switch=%r', average_timing, need_switch)
                 if need_switch:
                     common.GAE_PROFILE = 'google_hk'
@@ -1468,6 +1476,7 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
                     common.GOOGLE_HOSTS = list(set(x for x in common.CONFIG.get(common.GAE_PROFILE, 'hosts').split('|') if x))
                     common.GOOGLE_WITHGAE = tuple(common.CONFIG.get('google_hk', 'withgae').split('|'))
             self._update_google_iplist()
+
 
     def setup(self):
         if isinstance(self.__class__.first_run, collections.Callable):
@@ -1621,11 +1630,33 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
                     continue
                 # appid over qouta, switch to next appid
                 if response.app_status == 503:
-                    common.GAE_APPIDS.append(common.GAE_APPIDS.pop(0))
-                    common.GAE_FETCHSERVER = '%s://%s.appspot.com%s?' % (common.GOOGLE_MODE, common.GAE_APPIDS[0], common.GAE_PATH)
-                    http_util.dns[urllib.parse.urlparse(common.GAE_FETCHSERVER).netloc] = common.GOOGLE_HOSTS
-                    logging.info('APPID Over Quota,Auto Switch to [%s]' % (common.GAE_APPIDS[0]))
-                    continue
+                    if common.FIRST_SWITCH:
+                        common.FIRST_SWITCH = False
+                        common.GAE_APPIDS.append(common.GAE_APPIDS.pop(0))
+                        common.GAE_FETCHSERVER = '%s://%s.appspot.com%s?' % (common.GOOGLE_MODE, common.GAE_APPIDS[0], common.GAE_PATH)
+                        http_util.dns[urllib.parse.urlparse(common.GAE_FETCHSERVER).netloc] = common.GOOGLE_HOSTS
+                        logging.info('APPID Over Quota,Auto Switch to [%s]' % (common.GAE_APPIDS[0]))
+                        self.do_METHOD_GAE()
+                        return
+                    if common.NEED_SWITCH:
+                        common.GAE_APPIDS.append(common.GAE_APPIDS.pop(0))
+                        if common.GAE_APPIDS[0] != common.FIRST_APPID:
+                            common.GAE_FETCHSERVER = '%s://%s.appspot.com%s?' % (common.GOOGLE_MODE, common.GAE_APPIDS[0], common.GAE_PATH)
+                            http_util.dns[urllib.parse.urlparse(common.GAE_FETCHSERVER).netloc] = common.GOOGLE_HOSTS
+                            logging.info('APPID Over Quota,Auto Switch to [%s]' % (common.GAE_APPIDS[0]))
+                            self.do_METHOD_GAE()
+                            return
+                        else :
+                            common.NEED_SWITCH = False
+                            error_html = message_html('503', 'Over Quota', 'All APPID Over Quota,Please Wait Some Time')
+                            self.sock.sendall('HTTP/1.0 503\r\nContent-Type: text/html\r\n\r\n' + error_html)
+                            logging.error('All APPID Over Quota,Please Wait Some Time')
+                            return
+                    else :
+                        error_html = message_html('503', 'Over Quota', 'All APPID Over Quota,Please Wait Some Time')
+                        self.sock.sendall('HTTP/1.0 503\r\nContent-Type: text/html\r\n\r\n' + error_html)
+                        logging.error('All APPID Over Quota,Please Wait Some Time')
+                        return
                 # bad request, disable CRLF injection
                 if response.app_status in (400, 405):
                     http_util.crlf = 0
