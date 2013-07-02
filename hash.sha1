@@ -8,7 +8,6 @@
 1b094ed78a73180138df849a153786db31163e07  .\goagent-local\goagent.exe
 1b940115edd500d6e8a34a68545c5721e0a7264c  .\goagent-local\SwitchyOptions.bak
 2109a407dd4812fc09314260a03b7151da589712  .\goagent-local\python33.zip
-24d6c43bcdf85edacf278804c15b6dd3ff715818  .\data\version
 29161cf47b879e391ae787401e75105087b44851  .\goagent-local\check_google_ip.py
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\utility\php\msvcr90.dll
@@ -40,6 +39,7 @@
 a71f102d68896a675fff232179e6ebe7f2e2bcaa  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\greatagent.pubkey
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\utility\php\Microsoft.VC90.CRT.manifest
+b4822790c6ea8943a4a490a4709f57f41e9d7027  .\data\version
 b6d73af245478005da8f6388c31c19a6db5518f9  .\startfirefox.inc.php
 b6db85cd30a388c86748c34e6165cf5441a0f298  .\greatagent.bat
 b6db85cd30a388c86748c34e6165cf5441a0f298  .\wwqgtxx-goagent.bat
