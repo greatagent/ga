@@ -1733,7 +1733,7 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
             http_util.dns[host] = common.GOOGLE_HOSTS
             self.do_CONNECT_FWD()
         else:
-            self.do_CONNECT_AGENT()
+            self.do_CONNECT_PROCESS()
 
     def do_CONNECT_FWD(self):
         """socket forward for http CONNECT command"""
@@ -1773,12 +1773,12 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(b'HTTP/1.1 200 OK\r\n\r\n')
             http_util.forward_socket(self.connection, remote, bufsize=self.bufsize)
 
-    def do_CONNECT_AGENT(self):
+    def do_CONNECT_PROCESS(self):
         """deploy fake cert to client"""
         host, _, port = self.path.rpartition(':')
         port = int(port)
         certfile = CertUtil.get_cert(host)
-        logging.info('%s "AGENT %s %s:%d HTTP/1.1" - -', self.address_string(), self.command, host, port)
+        logging.info('%s "PROCESS %s %s:%d HTTP/1.1" - -', self.address_string(), self.command, host, port)
         self.__realconnection = None
         self.wfile.write(b'HTTP/1.1 200 OK\r\n\r\n')
         try:
@@ -1894,7 +1894,7 @@ class PAASProxyHandler(GAEProxyHandler):
         self.__class__.do_HEAD = self.__class__.do_METHOD
         self.__class__.do_DELETE = self.__class__.do_METHOD
         self.__class__.do_OPTIONS = self.__class__.do_METHOD
-        self.__class__.do_CONNECT = GAEProxyHandler.do_CONNECT_AGENT
+        self.__class__.do_CONNECT = GAEProxyHandler.do_CONNECT_PROCESS
         self.setup()
 
     def do_METHOD(self):
