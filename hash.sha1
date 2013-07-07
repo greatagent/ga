@@ -36,9 +36,9 @@
 91bbcdf1b8547ce88936fe9c3c88516cb169b98e  .\goagent-local\python33.dll
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
+9ee7084a589b38558dd7db6eaa1f3409711ed2b3  .\data\version
 a71f102d68896a675fff232179e6ebe7f2e2bcaa  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\greatagent.pubkey
-b118159877bcea00e3126452a2f5081345f37000  .\data\version
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\utility\php\Microsoft.VC90.CRT.manifest
 b6d73af245478005da8f6388c31c19a6db5518f9  .\startfirefox.inc.php
 b6db85cd30a388c86748c34e6165cf5441a0f298  .\greatagent.bat
