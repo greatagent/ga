@@ -7,8 +7,8 @@
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 1b094ed78a73180138df849a153786db31163e07  .\goagent-local\goagent.exe
 1b940115edd500d6e8a34a68545c5721e0a7264c  .\goagent-local\SwitchyOptions.bak
+1e7b920d07e56b1e2c36f24b01c251e1a879048e  .\data\version
 2109a407dd4812fc09314260a03b7151da589712  .\goagent-local\python33.zip
-28fd053d3d98ecb2e74a229ca6567ede4765f345  .\data\version
 29161cf47b879e391ae787401e75105087b44851  .\goagent-local\check_google_ip.py
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\utility\php\msvcr90.dll
@@ -38,6 +38,7 @@
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
 a71f102d68896a675fff232179e6ebe7f2e2bcaa  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\greatagent.pubkey
+ad262933a142c0872c0a20ad7e6eda5e533cb849  .\goagent-local\proxy.ini
 b3fef2e2e06ec32d6f2a6dec9c81845ba9fc09d9  .\utility\php\Microsoft.VC90.CRT.manifest
 b6d73af245478005da8f6388c31c19a6db5518f9  .\startfirefox.inc.php
 b6db85cd30a388c86748c34e6165cf5441a0f298  .\greatagent.bat
@@ -46,7 +47,6 @@ b7de249b06c6661b52a6ef6d3e04dcf99a65b9d4  .\goagent-local\python27.exe
 c2bb649c2ea1b33b865eda0d5d36ddb6fd97e09e  .\goagent-local\addto-startup.vbs
 c6f7a1b457d042976e6900483172501c53db725e  .\utility\php\php.exe
 ce2f0184d600ed03673a357fe8bf0f3f04c77bb1  .\goagent-local\python33.exe
-cf3dadbd667ab5937d7a369124d10c919ad21071  .\goagent-local\proxy.ini
 d241e28c88120d40feab1a66c2f34dcf5475d12c  .\goagent-local\python27.zip
 d8f083feddb0979aa6e47d12582dd743aee83217  .\runner2.bat
 da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
