@@ -26,7 +26,7 @@ $googleip1=array_unique($googleip1);
 echo "SmartHosts=".implode(",",$googleip1)."\r\n";
 echo "Grabbing Huhamhire-Hosts hosts:\r\n";
 $googleip2=array();
-$host=request("GET /git/downloads/raw/ipv4_mobile_utf8/hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com");
+$host=request("GET /git-history/HostsUtl-Hostsdata/ipv4_mods/google(cn).hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com");
 $host=explode("\n",str_replace("\r\n","\n",$host));
 foreach($host as $hostkey=>$hoststring){
 	//talk.google.com is special case. We cannot use it as G-Server
