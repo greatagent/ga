@@ -7,6 +7,7 @@
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
 1b094ed78a73180138df849a153786db31163e07  .\goagent-local\goagent.exe
 1b940115edd500d6e8a34a68545c5721e0a7264c  .\goagent-local\SwitchyOptions.bak
+202b0c911cafdfbb54d162e1b9a5f2fd8dc41267  .\data\version
 2109a407dd4812fc09314260a03b7151da589712  .\goagent-local\python33.zip
 29161cf47b879e391ae787401e75105087b44851  .\goagent-local\check_google_ip.py
 29268ef0cd220ad3c5e9812befd3f5759b27a266  .\goagent-local\msvcr90.dll
@@ -49,7 +50,6 @@ ce2f0184d600ed03673a357fe8bf0f3f04c77bb1  .\goagent-local\python33.exe
 d241e28c88120d40feab1a66c2f34dcf5475d12c  .\goagent-local\python27.zip
 d8f083feddb0979aa6e47d12582dd743aee83217  .\runner2.bat
 da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
-dabaece01b0a491f0bcabba473b9a1bda17b821a  .\data\version
 e173a0c39703982fbf64302f53ac684f2f44d087  .\goagent-local\goagent-osx.py
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 e7938f1f999a58e6a036f955438b82dabfb7bc15  .\string.inc.php
