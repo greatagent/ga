@@ -28,12 +28,12 @@ echo "Grabbing Huhamhire-Hosts hosts:\r\n";
 $googleip2=array();
 $host=request("GET /git-history/HostsUtl-Hostsdata/ipv4_mods/google(cn).hosts HTTP/1.1\r\nHost:{host}\r\nConnection: close\r\n\r\n","huhamhire-hosts.googlecode.com");
 $host=str_replace(" ","	",$host);
+$host=str_replace("8.8.8.8","",$host);
+$host=str_replace("8.8.4.4","",$host);
 $host=explode("\n",str_replace("\r\n","\n",$host));
 foreach($host as $hostkey=>$hoststring){
 	//talk.google.com is special case. We cannot use it as G-Server
-	if($hoststring=='google-public-dns-a.google.com'){
-	}elseif($hoststring=='google-public-dns-b.google.com'){
-	}elseif(preg_match('/(.*?)\ttalk\.google\.com$/',$hoststring,$hostmatch)){
+	if(preg_match('/(.*?)\ttalk\.google\.com$/',$hoststring,$hostmatch)){
 	}elseif(preg_match('/(.*?)\t.*?\.google\.com$/',$hoststring,$hostmatch)){
 		if(filter_var($hostmatch[1],FILTER_VALIDATE_IP)){
 			$googleip2[]=$hostmatch[1];
