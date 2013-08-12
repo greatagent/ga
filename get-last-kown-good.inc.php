@@ -20,6 +20,10 @@ foreach($host as $hostkey=>$hoststring){
 		if(filter_var($hostmatch[1],FILTER_VALIDATE_IP)){
 			$googleip1[]=$hostmatch[1];
 		}
+	}elseif(preg_match('/(.*?)\t.*?\.google\.com\.hk$/',$hoststring,$hostmatch)){
+		if(filter_var($hostmatch[1],FILTER_VALIDATE_IP)){
+			$googleip2[]=$hostmatch[1];
+		}
 	}
 }
 $googleip1=array_unique($googleip1);
@@ -35,6 +39,10 @@ foreach($host as $hostkey=>$hoststring){
 	//talk.google.com is special case. We cannot use it as G-Server
 	if(preg_match('/(.*?)\ttalk\.google\.com$/',$hoststring,$hostmatch)){
 	}elseif(preg_match('/(.*?)\t.*?\.google\.com$/',$hoststring,$hostmatch)){
+		if(filter_var($hostmatch[1],FILTER_VALIDATE_IP)){
+			$googleip2[]=$hostmatch[1];
+		}
+	}elseif(preg_match('/(.*?)\t.*?\.google\.com\.hk$/',$hoststring,$hostmatch)){
 		if(filter_var($hostmatch[1],FILTER_VALIDATE_IP)){
 			$googleip2[]=$hostmatch[1];
 		}
