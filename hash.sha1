@@ -23,7 +23,6 @@
 51db69b0fd96c6867879cd09e3dabecb019add69  .\utility\php\libeay32.dll
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
 5bb13480e7ddaaf52b641552ef4ebe7b8b01f0a2  .\runner.bat
-5e8799dc1abdde8eb4eb768f2967f0324dd2456e  .\data\version
 673a814442244efcca3ecf8652f71c86f240afb3  .\utility\php\ext\php_sockets.dll
 6bdbb3084d1310d5236249c2b40808605d039aaa  .\goagent-local\goagent-osx.command
 6c206da5f50fd301d1e66d21e61f479dfb2df265  .\utility\php\ext\Microsoft.VC90.CRT.manifest
@@ -53,6 +52,7 @@ da39a3ee5e6b4b0d3255bfef95601890afd80709  .\data\usegc1
 e173a0c39703982fbf64302f53ac684f2f44d087  .\goagent-local\goagent-osx.py
 e5716d7889d34f29e0acffe63af3e38eb3f3c1f8  .\utility\sha1deep64.exe
 e7938f1f999a58e6a036f955438b82dabfb7bc15  .\string.inc.php
+e8e8bc1492ae8bc123fcebea60735e621a3959dc  .\data\version
 ed3fdf970a4e5aa3d7fbe63ec46b07f8c2cc114a  .\goagent-local\proxy.pac
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
