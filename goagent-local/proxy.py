@@ -339,8 +339,8 @@ class CertUtil(object):
                 except EnvironmentError:
                     pass
         #Check CA imported
-        if CertUtil.import_ca(capath) != 0:
-            logging.warning('install root certificate failed, Please run as administrator/root/sudo')
+        #if CertUtil.import_ca(capath) != 0:
+            #logging.warning('install root certificate failed, Please run as administrator/root/sudo')
         #Check Certs Dir
         if not os.path.exists(certdir):
             os.makedirs(certdir)
@@ -881,7 +881,7 @@ class HTTPUtil(object):
         if isinstance(payload, bytes):
             sock.sendall(request_data.encode() + payload)
         elif hasattr(payload, 'read'):
-            sock.sendall(request_data.encode())
+            sock.sendall(request_data)
             while 1:
                 data = payload.read(bufsize)
                 if not data:
@@ -1022,8 +1022,9 @@ class Common(object):
         self.GOOGLE_HOSTS = [x for x in self.CONFIG.get(self.GAE_PROFILE, 'hosts').split('|') if x]
         self.GOOGLE_SITES = tuple(x for x in self.CONFIG.get(self.GAE_PROFILE, 'sites').split('|') if x)
         self.GOOGLE_FORCEHTTPS = tuple('http://'+x for x in self.CONFIG.get(self.GAE_PROFILE, 'forcehttps').split('|') if x)
-        self.GOOGLE_FAKEHTTPS = tuple(x for x in self.CONFIG.get(self.GAE_PROFILE, 'fakehttps').split('|') if x)
-        self.GOOGLE_NOFAKEHTTPS = tuple(x for x in self.CONFIG.get(self.GAE_PROFILE, 'nofakehttps').split('|') if x)
+        self.GOOGLE_USEFAKEHTTPS = self.CONFIG.getint(self.GAE_PROFILE, 'usefakehttps') if self.CONFIG.has_option(self.GAE_PROFILE, 'usefakehttps') else 0        
+        self.GOOGLE_FAKEHTTPS = tuple(x for x in (self.CONFIG.get(self.GAE_PROFILE, 'fakehttps') if self.GOOGLE_USEFAKEHTTPS==1 else '').split('|') if x)
+        self.GOOGLE_NOFAKEHTTPS = tuple(x for x in (self.CONFIG.get(self.GAE_PROFILE, 'nofakehttps') if self.GOOGLE_USEFAKEHTTPS==1 else '').split('|') if x)
         self.GOOGLE_WITHGAE = tuple(x for x in self.CONFIG.get(self.GAE_PROFILE, 'withgae').split('|') if x)
 
         self.AUTORANGE_HOSTS = self.CONFIG.get('autorange', 'hosts').split('|')
@@ -1061,9 +1062,14 @@ class Common(object):
         self.LOVE_ENABLE = self.CONFIG.getint('love', 'enable')
         self.LOVE_TIP = self.CONFIG.get('love', 'tip').encode('utf8').decode('unicode-escape').split('|')
 
-        self.HOSTS = getattr(collections, 'OrderedDict', dict)(self.CONFIG.items('hosts'))
-        self.HOSTS_MATCH = collections.OrderedDict((re.compile(k).search, v) for k, v in self.HOSTS.items() if not re.search(r'\d+$', k))
-        self.HOSTS_CONNECT_MATCH = collections.OrderedDict((re.compile(k).search, v) for k, v in self.HOSTS.items() if re.search(r'\d+$', k))
+        DictType = getattr(collections, 'OrderedDict', dict)
+        self.HOSTS = DictType(self.CONFIG.items('hosts'))
+        for key, value in self.HOSTS.items():
+            m = re.match(r'\[(\w+)\](\w+)', value)
+            if m:
+                self.HOSTS[key] = self.CONFIG.get(m.group(1), m.group(2))
+        self.HOSTS_MATCH = DictType((re.compile(k).search, v) for k, v in self.HOSTS.items() if not re.search(r'\d+$', k))
+        self.HOSTS_CONNECT_MATCH = DictType((re.compile(k).search, v) for k, v in self.HOSTS.items() if re.search(r'\d+$', k))
         
         if self.CONFIG.getint('gae', 'enable') == 1 :
             self.GAE_PASSWORD = zlib.compress(self.GAE_PASSWORD.encode())[2:-4]
@@ -1072,7 +1078,7 @@ class Common(object):
         self.NEED_SWITCH   = True
         self.FIRST_SWITCH  = True
 
-        random.shuffle(self.GAE_APPIDS)
+        #random.shuffle(self.GAE_APPIDS)
 
 
         self.GAE_FETCHSERVER = '%s://%s.appspot.com%s?' % (self.GOOGLE_MODE, self.GAE_APPIDS[0], self.GAE_PATH)
@@ -1551,7 +1557,8 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
             content_length = int(self.headers.get('Content-Length', 0))
             payload = self.rfile.read(content_length) if content_length else b''
             if common.HOSTS_MATCH and any(x(self.path) for x in common.HOSTS_MATCH):
-                realhost = next(common.HOSTS_MATCH[x] for x in common.HOSTS_MATCH if x(self.path)) or re.sub(r':\d+$', '', self.parsed_url.netloc)
+                realhosts = next(common.HOSTS_MATCH[x] for x in common.HOSTS_MATCH if x(self.path)) or re.sub(r':\d+$', '', self.parsed_url.netloc)
+                realhost = random.choice(realhosts.split('|'))
                 logging.debug('hosts pattern mathed, url=%r realhost=%r', self.path, realhost)
                 response = http_util.request(self.command, self.path, payload, self.headers, realhost=realhost, crlf=common.GAE_CRLF)
             else:
@@ -1683,8 +1690,8 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
                         return rangefetch.fetch()
                     if response.getheader('Set-Cookie'):
                         response.headers['Set-Cookie'] = self.normcookie(response.getheader('Set-Cookie'))
-                    headers_data = ('HTTP/1.1 %s\r\n%s\r\n' % (response.status, ''.join('%s: %s\r\n' % (k.title(), v) for k, v in response.getheaders() if k.title() != 'Transfer-Encoding'))).encode()
-                    self.wfile.write(headers_data)
+                    headers_data = 'HTTP/1.1 %s\r\n%s\r\n' % (response.status, ''.join('%s: %s\r\n' % (k.title(), v) for k, v in response.getheaders() if k.title() != 'Transfer-Encoding'))
+                    self.wfile.write(headers_data.encode() if bytes is not str else headers_data)
                     headers_sent = True
                 content_length = int(response.getheader('Content-Length', 0))
                 content_range = response.getheader('Content-Range', '')
@@ -1727,7 +1734,12 @@ class GAEProxyHandler(http.server.BaseHTTPRequestHandler):
     def do_CONNECT(self):
         """handle CONNECT cmmand, socket forward or deploy a fake cert"""
         host = self.path.rpartition(':')[0]
-        if common.HOSTS_CONNECT_MATCH and any(x(self.path) for x in common.HOSTS_CONNECT_MATCH) or host.endswith(common.GOOGLE_NOFAKEHTTPS):
+        if common.HOSTS_CONNECT_MATCH and any(x(self.path) for x in common.HOSTS_CONNECT_MATCH):
+            if host.endswith(common.GOOGLE_SITES) and not host.endswith(common.GOOGLE_WITHGAE):
+                http_util.dns.pop(host, None)
+            realhosts = next(common.HOSTS_CONNECT_MATCH[x] for x in common.HOSTS_CONNECT_MATCH if x(self.path))
+            if realhosts:
+                http_util.dns[host] = list(set(sum([socket.gethostbyname_ex(x)[-1] for x in realhosts.split('|')], [])))
             self.do_CONNECT_FWD()
         elif host.endswith(common.GOOGLE_SITES) and not host.endswith(common.GOOGLE_WITHGAE) and not host.endswith(common.GOOGLE_FAKEHTTPS):
             http_util.dns[host] = common.GOOGLE_HOSTS
