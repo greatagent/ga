@@ -4,6 +4,7 @@
 0c1cf1c8dc4ded0e2c99466da1ee38728c3b4663  .\clean-old-file.php
 14e64246a966327150abf72c68864a3f1867a3e9  .\utility\sleep.exe
 157dee2b0d2bddca2f0367050c68b4cacbe2e50f  .\FirefoxPortable\Data\profile\cert8.db
+1680102e3c7256a84f406cc81ff7fc9f306a80c9  .\data\version
 1b094ed78a73180138df849a153786db31163e07  .\goagent-local\goagent.exe
 1b940115edd500d6e8a34a68545c5721e0a7264c  .\goagent-local\SwitchyOptions.bak
 2109a407dd4812fc09314260a03b7151da589712  .\goagent-local\python33.zip
@@ -35,7 +36,6 @@
 91bbcdf1b8547ce88936fe9c3c88516cb169b98e  .\goagent-local\python33.dll
 9327581c48da2e1f8eed7447bc71410cb9afab61  .\utility\php\ext\php_openssl.dll
 9af244567ebcb618fbfcc08aeb2f77710824f17c  .\utility\php\php5ts.dll
-a17b7b6846967e96c94bd38b8464054e8e038f18  .\data\version
 a71f102d68896a675fff232179e6ebe7f2e2bcaa  .\goagent-local\goagent-gtk.py
 aa98f835169ae80f8c38ba0223f1a56f884d83bc  .\data\greatagent.pubkey
 acf825fc990606dac696c5ecda13446adc9e8028  .\get-last-kown-good.inc.php
