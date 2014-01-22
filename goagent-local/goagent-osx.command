@@ -35,19 +35,7 @@ import ctypes
 import ctypes.util
 
 from PyObjCTools import AppHelper
-from AppKit import NSObject
-from AppKit import NSApplication, NSApp, NSApplicationActivationPolicyProhibited
-from AppKit import NSImage
-from AppKit import NSData
-from AppKit import NSStatusBar, NSVariableStatusItemLength
-from AppKit import NSMenu, NSMenuItem
-from AppKit import NSWindow, NSRect, NSSize, NSMaxY, NSMakeRect, NSMakeRange
-from AppKit import NSBackingStoreBuffered, NSTitledWindowMask, NSClosableWindowMask
-from AppKit import NSTextView, NSScrollView
-from AppKit import NSViewWidthSizable, NSViewHeightSizable, NSNoBorder
-from AppKit import NSWorkspace, NSNotificationCenter, NSWorkspaceWillPowerOffNotification
-#XXXXXX how about just from AppKit import *?
-
+from AppKit import *
 
 class GoAgentOSX(NSObject):
 
@@ -122,10 +110,10 @@ class GoAgentOSX(NSObject):
         nc.addObserver_selector_name_object_(self, 'exit:', NSWorkspaceWillPowerOffNotification, None)
 
     def startGoAgent(self):
-        if os.system('which python3') == 0:
-            cmd = '/usr/bin/env python3 proxy.py'
-        else:
-            cmd = '/usr/bin/env python proxy.py'
+        for pycmd in ('python2.7', 'python2', 'python'):
+            if os.system('which %s' % pycmd) == 0:
+                cmd = '/usr/bin/env %s proxy.py' % pycmd
+                break
         self.master, self.slave = pty.openpty()
         self.pipe = subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE, stdout=self.slave, stderr=self.slave, close_fds=True)
         self.pipe_fd = os.fdopen(self.master)
