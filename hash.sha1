@@ -41,6 +41,7 @@
 53b29c396e3f798855ca4e139be5c9729dea7971  .\goagent-local\cacert.pem
 53bb653cbc94bda849f3b33a535e697c3f4fd083  .\certs\.greatagent2-test.googlecode.com.crt
 551f00ac34d4952fe83ec9ff042a0b9059f1e97d  .\needclean.ini
+55c7076456f563ccb7006be18bad7a95e7f91701  .\data\version
 56dabe65a774fc7635e4f8646d52a1cf1f485def  .\python27.exe
 5818eb5d02c80a5557d3686ea8ac49d994b92332  .\goagent-local\check_google_ip.py
 5c479ffca8a2d71023c2522f54ed3f6f36f88e79  .\python27.dll
@@ -97,6 +98,5 @@ e7938f1f999a58e6a036f955438b82dabfb7bc15  .\string.inc.php
 ed95b93cb6152b337c42947437ae64d524931218  .\utility\sha1deep.exe
 f17a9e18e07f24250b2e277778787796706a6334  .\makehash.py
 f9613ab19644448568841e8a2969e265381fd96e  .\utility\php\ssleay32.dll
-fad3052b5a39f1c7769aaf7233eb9115057b432a  .\data\version
 fb0b51388f149a67b4cefc932a83abc6f9e14974  .\sha1.sign
 fdb885d2682bd79516bca7395324379095d793a5  .\goagent-local\memimporter.pyd
