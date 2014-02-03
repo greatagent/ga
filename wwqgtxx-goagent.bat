@@ -1,6 +1,6 @@
-:: greatagent-ga.bat
+:: greatagent-esr.bat
 :: Main Batch File
    
 @echo off
-title greatagent-ga
-greatagent-ga.bat
+title greatagent-esr
+greatagent-esr.bat
